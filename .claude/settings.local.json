@@ -5,7 +5,8 @@
       "Bash(npm install:*)",
       "Bash(npm start)",
       "Bash(timeout:*)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(git add:*)"
     ]
   }
 }

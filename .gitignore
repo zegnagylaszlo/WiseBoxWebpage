@@ -45,3 +45,10 @@ Thumbs.db
 
 # Debug
 debug.log
+
+# WordPress source files (temporary reference files)
+wordpress-source/
+
+# Documentation files
+OriginalWebpage_WiseBox.hu_Pictures.docx
+screenshots/

@@ -7,41 +7,59 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 export const Features: React.FC = () => {
   const features = [
     {
-      icon: <VisibilityIcon sx={{ fontSize: '48px' }} />,
+      icon: <VisibilityIcon sx={{ fontSize: '75px' }} />,
       title: 'Átlátható pénzügyek',
       description: 'Láthatóvá tesszük a könyvelési adataidat, hogy minden pillanatban tiszta képet kapj vállalkozásod pénzügyi helyzetéről.',
     },
     {
-      icon: <AssessmentIcon sx={{ fontSize: '48px' }} />,
+      icon: <AssessmentIcon sx={{ fontSize: '75px' }} />,
       title: 'Döntéstámogatás',
       description: 'Értelmezhetővé tesszük az adatokat, hogy megalapozott döntéseket hozhass vállalkozásod jövőjével kapcsolatban.',
     },
     {
-      icon: <TrendingUpIcon sx={{ fontSize: '48px' }} />,
+      icon: <TrendingUpIcon sx={{ fontSize: '75px' }} />,
       title: 'Egyszerű és érthető',
       description: 'Könnyen használható rendszer, amely a bonyolult könyvelési adatokat egyszerű, érthető formában jeleníti meg.',
     },
   ];
 
   return (
-    <Box sx={{ py: 8, bgcolor: 'background.default' }}>
+    <Box sx={{ py: { xs: 6, md: 10 }, bgcolor: '#FFFFFF' }}>
       <Container>
-        <Typography
-          variant="h2"
-          align="center"
-          gutterBottom
-          sx={{ mb: 2, color: 'text.primary' }}
-        >
-          Miért a Wisebox?
-        </Typography>
-        <Typography
-          variant="body1"
-          align="center"
-          color="text.secondary"
-          sx={{ mb: 6, maxWidth: '800px', mx: 'auto' }}
-        >
-          A Wisebox segít megérteni a könyvelési adataidat és jobb döntéseket hozni
-        </Typography>
+        <Box sx={{ textAlign: 'center', mb: 6 }}>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: 2,
+              color: '#2B2B28',
+              fontSize: { xs: '32px', md: '45px' },
+              fontWeight: 700,
+              textTransform: 'uppercase',
+            }}
+          >
+            MIÉRT A WISEBOX?
+          </Typography>
+          <Box
+            sx={{
+              width: '80px',
+              height: '4px',
+              bgcolor: 'primary.main',
+              mx: 'auto',
+              mb: 3,
+            }}
+          />
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: '18px',
+              color: '#2B2B28',
+              maxWidth: '600px',
+              mx: 'auto',
+            }}
+          >
+            Könnyen és érthetően
+          </Typography>
+        </Box>
         <Box
           sx={{
             display: 'grid',
@@ -52,24 +70,54 @@ export const Features: React.FC = () => {
           {features.map((feature, index) => (
             <Box key={index}>
               <Card
-                elevation={2}
+                elevation={0}
                 sx={{
                   height: '100%',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  textAlign: 'center',
+                  bgcolor: 'transparent',
+                  transition: 'transform 0.3s ease',
                   '&:hover': {
                     transform: 'translateY(-8px)',
-                    boxShadow: '0px 8px 16px rgba(0, 150, 75, 0.2)',
                   },
                 }}
               >
-                <CardContent sx={{ textAlign: 'center', py: 4 }}>
-                  <Box sx={{ color: 'primary.main', mb: 2 }}>
+                <CardContent sx={{ py: 4 }}>
+                  <Box
+                    sx={{
+                      width: '105px',
+                      height: '105px',
+                      borderRadius: '50%',
+                      bgcolor: 'primary.main',
+                      color: 'white',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      mx: 'auto',
+                      mb: 3,
+                    }}
+                  >
                     {feature.icon}
                   </Box>
-                  <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
+                  <Typography
+                    variant="h5"
+                    gutterBottom
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: '30px',
+                      color: '#2B2B28',
+                      mb: 2,
+                    }}
+                  >
                     {feature.title}
                   </Typography>
-                  <Typography variant="body1" color="text.secondary">
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      fontSize: '18px',
+                      color: '#2B2B28',
+                      lineHeight: 1.6,
+                    }}
+                  >
                     {feature.description}
                   </Typography>
                 </CardContent>

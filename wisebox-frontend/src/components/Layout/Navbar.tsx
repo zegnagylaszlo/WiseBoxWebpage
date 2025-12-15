@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   IconButton,
   Drawer,
@@ -19,8 +18,11 @@ export const Navbar: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Kezdőlap', path: '/' },
-    // Will add more items after extracting from wisebox.hu
+    { label: 'Szolgáltatások', path: '/szolgaltatasok' },
+    { label: 'Partnerek', path: '/partnerek' },
+    { label: 'Referenciák', path: '/referenciak' },
+    { label: 'Üzletfejlesztők', path: '/uzletfejlesztok' },
+    { label: 'Ajánlói program', path: '/ajanloi-program' },
   ];
 
   const handleDrawerToggle = () => {
@@ -31,23 +33,25 @@ export const Navbar: React.FC = () => {
     <AppBar position="sticky" color="default" elevation={1} sx={{ bgcolor: 'white' }}>
       <Container>
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
+          <Box
             component={Link}
             to="/"
             sx={{
               flexGrow: 1,
               textDecoration: 'none',
-              color: 'primary.main',
-              fontWeight: 600,
-              fontSize: '24px',
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
-            Wisebox
-          </Typography>
+            <img
+              src="/images/wisebox-logo.webp"
+              alt="Wisebox"
+              style={{ height: '50px', width: 'auto' }}
+            />
+          </Box>
 
           {/* Desktop menu */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2, alignItems: 'center' }}>
             {menuItems.map((item) => (
               <Button
                 key={item.path}
@@ -55,6 +59,9 @@ export const Navbar: React.FC = () => {
                 to={item.path}
                 sx={{
                   color: 'text.primary',
+                  fontWeight: 600,
+                  fontSize: '16px',
+                  textTransform: 'none',
                   '&:hover': {
                     color: 'primary.main',
                   },
@@ -63,6 +70,21 @@ export const Navbar: React.FC = () => {
                 {item.label}
               </Button>
             ))}
+            <Button
+              variant="contained"
+              color="primary"
+              sx={{
+                ml: 1,
+                px: 3.5,
+                py: 1.5,
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                fontSize: '14px',
+                borderRadius: '4px',
+              }}
+            >
+              KONZULTÁCIÓT KÉREK
+            </Button>
           </Box>
 
           {/* Mobile menu toggle */}

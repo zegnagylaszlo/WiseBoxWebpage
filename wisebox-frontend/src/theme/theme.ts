@@ -7,7 +7,10 @@ export const wiseboxTheme = createTheme({
       dark: '#2E8640',  // Hover state
     },
     secondary: {
-      main: '#6EC1E4', // Cyan blue accent
+      main: '#FF8C00', // Orange accent
+    },
+    info: {
+      main: '#6EC1E4', // Blue accent
     },
     success: {
       main: '#61CE70', // Light green accent
