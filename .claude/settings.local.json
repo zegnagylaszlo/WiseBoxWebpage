@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-react-app wisebox-frontend --template typescript)",
+      "Bash(npm install:*)",
+      "Bash(npm start)",
+      "Bash(timeout:*)",
+      "Bash(git init:*)"
+    ]
+  }
+}
