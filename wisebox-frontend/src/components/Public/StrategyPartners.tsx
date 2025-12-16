@@ -58,7 +58,7 @@ export const StrategyPartners: React.FC = () => {
           }}
         >
           <img
-            src="/images/B2B-Prosales-logo.webp"
+            src="/images/B2B_pecset.webp"
             alt="B2B ProSales"
             style={{
               maxWidth: '300px',
@@ -87,6 +87,9 @@ export const StrategyPartners: React.FC = () => {
         <Button
           variant="contained"
           size="large"
+          href="https://b2b-prosales.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
             bgcolor: 'white',
             color: 'info.main',

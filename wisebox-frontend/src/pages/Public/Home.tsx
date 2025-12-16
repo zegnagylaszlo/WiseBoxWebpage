@@ -9,6 +9,8 @@ import { ServiceCards } from '../../components/Public/ServiceCards';
 import { FeaturesGrid } from '../../components/Public/FeaturesGrid';
 import { Pricing } from '../../components/Public/Pricing';
 import { StrategyPartners } from '../../components/Public/StrategyPartners';
+import { PannonUniversity } from '../../components/Public/PannonUniversity';
+import { PartnersGrid } from '../../components/Public/PartnersGrid';
 import { Stats } from '../../components/Public/Stats';
 import { Contact } from '../../components/Public/Contact';
 import { CallToAction } from '../../components/Public/CallToAction';
@@ -21,13 +23,15 @@ export const Home: React.FC = () => {
       <WaveDivider variant="white-to-green" />
       <GuaranteedROI />
       <Vision />
-      <Features />
-      <ServiceCards />
       <FeaturesGrid />
       <Pricing />
       <StrategyPartners />
+      <PannonUniversity />
+      <PartnersGrid />
       <Stats />
       <Contact />
+      <Features />
+      <ServiceCards />
       <CallToAction />
     </>
   );
