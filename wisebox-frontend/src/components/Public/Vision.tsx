@@ -1,80 +1,160 @@
 import React from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 
 export const Vision: React.FC = () => {
   return (
     <Box
       sx={{
-        py: { xs: 10, md: 14 },
+        position: 'relative',
+        py: { xs: 8, md: 12 },
         bgcolor: 'primary.main',
-        textAlign: 'center',
+        overflow: 'hidden',
       }}
     >
-      <Container maxWidth="md">
-        {/* Section Title */}
+      {/* Decorative Circles */}
+      {[...Array(15)].map((_, i) => (
+        <Box
+          key={i}
+          sx={{
+            position: 'absolute',
+            borderRadius: '50%',
+            bgcolor: 'rgba(255, 255, 255, 0.1)',
+            width: { xs: '80px', md: '150px' },
+            height: { xs: '80px', md: '150px' },
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
+      ))}
+
+      <Box
+        sx={{
+          position: 'relative',
+          zIndex: 1,
+          px: { xs: 3, md: 8, lg: 12 },
+        }}
+      >
+        {/* Title */}
         <Typography
           variant="h2"
           sx={{
-            mb: 2,
+            mb: 6,
             color: 'white',
             fontSize: { xs: '32px', md: '45px' },
             fontWeight: 700,
             textTransform: 'uppercase',
+            textAlign: 'center',
           }}
         >
           VÍZIÓNK
         </Typography>
 
-        {/* White Underline */}
+        {/* Two Column Layout */}
         <Box
           sx={{
-            width: '80px',
-            height: '4px',
-            bgcolor: 'white',
+            maxWidth: '1440px',
             mx: 'auto',
-            mb: 5,
-          }}
-        />
-
-        {/* Quote */}
-        <Typography
-          variant="h4"
-          sx={{
-            mb: 6,
-            color: 'white',
-            fontSize: { xs: '22px', md: '28px' },
-            fontWeight: 400,
-            lineHeight: 1.6,
-            maxWidth: '900px',
-            mx: 'auto',
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
+            gap: 6,
+            alignItems: 'center',
           }}
         >
-          Olyan platform megalkotása, amely támogatja a menedzsmentet az adat-vezérelt döntéshozatalban
-        </Typography>
+          {/* Left Column - Image */}
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: { xs: 'center', md: 'flex-start' },
+            }}
+          >
+            <img
+              src="/images/family-using-computer-1.webp"
+              alt="Team collaboration"
+              style={{
+                width: '100%',
+                maxWidth: '450px',
+                height: 'auto',
+                borderRadius: '8px',
+              }}
+            />
+          </Box>
 
-        {/* Button */}
-        <Button
-          variant="contained"
-          size="large"
-          sx={{
-            bgcolor: 'white',
-            color: 'primary.main',
-            px: 5,
-            py: 2,
-            fontSize: '17px',
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            borderRadius: '4px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-            '&:hover': {
-              bgcolor: '#f5f5f5',
-              boxShadow: '0 6px 16px rgba(0,0,0,0.25)',
-            },
-          }}
-        >
-          Konzultációt kérek
-        </Button>
-      </Container>
+          {/* Right Column - Text and Button */}
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: { xs: 'center', md: 'flex-start' },
+              gap: 2,
+              pl: { md: 4 },
+            }}
+          >
+            {/* Quote Icon */}
+            <FormatQuoteIcon
+              sx={{
+                fontSize: '64px',
+                color: 'white',
+                opacity: 0.5,
+                mb: -2,
+              }}
+            />
+
+            {/* Quote Text */}
+            <Typography
+              variant="h4"
+              sx={{
+                color: 'white',
+                fontSize: { xs: '20px', md: '28px' },
+                fontWeight: 400,
+                fontStyle: 'italic',
+                lineHeight: 1.4,
+                textAlign: { xs: 'center', md: 'left' },
+                mb: 1,
+              }}
+            >
+              Olyan platform megalkotása, amely támogatja a menedzsmentet az adat-vezérelt döntéshozatalban
+            </Typography>
+
+            {/* Closing Quote Icon */}
+            <FormatQuoteIcon
+              sx={{
+                fontSize: '64px',
+                color: 'white',
+                opacity: 0.5,
+                transform: 'rotate(180deg)',
+                alignSelf: { xs: 'center', md: 'flex-end' },
+                mt: -2,
+                mb: 3,
+              }}
+            />
+
+            {/* Button */}
+            <Box
+              component="button"
+              sx={{
+                bgcolor: '#2B2B28',
+                color: 'white',
+                px: 5,
+                py: 2.5,
+                fontSize: '15px',
+                fontWeight: 600,
+                border: 'none',
+                cursor: 'pointer',
+                borderRadius: '4px',
+                textTransform: 'none',
+                alignSelf: { xs: 'center', md: 'flex-start' },
+                '&:hover': {
+                  bgcolor: '#1a1a18',
+                },
+              }}
+            >
+              Konzultációt kérek
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };

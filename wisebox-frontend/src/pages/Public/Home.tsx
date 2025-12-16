@@ -1,6 +1,7 @@
 import React from 'react';
 import { Hero } from '../../components/Public/Hero';
 import { BelieveInROI } from '../../components/Public/BelieveInROI';
+import { WaveDivider } from '../../components/Public/WaveDivider';
 import { GuaranteedROI } from '../../components/Public/GuaranteedROI';
 import { Vision } from '../../components/Public/Vision';
 import { Features } from '../../components/Public/Features';
@@ -17,6 +18,7 @@ export const Home: React.FC = () => {
     <>
       <Hero />
       <BelieveInROI />
+      <WaveDivider variant="white-to-green" />
       <GuaranteedROI />
       <Vision />
       <Features />
