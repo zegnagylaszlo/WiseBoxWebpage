@@ -9,7 +9,6 @@ import {
   ListItem,
   ListItemText,
   Box,
-  Container,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
@@ -30,27 +29,42 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <AppBar position="sticky" color="default" elevation={1} sx={{ bgcolor: 'white' }}>
-      <Container>
-        <Toolbar disableGutters>
+    <AppBar position="sticky" elevation={0} sx={{ bgcolor: '#2B2B28' }}>
+      <Box sx={{ px: { xs: 3, md: 8, lg: 12, xl: 15 } }}>
+        <Toolbar disableGutters sx={{ py: 1.5, px: 0, maxWidth: '1440px', mx: 'auto' }}>
+          {/* Logo and WISEBOX text - Left side */}
           <Box
             component={Link}
             to="/"
             sx={{
-              flexGrow: 1,
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
+              gap: 1.5,
+              flexGrow: 0,
             }}
           >
             <img
               src="/images/wisebox-logo.webp"
               alt="Wisebox"
-              style={{ height: '50px', width: 'auto' }}
+              style={{ height: '60px', width: 'auto' }}
             />
+            <Box
+              sx={{
+                color: 'white',
+                fontWeight: 700,
+                fontSize: '18px',
+                letterSpacing: '0.5px',
+              }}
+            >
+              WISEBOX
+            </Box>
           </Box>
 
-          {/* Desktop menu */}
+          {/* Spacer to push menu to the right */}
+          <Box sx={{ flexGrow: 1 }} />
+
+          {/* Desktop menu - Right side */}
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2, alignItems: 'center' }}>
             {menuItems.map((item) => (
               <Button
@@ -58,12 +72,15 @@ export const Navbar: React.FC = () => {
                 component={Link}
                 to={item.path}
                 sx={{
-                  color: 'text.primary',
-                  fontWeight: 600,
-                  fontSize: '16px',
+                  color: 'white',
+                  fontWeight: 400,
+                  fontSize: '15px',
                   textTransform: 'none',
+                  padding: '6px 12px',
+                  minWidth: 'auto',
                   '&:hover': {
                     color: 'primary.main',
+                    bgcolor: 'transparent',
                   },
                 }}
               >
@@ -74,13 +91,19 @@ export const Navbar: React.FC = () => {
               variant="contained"
               color="primary"
               sx={{
-                ml: 1,
-                px: 3.5,
-                py: 1.5,
+                bgcolor: 'primary.main',
+                color: 'white',
                 fontWeight: 700,
-                textTransform: 'uppercase',
                 fontSize: '14px',
+                textTransform: 'uppercase',
+                px: 3,
+                py: 1.25,
                 borderRadius: '4px',
+                boxShadow: 'none',
+                '&:hover': {
+                  bgcolor: 'primary.dark',
+                  boxShadow: 'none',
+                },
               }}
             >
               KONZULTÁCIÓT KÉREK
@@ -89,16 +112,19 @@ export const Navbar: React.FC = () => {
 
           {/* Mobile menu toggle */}
           <IconButton
-            color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ display: { md: 'none' } }}
+            sx={{
+              display: { md: 'none' },
+              ml: 'auto',
+              color: 'white',
+            }}
           >
             <MenuIcon />
           </IconButton>
         </Toolbar>
-      </Container>
+      </Box>
 
       {/* Mobile drawer */}
       <Drawer
