@@ -21,7 +21,7 @@ export const Stats: React.FC = () => {
     <Box
       sx={{
         py: { xs: 8, md: 12 },
-        background: 'linear-gradient(90deg, #00964B 0%, #2B2B28 100%)',
+        bgcolor: '#f3fff6',
       }}
     >
       <Container>
@@ -30,22 +30,22 @@ export const Stats: React.FC = () => {
           variant="h2"
           sx={{
             mb: 2,
-            color: 'white',
+            color: '#2B2B28',
             fontSize: { xs: '32px', md: '45px' },
             fontWeight: 700,
             textTransform: 'uppercase',
             textAlign: 'center',
           }}
         >
-          RÓLUNK MONDTÁK
+          WISEBOX SZÁMOKBAN
         </Typography>
 
-        {/* White Underline */}
+        {/* Green Underline */}
         <Box
           sx={{
             width: '80px',
             height: '4px',
-            bgcolor: 'white',
+            bgcolor: 'primary.main',
             mx: 'auto',
             mb: 8,
           }}
@@ -66,11 +66,13 @@ export const Stats: React.FC = () => {
               sx={{
                 textAlign: 'center',
                 p: 4,
-                bgcolor: 'rgba(255, 255, 255, 0.1)',
+                bgcolor: 'white',
                 borderRadius: '8px',
                 transition: 'transform 0.3s ease',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
                 '&:hover': {
                   transform: 'translateY(-8px)',
+                  boxShadow: '0 6px 16px rgba(0,0,0,0.15)',
                 },
               }}
             >
@@ -78,7 +80,7 @@ export const Stats: React.FC = () => {
                 variant="h4"
                 sx={{
                   mb: 3,
-                  color: 'white',
+                  color: '#2B2B28',
                   fontSize: { xs: '24px', md: '28px' },
                   fontWeight: 700,
                 }}
@@ -88,7 +90,7 @@ export const Stats: React.FC = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  color: 'white',
+                  color: '#2B2B28',
                   fontSize: '16px',
                   lineHeight: 1.6,
                   whiteSpace: 'pre-line',
@@ -106,8 +108,8 @@ export const Stats: React.FC = () => {
             variant="contained"
             size="large"
             sx={{
-              bgcolor: 'white',
-              color: 'primary.main',
+              bgcolor: 'primary.main',
+              color: 'white',
               px: 5,
               py: 2,
               fontSize: '17px',
@@ -116,7 +118,7 @@ export const Stats: React.FC = () => {
               borderRadius: '4px',
               boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
               '&:hover': {
-                bgcolor: '#f5f5f5',
+                bgcolor: '#2E8640',
                 boxShadow: '0 6px 16px rgba(0,0,0,0.25)',
               },
             }}

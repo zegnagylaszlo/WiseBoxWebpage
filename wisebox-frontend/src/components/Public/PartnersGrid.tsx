@@ -44,7 +44,7 @@ export const PartnersGrid: React.FC = () => {
     <Box
       sx={{
         py: { xs: 8, md: 12 },
-        bgcolor: '#2B2B28',
+        bgcolor: '#FAFAFA',
       }}
     >
       <Box
