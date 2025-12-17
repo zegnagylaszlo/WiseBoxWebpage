@@ -7,7 +7,7 @@ export const Pricing: React.FC = () => {
       number: '1',
       color: '#00964B', // Green
       title: 'Kötöttségek nélkül',
-      description: 'Elkötelezôdés nélkül, amíg szeretnéd',
+      description: 'Elköteleződés nélkül, amíg szeretnéd',
     },
     {
       number: '2',
@@ -44,7 +44,7 @@ export const Pricing: React.FC = () => {
             lineHeight: 1.3,
           }}
         >
-          ELKÖTELEZÔDÉS ÉS REJTETT KÖLTSÉGEK NÉLKÜL
+          ELKÖTELEZŐDÉS ÉS REJTETT KÖLTSÉGEK NÉLKÜL
         </Typography>
 
         {/* Green Underline */}
