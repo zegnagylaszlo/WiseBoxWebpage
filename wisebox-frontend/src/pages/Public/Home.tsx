@@ -21,6 +21,7 @@ export const Home: React.FC = () => {
   return (
     <>
       <Hero />
+      <WhyWiseBox />
       <BelieveInROI />
       <WaveDivider variant="white-to-green" />
       <GuaranteedROI />
@@ -34,7 +35,6 @@ export const Home: React.FC = () => {
       <BusinessPartner />
       <Contact />
       <ReferralOpportunity />
-      <WhyWiseBox />
       <ServiceCards />
       <CallToAction />
     </>

@@ -8,18 +8,18 @@ export const WhyWiseBox: React.FC = () => {
   const features = [
     {
       icon: <VisibilityIcon sx={{ fontSize: '75px' }} />,
-      title: 'Átlátható pénzügyek',
-      description: 'Láthatóvá tesszük a könyvelési adataidat, hogy minden pillanatban tiszta képet kapj vállalkozásod pénzügyi helyzetéről.',
+      title: 'Elérhető könyvelési adatok',
+      description: 'Elérhetővé tesszük a könyvelési adataidat, hogy minden pillanatban tiszta képet kapj vállalkozásod pénzügyi helyzetéről.',
     },
     {
       icon: <AssessmentIcon sx={{ fontSize: '75px' }} />,
       title: 'Döntéstámogatás',
-      description: 'Értelmezhetővé tesszük az adatokat, hogy megalapozott döntéseket hozhass vállalkozásod jövőjével kapcsolatban.',
+      description: 'Értelmezhetővé tesszük az adatokat, hogy megalapozott döntéseket hozhass vállalkozásod működésével kapcsolatban.',
     },
     {
       icon: <TrendingUpIcon sx={{ fontSize: '75px' }} />,
       title: 'Egyszerű és érthető',
-      description: 'Könnyen használható rendszer, amely a bonyolult könyvelési adatokat egyszerű, érthető formában jeleníti meg.',
+      description: 'Könnyen használható, felhasználó-barát rendszer, amely a bonyolult könyvelési adatokat egyszerű, érthető formában jeleníti meg.',
     },
   ];
 
@@ -57,7 +57,7 @@ export const WhyWiseBox: React.FC = () => {
               mx: 'auto',
             }}
           >
-            Könnyen és érthetően
+            Mert a válaszokra van szükséged, nem az adatokra
           </Typography>
         </Box>
         <Box
@@ -106,6 +106,10 @@ export const WhyWiseBox: React.FC = () => {
                       fontSize: '30px',
                       color: '#2B2B28',
                       mb: 2,
+                      minHeight: { xs: 'auto', md: '75px' },
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                     }}
                   >
                     {feature.title}
