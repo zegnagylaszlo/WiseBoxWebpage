@@ -49,12 +49,15 @@ export const WhyWiseBox: React.FC = () => {
             }}
           />
           <Typography
-            variant="body1"
+            variant="h4"
             sx={{
-              fontSize: '18px',
-              color: '#2B2B28',
-              maxWidth: '600px',
+              fontSize: { xs: '22px', md: '28px' },
+              fontWeight: 600,
+              color: 'primary.main',
+              maxWidth: '800px',
               mx: 'auto',
+              lineHeight: 1.3,
+              mb: 2,
             }}
           >
             Mert a válaszokra van szükséged, nem az adatokra
@@ -108,7 +111,7 @@ export const WhyWiseBox: React.FC = () => {
                       mb: 2,
                       minHeight: { xs: 'auto', md: '75px' },
                       display: 'flex',
-                      alignItems: 'center',
+                      alignItems: 'flex-start',
                       justifyContent: 'center',
                     }}
                   >
