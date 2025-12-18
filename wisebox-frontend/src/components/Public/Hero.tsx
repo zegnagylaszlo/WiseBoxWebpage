@@ -67,7 +67,7 @@ export const Hero: React.FC = () => {
             },
           }}
         >
-          Konzultációt kérek
+          KONZULTÁCIÓT KÉREK
         </Button>
       </Container>
     </Box>

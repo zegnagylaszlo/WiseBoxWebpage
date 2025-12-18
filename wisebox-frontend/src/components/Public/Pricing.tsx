@@ -169,7 +169,7 @@ export const Pricing: React.FC = () => {
               },
             }}
           >
-            Konzultációt kérek
+            KONZULTÁCIÓT KÉREK
           </Button>
         </Box>
       </Container>

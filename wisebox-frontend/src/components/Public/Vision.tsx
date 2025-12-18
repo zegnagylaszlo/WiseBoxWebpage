@@ -146,11 +146,11 @@ export const Vision: React.FC = () => {
                 textTransform: 'none',
                 alignSelf: { xs: 'center', md: 'flex-start' },
                 '&:hover': {
-                  bgcolor: '#1a1a18',
+                  bgcolor: '#1F1F1D',
                 },
               }}
             >
-              Konzultációt kérek
+              KONZULTÁCIÓT KÉREK
             </Box>
           </Box>
         </Box>

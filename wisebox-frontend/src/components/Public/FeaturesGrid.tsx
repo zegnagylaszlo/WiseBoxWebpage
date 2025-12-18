@@ -45,7 +45,7 @@ export const FeaturesGrid: React.FC = () => {
     <Box
       sx={{
         py: { xs: 8, md: 12 },
-        bgcolor: '#2B2B28',
+        bgcolor: '#FFFFFF',
       }}
     >
       <Container>
@@ -54,7 +54,7 @@ export const FeaturesGrid: React.FC = () => {
           variant="h2"
           sx={{
             mb: 2,
-            color: 'white',
+            color: '#2B2B28',
             fontSize: { xs: '28px', md: '40px' },
             fontWeight: 700,
             textTransform: 'uppercase',
@@ -64,12 +64,12 @@ export const FeaturesGrid: React.FC = () => {
           KÖVETKEZŐ SZINTRE EMELJÜK VÁLLALKOZÁSODAT
         </Typography>
 
-        {/* White Underline */}
+        {/* Green Underline */}
         <Box
           sx={{
             width: '80px',
             height: '4px',
-            bgcolor: 'white',
+            bgcolor: 'primary.main',
             mx: 'auto',
             mb: 8,
           }}

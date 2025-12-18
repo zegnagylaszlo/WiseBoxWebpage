@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
             >
               <a href="/uzletfejlesztok">Üzletfejlesztők</a>
               <a href="/ajanloi-program">Ajánlói program</a>
-              <a href="#contact">Konzultációt kérek</a>
+              <a href="#contact">KONZULTÁCIÓT KÉREK</a>
             </Typography>
           </Box>
           <Box>

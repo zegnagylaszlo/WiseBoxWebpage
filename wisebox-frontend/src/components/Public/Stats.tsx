@@ -123,7 +123,7 @@ export const Stats: React.FC = () => {
               },
             }}
           >
-            Konzultációt kérek
+            KONZULTÁCIÓT KÉREK
           </Button>
         </Box>
       </Container>

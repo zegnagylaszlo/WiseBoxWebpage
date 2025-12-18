@@ -151,7 +151,7 @@ export const PannonUniversity: React.FC = () => {
                   color: 'white',
                   borderRadius: '4px',
                   '&:hover': {
-                    bgcolor: '#1a1a18',
+                    bgcolor: '#1F1F1D',
                   },
                 }}
               >
