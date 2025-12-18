@@ -4,7 +4,7 @@ import { BelieveInROI } from '../../components/Public/BelieveInROI';
 import { WaveDivider } from '../../components/Public/WaveDivider';
 import { GuaranteedROI } from '../../components/Public/GuaranteedROI';
 import { Vision } from '../../components/Public/Vision';
-import { Features } from '../../components/Public/Features';
+import { WhyWiseBox } from '../../components/Public/WhyWiseBox';
 import { ServiceCards } from '../../components/Public/ServiceCards';
 import { FeaturesGrid } from '../../components/Public/FeaturesGrid';
 import { Pricing } from '../../components/Public/Pricing';
@@ -34,7 +34,7 @@ export const Home: React.FC = () => {
       <BusinessPartner />
       <Contact />
       <ReferralOpportunity />
-      <Features />
+      <WhyWiseBox />
       <ServiceCards />
       <CallToAction />
     </>

@@ -4,7 +4,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
-export const Features: React.FC = () => {
+export const WhyWiseBox: React.FC = () => {
   const features = [
     {
       icon: <VisibilityIcon sx={{ fontSize: '75px' }} />,
