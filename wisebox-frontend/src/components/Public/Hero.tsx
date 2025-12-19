@@ -67,7 +67,7 @@ export const Hero: React.FC = () => {
             },
           }}
         >
-          KONZULTÁCIÓT KÉREK
+          IDŐPONTOT KÉREK
         </Button>
       </Container>
     </Box>

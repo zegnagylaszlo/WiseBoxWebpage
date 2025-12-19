@@ -151,7 +151,7 @@ export const BelieveInROI: React.FC = () => {
                   },
                 }}
               >
-                KONZULTÁCIÓT KÉREK
+                IDŐPONTOT KÉREK
               </Box>
             </Box>
           </Box>

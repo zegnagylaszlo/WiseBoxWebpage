@@ -31,11 +31,15 @@ export const Home: React.FC = () => {
       <Pricing />
       <Stats />
       <StrategicPartnersNew />
+      {/*
       <BusinessPartner />
+      */}
       <Contact />
       <ReferralOpportunity />
+      {/*
       <ServiceCards />
       <CallToAction />
+      */}
     </>
   );
 };

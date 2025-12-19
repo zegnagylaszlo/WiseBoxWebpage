@@ -106,7 +106,7 @@ export const Navbar: React.FC = () => {
                 },
               }}
             >
-              KONZULTÁCIÓT KÉREK
+              IDŐPONTOT KÉREK
             </Button>
           </Box>
 
