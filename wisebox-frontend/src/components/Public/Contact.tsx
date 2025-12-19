@@ -11,7 +11,7 @@ export const Contact: React.FC = () => {
         bgcolor: 'primary.main', // Green
       }}
     >
-      <Container>
+      <Container maxWidth="xl">
         {/* Section Title */}
         <Typography
           variant="h2"
@@ -24,7 +24,9 @@ export const Contact: React.FC = () => {
             textAlign: 'center',
           }}
         >
-          VEDD FEL VELÜNK A KAPCSOLATOT
+          KÉSZEN ÁLLSZ A KEZDÉSRE? <br />
+          <br />
+          VEDD FEL VELÜNK A KAPCSOLATOT!
         </Typography>
 
         {/* White Underline */}
@@ -34,9 +36,33 @@ export const Contact: React.FC = () => {
             height: '4px',
             bgcolor: 'white',
             mx: 'auto',
-            mb: 6,
+            mb: 4,
           }}
         />
+
+        {/* Subtitle */}
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            mb: 8,
+            px: { xs: 2, md: 2, lg: 3, xl: 4 },
+          }}
+        >
+          <Typography
+            variant="h4"
+            sx={{
+              color: 'white',
+              fontSize: { xs: '20px', md: '26px', lg: '28px', xl: '30px' },
+              fontWeight: 600,
+              textAlign: 'center',
+              lineHeight: 1.3,
+              whiteSpace: { md: 'nowrap' },
+            }}
+          >
+            Fedezd fel, hogyan segíthet a Wisebox még jobban megérteni céged könyvelési adatait
+          </Typography>
+        </Box>
 
         {/* Two Column Layout */}
         <Box
@@ -63,8 +89,8 @@ export const Contact: React.FC = () => {
                 lineHeight: 1.6,
               }}
             >
-              Ha megtestezett controlling szoftverünk, vagy szeretnél egy konzultációt kérni,<br />
-              kérjük írj a megadott email címre vagy hívj a megadott telefonszámon!
+              Ha megtetszett a WiseBox kontrolling szoftverünk és szeretnél egy bemutatót, konzultációt kérni,
+              kérjük írj az email címünkre vagy hívd az számodra legszompatikusabb Üzletfejlesztési partnerünket!
             </Typography>
           </Box>
 
@@ -77,7 +103,8 @@ export const Contact: React.FC = () => {
               justifyContent: 'center',
             }}
           >
-            {/* Phone */}
+            {/*
+            Phone
             <Box
               sx={{
                 display: 'flex',
@@ -110,6 +137,7 @@ export const Contact: React.FC = () => {
                 +36 70 931 9828
               </Typography>
             </Box>
+            */} 
 
             {/* Email */}
             <Box
