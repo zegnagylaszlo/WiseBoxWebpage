@@ -90,6 +90,7 @@ export const Navbar: React.FC = () => {
             <Button
               variant="contained"
               color="primary"
+              href="#contact"
               sx={{
                 bgcolor: 'primary.main',
                 color: 'white',

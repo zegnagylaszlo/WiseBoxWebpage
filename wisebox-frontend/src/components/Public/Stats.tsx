@@ -107,6 +107,7 @@ export const Stats: React.FC = () => {
           <Button
             variant="contained"
             size="large"
+            href="#contact"
             sx={{
               bgcolor: 'primary.main',
               color: 'white',

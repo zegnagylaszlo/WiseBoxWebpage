@@ -132,7 +132,8 @@ export const Vision: React.FC = () => {
 
             {/* Button */}
             <Box
-              component="button"
+              component="a"
+              href="#contact"
               sx={{
                 bgcolor: '#2B2B28',
                 color: 'white',
@@ -144,6 +145,8 @@ export const Vision: React.FC = () => {
                 cursor: 'pointer',
                 borderRadius: '4px',
                 textTransform: 'none',
+                textDecoration: 'none',
+                display: 'inline-block',
                 alignSelf: { xs: 'center', md: 'flex-start' },
                 '&:hover': {
                   bgcolor: '#1F1F1D',

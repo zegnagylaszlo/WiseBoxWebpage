@@ -156,6 +156,7 @@ export const Pricing: React.FC = () => {
             variant="contained"
             color="primary"
             size="large"
+            href="#contact"
             sx={{
               px: 5,
               py: 2,

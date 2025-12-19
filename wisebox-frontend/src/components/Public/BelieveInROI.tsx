@@ -134,7 +134,8 @@ export const BelieveInROI: React.FC = () => {
             {/* Button */}
             <Box sx={{ mt: 4 }}>
               <Box
-                component="button"
+                component="a"
+                href="#contact"
                 sx={{
                   bgcolor: '#00964B',
                   color: 'white',
@@ -146,6 +147,8 @@ export const BelieveInROI: React.FC = () => {
                   cursor: 'pointer',
                   borderRadius: '3px',
                   textTransform: 'none',
+                  textDecoration: 'none',
+                  display: 'inline-block',
                   '&:hover': {
                     bgcolor: '#2E8640',
                   },

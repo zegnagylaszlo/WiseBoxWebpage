@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Box, Container, Typography, Button, TextField, Alert } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
@@ -13,16 +13,6 @@ export const Contact: React.FC = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  const formRef = useRef<HTMLDivElement>(null);
-
-  // Scroll to form function
-  const scrollToForm = () => {
-    formRef.current?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  };
 
   // Validation function
   const validateForm = (): boolean => {
@@ -80,6 +70,7 @@ export const Contact: React.FC = () => {
 
   return (
     <Box
+      id="contact"
       sx={{
         bgcolor: '#F5F5F5',
         py: { xs: 4, md: 6 },
@@ -176,7 +167,7 @@ export const Contact: React.FC = () => {
               size="large"
               startIcon={<EmailIcon />}
               component="a"
-              href="mailto:info@wisebox.hu"
+              href="#contact-email"
               sx={{
                 bgcolor: 'white',
                 color: 'primary.main',
@@ -202,7 +193,7 @@ export const Contact: React.FC = () => {
               size="large"
               startIcon={<PhoneIcon />}
               component="a"
-              href="tel:+36709319828"
+              href="#contact-phone"
               sx={{
                 bgcolor: 'white',
                 color: 'primary.main',
@@ -227,7 +218,8 @@ export const Contact: React.FC = () => {
               variant="contained"
               size="large"
               startIcon={<SendIcon />}
-              onClick={scrollToForm}
+              component="a"
+              href="#contact-form"
               sx={{
                 bgcolor: 'white',
                 color: 'primary.main',
@@ -252,6 +244,7 @@ export const Contact: React.FC = () => {
 
       {/* Contact Cards Section - White Background */}
         <Box
+          id="contact-phone"
           sx={{
             py: { xs: 8, md: 10 },
             bgcolor: 'white',
@@ -513,7 +506,7 @@ export const Contact: React.FC = () => {
 
       {/* Contact Form Section - Light Grey Background */}
       <Box
-        ref={formRef}
+        id="contact-form"
         sx={{
           py: { xs: 8, md: 12 },
           bgcolor: '#F5F5F5',
@@ -653,6 +646,7 @@ export const Contact: React.FC = () => {
 
       {/* Email Section - White Background */}
       <Box
+        id="contact-email"
         sx={{
           py: { xs: 8, md: 10 },
           bgcolor: 'white',

@@ -74,6 +74,7 @@ export const ReferralOpportunity: React.FC = () => {
             <Button
               variant="contained"
               size="large"
+              href="#contact"
               sx={{
                 bgcolor: 'primary.main',
                 color: 'white',
