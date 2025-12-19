@@ -11,6 +11,7 @@ import { Pricing } from '../../components/Public/Pricing';
 import { StrategyPartners } from '../../components/Public/StrategyPartners';
 import { PannonUniversity } from '../../components/Public/PannonUniversity';
 import { PartnersGrid } from '../../components/Public/PartnersGrid';
+import { StrategicPartnersNew } from '../../components/Public/StrategicPartnersNew';
 import { BusinessPartner } from '../../components/Public/BusinessPartner';
 import { ReferralOpportunity } from '../../components/Public/ReferralOpportunity';
 import { Stats } from '../../components/Public/Stats';
@@ -28,10 +29,8 @@ export const Home: React.FC = () => {
       <Vision />
       <FeaturesGrid />
       <Pricing />
-      <StrategyPartners />
-      <PannonUniversity />
-      <PartnersGrid />
       <Stats />
+      <StrategicPartnersNew />
       <BusinessPartner />
       <Contact />
       <ReferralOpportunity />
