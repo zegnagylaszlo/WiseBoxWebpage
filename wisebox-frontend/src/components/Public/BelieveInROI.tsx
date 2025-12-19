@@ -136,7 +136,7 @@ export const BelieveInROI: React.FC = () => {
               <Box
                 component="button"
                 sx={{
-                  bgcolor: '#2B2B28',
+                  bgcolor: '#00964B',
                   color: 'white',
                   px: 4,
                   py: 2,
@@ -147,7 +147,7 @@ export const BelieveInROI: React.FC = () => {
                   borderRadius: '3px',
                   textTransform: 'none',
                   '&:hover': {
-                    bgcolor: '#1F1F1D',
+                    bgcolor: '#2E8640',
                   },
                 }}
               >
