@@ -116,33 +116,6 @@ export const BelieveInROI: React.FC = () => {
                 </Box>
               ))}
             </Box>
-
-            {/* Button */}
-            <Box sx={{ mt: 4 }}>
-              <Box
-                component="a"
-                href="#contact"
-                sx={{
-                  bgcolor: '#00964B',
-                  color: 'white',
-                  px: 4,
-                  py: 2,
-                  fontSize: '16px',
-                  fontWeight: 600,
-                  border: 'none',
-                  cursor: 'pointer',
-                  borderRadius: '3px',
-                  textTransform: 'none',
-                  textDecoration: 'none',
-                  display: 'inline-block',
-                  '&:hover': {
-                    bgcolor: '#2E8640',
-                  },
-                }}
-              >
-                IDŐPONTOT KÉREK
-              </Box>
-            </Box>
           </Box>
 
           {/* Right Column - Image */}

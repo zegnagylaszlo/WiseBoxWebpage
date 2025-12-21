@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import GroupsIcon from '@mui/icons-material/Groups';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -191,32 +191,6 @@ export const Stats: React.FC = () => {
               </Box>
             );
           })}
-        </Box>
-
-        {/* Button */}
-        <Box sx={{ textAlign: 'center' }}>
-          <Button
-            variant="contained"
-            size="large"
-            href="#contact"
-            sx={{
-              bgcolor: 'primary.main',
-              color: 'white',
-              px: 5,
-              py: 2,
-              fontSize: '17px',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              borderRadius: '4px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-              '&:hover': {
-                bgcolor: '#2E8640',
-                boxShadow: '0 6px 16px rgba(0,0,0,0.25)',
-              },
-            }}
-          >
-            IDŐPONTOT KÉREK
-          </Button>
         </Box>
       </Container>
     </Box>

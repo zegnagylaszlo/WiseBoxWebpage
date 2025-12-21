@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 
 export const Pricing: React.FC = () => {
   const circles = [
@@ -148,30 +148,6 @@ export const Pricing: React.FC = () => {
               </Typography>
             </Box>
           ))}
-        </Box>
-
-        {/* Button */}
-        <Box sx={{ textAlign: 'center' }}>
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            href="#contact"
-            sx={{
-              px: 5,
-              py: 2,
-              fontSize: '17px',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              borderRadius: '4px',
-              boxShadow: '0 4px 12px rgba(0, 150, 75, 0.3)',
-              '&:hover': {
-                boxShadow: '0 6px 16px rgba(0, 150, 75, 0.4)',
-              },
-            }}
-          >
-            IDŐPONTOT KÉREK
-          </Button>
         </Box>
       </Container>
     </Box>
