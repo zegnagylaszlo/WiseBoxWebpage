@@ -18,11 +18,31 @@ export const Footer: React.FC = () => {
       <Container>
         {/* Logo and tagline */}
         <Box sx={{ mb: 4, textAlign: { xs: 'center', md: 'left' } }}>
-          <img
-            src="/images/wisebox-logo.webp"
-            alt="Wisebox"
-            style={{ height: '40px', width: 'auto', marginBottom: '12px' }}
-          />
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 1.5,
+              mb: 1.5,
+              justifyContent: { xs: 'center', md: 'flex-start' },
+            }}
+          >
+            <img
+              src="/images/wisebox-logo.webp"
+              alt="Wisebox"
+              style={{ height: '40px', width: 'auto' }}
+            />
+            <Typography
+              sx={{
+                color: 'white',
+                fontWeight: 700,
+                fontSize: '16px',
+                letterSpacing: '0.5px',
+              }}
+            >
+              WISEBOX
+            </Typography>
+          </Box>
           <Typography
             variant="body2"
             sx={{
@@ -31,7 +51,7 @@ export const Footer: React.FC = () => {
               lineHeight: 1.6,
             }}
           >
-            Könyvelési adatok könnyen és érthetően
+            A KKV-k könyvelési rendszere -  Könyvelési adatok könnyen és érthetően - Mert a válaszokra van szükséged, nem az adatokra
           </Typography>
         </Box>
 
@@ -61,9 +81,9 @@ export const Footer: React.FC = () => {
                 },
               }}
             >
-              <a href="/partnerek">Partnerek</a>
-              <a href="/referenciak">Referenciák</a>
-              <a href="/szolgaltatasok">Szolgáltatások</a>
+              <a href="#partnereink">Partnereink</a>
+              <a href="#referenciaink">Referenciáink</a>
+              <a href="#contact">Kapcsolat</a>
             </Typography>
           </Box>
           <Box>
@@ -83,9 +103,8 @@ export const Footer: React.FC = () => {
                 },
               }}
             >
-              <a href="/uzletfejlesztok">Üzletfejlesztők</a>
-              <a href="/ajanloi-program">Ajánlói program</a>
-              <a href="#contact">IDŐPONTOT KÉREK</a>
+              <a href="#ajanloi-program">Ajánlói program</a>
+              <a href="#contact">Időpontot kérek</a>
             </Typography>
           </Box>
           <Box>
@@ -105,8 +124,8 @@ export const Footer: React.FC = () => {
                 },
               }}
             >
-              <a href="/aszf">ÁSZF</a>
-              <a href="/adatkezeles">Adatkezelési Tájékoztató</a>
+              <a href="/legal/ASZF_Wisebox_20240101.pdf" target="_blank" rel="noopener noreferrer">ÁSZF</a>
+              <a href="/legal/11.Adatkezelesi_Tajekoztato_Weblap_WB.pdf" target="_blank" rel="noopener noreferrer">Adatkezelési Tájékoztató</a>
             </Typography>
           </Box>
         </Box>
@@ -213,7 +232,7 @@ export const Footer: React.FC = () => {
               fontSize: '12px',
             }}
           >
-            Created and designed by Movement Makerz
+            Created and designed by Movement Makerz & WiseBox Team
           </Typography>
         </Box>
       </Container>
