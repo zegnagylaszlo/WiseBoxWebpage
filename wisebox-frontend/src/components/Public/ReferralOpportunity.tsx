@@ -4,6 +4,7 @@ import { Box, Container, Typography, Button } from '@mui/material';
 export const ReferralOpportunity: React.FC = () => {
   return (
     <Box
+      id="ajanloi-program"
       sx={{
         py: { xs: 8, md: 12 },
         bgcolor: 'white',

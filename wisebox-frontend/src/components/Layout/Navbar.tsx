@@ -11,17 +11,15 @@ import {
   Box,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Szolgáltatások', path: '/szolgaltatasok' },
-    { label: 'Partnerek', path: '/partnerek' },
-    { label: 'Referenciák', path: '/referenciak' },
-    { label: 'Üzletfejlesztők', path: '/uzletfejlesztok' },
-    { label: 'Ajánlói program', path: '/ajanloi-program' },
+    { label: 'Partnereink', path: '#partnereink' },
+    { label: 'Referenciáink', path: '#referenciaink' },
+    { label: 'Kapcsolat', path: '#contact' },
+    { label: 'Ajánlói program', path: '#ajanloi-program' },
   ];
 
   const handleDrawerToggle = () => {
@@ -34,14 +32,19 @@ export const Navbar: React.FC = () => {
         <Toolbar disableGutters sx={{ py: 1.5, px: 0, maxWidth: '1440px', mx: 'auto' }}>
           {/* Logo and WISEBOX text - Left side */}
           <Box
-            component={Link}
-            to="/"
+            component="a"
+            href="/"
+            onClick={(e: React.MouseEvent) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             sx={{
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
               gap: 1.5,
               flexGrow: 0,
+              cursor: 'pointer',
             }}
           >
             <img
@@ -69,8 +72,7 @@ export const Navbar: React.FC = () => {
             {menuItems.map((item) => (
               <Button
                 key={item.path}
-                component={Link}
-                to={item.path}
+                href={item.path}
                 sx={{
                   color: 'white',
                   fontWeight: 400,
@@ -141,8 +143,8 @@ export const Navbar: React.FC = () => {
           {menuItems.map((item) => (
             <ListItem
               key={item.path}
-              component={Link}
-              to={item.path}
+              component="a"
+              href={item.path}
               onClick={handleDrawerToggle}
               sx={{
                 textDecoration: 'none',

@@ -6,11 +6,6 @@ import { wiseboxTheme } from './theme/theme';
 import { Navbar } from './components/Layout/Navbar';
 import { Footer } from './components/Layout/Footer';
 import { Home } from './pages/Public/Home';
-import { Szolgaltatasok } from './pages/Public/Szolgaltatasok';
-import { Partnerek } from './pages/Public/Partnerek';
-import { Referenciak } from './pages/Public/Referenciak';
-import { Uzletfejlesztok } from './pages/Public/Uzletfejlesztok';
-import { AjanloiProgram } from './pages/Public/AjanloiProgram';
 import { PannonPartnership } from './pages/Public/PannonPartnership';
 
 function App() {
@@ -21,11 +16,6 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/szolgaltatasok" element={<Szolgaltatasok />} />
-          <Route path="/partnerek" element={<Partnerek />} />
-          <Route path="/referenciak" element={<Referenciak />} />
-          <Route path="/uzletfejlesztok" element={<Uzletfejlesztok />} />
-          <Route path="/ajanloi-program" element={<AjanloiProgram />} />
           <Route path="/pannon-egyetem-wisebox-egyuttmukodes" element={<PannonPartnership />} />
         </Routes>
         <Footer />

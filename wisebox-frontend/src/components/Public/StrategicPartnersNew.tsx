@@ -39,6 +39,7 @@ export const StrategicPartnersNew: React.FC = () => {
 
   return (
     <Box
+      id="partnereink"
       sx={{
         bgcolor: '#F5F5F5',
         py: { xs: 4, md: 6 },
