@@ -1,14 +1,14 @@
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 export const BelieveInROI: React.FC = () => {
   const checkItems = [
-    { icon: 'check', text: 'le tudnád csökkenteni a könyvelőddel folytatott kommunikációt?' },
-    { icon: 'arrow', text: 'egyre szakmaibb rálátásod lenne a könyvelésedre: az eredményedre, áfádra, nyitott vevő / szállítói számláidra, bankjaidra, ... ?' },
-    { icon: 'arrow', text: 'egyre kevesebbet kellene kérdezned?' },
-    { icon: 'check', text: 'a könyvelési adataidból döntéstámogató információkat kapnál?' },
-    { icon: 'check', text: 'minimalizálni tudnád a rendszeres jelentések elkészítésére fordított időt és erőforrást?' },
+    { icon: 'check', text: 'csökkented a könyvelőddel folytatott kommunikációt' },
+    { icon: 'check', text: 'szakmai rálátást kapsz a könyvelésedre: eredményedre, áfádra, nyitott vevő / szállítói számláidra, bankjaidra' },
+    { icon: 'check', text: 'kevesebbet kell kérdezned, mert látod az adatokat' },
+    { icon: 'check', text: 'döntéstámogató információkat kapsz a könyvelési adataidból' },
+    { icon: 'check', text: 'minimalizálod a rendszeres jelentések elkészítésére fordított időt és erőforrást' },
   ];
 
   return (
@@ -89,34 +89,20 @@ export const BelieveInROI: React.FC = () => {
                 fontWeight: 700,
               }}
             >
-              Mi lenne ha...
+              A Wisebox segítségével...
             </Typography>
 
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               {checkItems.map((item, index) => (
                 <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>
-                  {item.icon === 'check' ? (
-                    <CheckCircleIcon
-                      sx={{
-                        color: 'primary.main',
-                        fontSize: '24px',
-                        mt: 0.2,
-                        flexShrink: 0,
-                      }}
-                    />
-                  ) : (
-                    <Box
-                      sx={{
-                        color: 'primary.main',
-                        fontSize: '24px',
-                        mt: 0.2,
-                        flexShrink: 0,
-                        fontWeight: 700,
-                      }}
-                    >
-                      →
-                    </Box>
-                  )}
+                  <CheckCircleIcon
+                    sx={{
+                      color: 'primary.main',
+                      fontSize: '24px',
+                      mt: 0.2,
+                      flexShrink: 0,
+                    }}
+                  />
                   <Typography
                     variant="body1"
                     sx={{

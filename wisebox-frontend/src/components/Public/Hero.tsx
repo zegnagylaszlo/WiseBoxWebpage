@@ -25,6 +25,20 @@ export const Hero: React.FC = () => {
     >
       <Container sx={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
         <Typography
+          variant="overline"
+          color="white"
+          sx={{
+            display: 'block',
+            mb: 2,
+            fontSize: { xs: '14px', md: '16px' },
+            fontWeight: 600,
+            letterSpacing: '2px',
+            opacity: 0.95,
+          }}
+        >
+          KONTROLLING RENDSZER KKV-KNAK
+        </Typography>
+        <Typography
           variant="h1"
           color="white"
           gutterBottom

@@ -14,6 +14,7 @@ import { StrategicPartnersNew } from '../../components/Public/StrategicPartnersN
 import { BusinessPartner } from '../../components/Public/BusinessPartner';
 import { ReferralOpportunity } from '../../components/Public/ReferralOpportunity';
 import { Stats } from '../../components/Public/Stats';
+import { Testimonials } from '../../components/Public/Testimonials';
 import { Contact } from '../../components/Public/Contact';
 import { CallToAction } from '../../components/Public/CallToAction';
 
@@ -25,6 +26,7 @@ export const Home: React.FC = () => {
       <BelieveInROI />
       <FeaturesGrid />
       <Stats />
+      <Testimonials />
       <StrategicPartnersNew />
       <WaveDivider variant="white-to-green" />
       <GuaranteedROI />
