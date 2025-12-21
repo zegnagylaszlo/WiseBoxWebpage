@@ -18,6 +18,7 @@ import { Stats } from '../../components/Public/Stats';
 import { Testimonials } from '../../components/Public/Testimonials';
 import { Contact } from '../../components/Public/Contact';
 import { CallToAction } from '../../components/Public/CallToAction';
+import { FAQ } from '../../components/Public/FAQ';
 
 export const Home: React.FC = () => {
   return (
@@ -33,6 +34,7 @@ export const Home: React.FC = () => {
       <WaveDivider variant="white-to-green" />
       <GuaranteedROI />
       <Pricing />
+      <FAQ />
       {/*
       <BusinessPartner />
       */}
