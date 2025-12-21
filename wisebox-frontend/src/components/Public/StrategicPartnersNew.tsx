@@ -314,6 +314,8 @@ export const StrategicPartnersNew: React.FC = () => {
                   variant="outlined"
                   size="large"
                   href="/pannon-egyetem-wisebox-egyuttmukodes"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
                     px: 4,
                     py: 1.5,
