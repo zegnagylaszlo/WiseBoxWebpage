@@ -11,6 +11,7 @@ import { Partnerek } from './pages/Public/Partnerek';
 import { Referenciak } from './pages/Public/Referenciak';
 import { Uzletfejlesztok } from './pages/Public/Uzletfejlesztok';
 import { AjanloiProgram } from './pages/Public/AjanloiProgram';
+import { PannonPartnership } from './pages/Public/PannonPartnership';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/referenciak" element={<Referenciak />} />
           <Route path="/uzletfejlesztok" element={<Uzletfejlesztok />} />
           <Route path="/ajanloi-program" element={<AjanloiProgram />} />
+          <Route path="/pannon-egyetem-wisebox-egyuttmukodes" element={<PannonPartnership />} />
         </Routes>
         <Footer />
       </Router>

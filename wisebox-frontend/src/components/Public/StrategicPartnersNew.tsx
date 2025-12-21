@@ -313,9 +313,7 @@ export const StrategicPartnersNew: React.FC = () => {
                 <Button
                   variant="outlined"
                   size="large"
-                  href="https://wisebox.hu/pannon-egyetem-wisebox-egyuttmukodes/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/pannon-egyetem-wisebox-egyuttmukodes"
                   sx={{
                     px: 4,
                     py: 1.5,
