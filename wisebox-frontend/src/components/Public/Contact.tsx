@@ -3,6 +3,9 @@ import { Box, Container, Typography, Button, TextField, Alert } from '@mui/mater
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import SendIcon from '@mui/icons-material/Send';
+import LockIcon from '@mui/icons-material/Lock';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import CloudDoneIcon from '@mui/icons-material/CloudDone';
 
 export const Contact: React.FC = () => {
   // Form state
@@ -640,6 +643,83 @@ export const Contact: React.FC = () => {
             >
               {isSubmitting ? 'KÜLDÉS...' : 'ÜZENET KÜLDÉSE'}
             </Button>
+
+            {/* Security Badges */}
+            <Box
+              sx={{
+                mt: 4,
+                pt: 4,
+                borderTop: '1px solid #e0e0e0',
+                display: 'flex',
+                flexDirection: { xs: 'column', sm: 'row' },
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: 3,
+              }}
+            >
+              {/* GDPR Badge */}
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                }}
+              >
+                <VerifiedUserIcon sx={{ color: '#00964B', fontSize: '24px' }} />
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: '#666',
+                    fontSize: '13px',
+                    fontWeight: 500,
+                  }}
+                >
+                  GDPR megfelelő
+                </Typography>
+              </Box>
+
+              {/* SSL Badge */}
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                }}
+              >
+                <LockIcon sx={{ color: '#00964B', fontSize: '24px' }} />
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: '#666',
+                    fontSize: '13px',
+                    fontWeight: 500,
+                  }}
+                >
+                  256-bit titkosítás
+                </Typography>
+              </Box>
+
+              {/* EU Servers Badge */}
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                }}
+              >
+                <CloudDoneIcon sx={{ color: '#00964B', fontSize: '24px' }} />
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: '#666',
+                    fontSize: '13px',
+                    fontWeight: 500,
+                  }}
+                >
+                  EU szerverek
+                </Typography>
+              </Box>
+            </Box>
           </Box>
         </Container>
       </Box>

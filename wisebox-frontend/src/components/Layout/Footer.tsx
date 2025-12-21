@@ -1,5 +1,8 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
+import LockIcon from '@mui/icons-material/Lock';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import CloudDoneIcon from '@mui/icons-material/CloudDone';
 
 export const Footer: React.FC = () => {
   return (
@@ -116,6 +119,81 @@ export const Footer: React.FC = () => {
             mt: 2,
           }}
         >
+          {/* Security Badges */}
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', sm: 'row' },
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: 3,
+              mb: 3,
+            }}
+          >
+            {/* GDPR Badge */}
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+              }}
+            >
+              <VerifiedUserIcon sx={{ color: '#00964B', fontSize: '22px' }} />
+              <Typography
+                variant="body2"
+                sx={{
+                  color: 'rgba(255,255,255,0.8)',
+                  fontSize: '13px',
+                  fontWeight: 500,
+                }}
+              >
+                GDPR megfelelő
+              </Typography>
+            </Box>
+
+            {/* SSL Badge */}
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+              }}
+            >
+              <LockIcon sx={{ color: '#00964B', fontSize: '22px' }} />
+              <Typography
+                variant="body2"
+                sx={{
+                  color: 'rgba(255,255,255,0.8)',
+                  fontSize: '13px',
+                  fontWeight: 500,
+                }}
+              >
+                256-bit titkosítás
+              </Typography>
+            </Box>
+
+            {/* EU Servers Badge */}
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+              }}
+            >
+              <CloudDoneIcon sx={{ color: '#00964B', fontSize: '22px' }} />
+              <Typography
+                variant="body2"
+                sx={{
+                  color: 'rgba(255,255,255,0.8)',
+                  fontSize: '13px',
+                  fontWeight: 500,
+                }}
+              >
+                EU szerverek
+              </Typography>
+            </Box>
+          </Box>
+
           <Typography
             variant="body2"
             align="center"
