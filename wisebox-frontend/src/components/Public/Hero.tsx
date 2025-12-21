@@ -42,29 +42,26 @@ export const Hero: React.FC = () => {
           color="white"
           sx={{
             display: 'block',
-            mb: 2,
-            fontSize: { xs: '14px', md: '16px' },
+            mb: 3,
+            fontSize: { xs: '18px', md: '22px' },
             fontWeight: 600,
             letterSpacing: '2px',
-            opacity: 0.95,
+            textShadow: '0 2px 4px rgba(0,0,0,0.3)',
           }}
         >
-          KONTROLLING RENDSZER KKV-KNAK
+          A KKV-K KONTROLLING RENDSZERE
         </Typography>
-        <Typography
-          variant="h1"
-          color="white"
-          gutterBottom
+        <Box
+          component="img"
+          src="/WB_logo/WB LOGO WHITE FIN.png"
+          alt="Wisebox Logo"
           sx={{
-            mb: 3,
-            fontSize: { xs: '32px', md: '50px' },
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            letterSpacing: '1px',
+            width: { xs: '200px', md: '300px' },
+            height: 'auto',
+            mb: 4,
+            filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))',
           }}
-        >
-          WISEBOX
-        </Typography>
+        />
         <Typography
           variant="h2"
           color="white"
@@ -73,25 +70,28 @@ export const Hero: React.FC = () => {
             fontWeight: 400,
             fontSize: { xs: '20px', md: '35px' },
             lineHeight: 1.4,
+            textShadow: '0 2px 6px rgba(0,0,0,0.25)',
           }}
         >
-          Fedezd fel a könyvelési adataidat könnyen és érthetően
+          Fedezd fel a könyvelésben rejlő adataidat könnyen és érthetően
         </Typography>
         <Button
           variant="contained"
-          color="primary"
           size="large"
           href="#contact"
           sx={{
+            bgcolor: 'white',
+            color: '#2B2B28',
             px: 5,
             py: 2,
             fontSize: '17px',
             fontWeight: 700,
             textTransform: 'uppercase',
             borderRadius: '4px',
-            boxShadow: '0 4px 12px rgba(0, 150, 75, 0.3)',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
             '&:hover': {
-              boxShadow: '0 6px 16px rgba(0, 150, 75, 0.4)',
+              bgcolor: '#f5f5f5',
+              boxShadow: '0 6px 16px rgba(0,0,0,0.4)',
             },
           }}
         >
