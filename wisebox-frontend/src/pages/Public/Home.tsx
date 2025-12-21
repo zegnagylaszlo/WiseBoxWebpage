@@ -1,6 +1,7 @@
 import React from 'react';
 import { Hero } from '../../components/Public/Hero';
 import { BelieveInROI } from '../../components/Public/BelieveInROI';
+import { BelieveInROI_Solution } from '../../components/Public/BelieveInROI_Solution';
 import { WaveDivider } from '../../components/Public/WaveDivider';
 import { GuaranteedROI } from '../../components/Public/GuaranteedROI';
 import { WhyWiseBox } from '../../components/Public/WhyWiseBox';
@@ -23,7 +24,8 @@ export const Home: React.FC = () => {
     <>
       <Hero />
       <WhyWiseBox />
-      <BelieveInROI />
+      {/* <BelieveInROI /> */}
+      <BelieveInROI_Solution />
       <FeaturesGrid />
       <Stats />
       <Testimonials />
