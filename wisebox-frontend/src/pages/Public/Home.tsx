@@ -3,7 +3,6 @@ import { Hero } from '../../components/Public/Hero';
 import { BelieveInROI } from '../../components/Public/BelieveInROI';
 import { WaveDivider } from '../../components/Public/WaveDivider';
 import { GuaranteedROI } from '../../components/Public/GuaranteedROI';
-import { Vision } from '../../components/Public/Vision';
 import { WhyWiseBox } from '../../components/Public/WhyWiseBox';
 import { ServiceCards } from '../../components/Public/ServiceCards';
 import { FeaturesGrid } from '../../components/Public/FeaturesGrid';
@@ -24,13 +23,12 @@ export const Home: React.FC = () => {
       <Hero />
       <WhyWiseBox />
       <BelieveInROI />
-      <WaveDivider variant="white-to-green" />
-      <GuaranteedROI />
-      <Vision />
       <FeaturesGrid />
-      <Pricing />
       <Stats />
       <StrategicPartnersNew />
+      <WaveDivider variant="white-to-green" />
+      <GuaranteedROI />
+      <Pricing />
       {/*
       <BusinessPartner />
       */}
