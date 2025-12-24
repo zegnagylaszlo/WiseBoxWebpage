@@ -17,6 +17,7 @@ export const Home: React.FC = () => {
     <>
       <Hero />
       <WhyWiseBox />
+      {/* eslint-disable-next-line react/jsx-pascal-case */}
       <BelieveInROI_Solution />
       <FeaturesGrid />
       <Stats />
