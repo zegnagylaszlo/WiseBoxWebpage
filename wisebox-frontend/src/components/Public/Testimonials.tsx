@@ -29,7 +29,7 @@ export const Testimonials: React.FC = () => {
       id="referenciaink"
       sx={{
         py: { xs: 10, md: 14 },
-        bgcolor: '#FFFFFF',
+        bgcolor: 'background.paper',
       }}
     >
       <Container>

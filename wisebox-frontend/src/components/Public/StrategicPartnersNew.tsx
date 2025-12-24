@@ -41,7 +41,7 @@ export const StrategicPartnersNew: React.FC = () => {
     <Box
       id="partnereink"
       sx={{
-        bgcolor: 'background.paper',
+        bgcolor: '#FFFFFF',
         py: { xs: 10, md: 14 },
       }}
     >
@@ -75,7 +75,7 @@ export const StrategicPartnersNew: React.FC = () => {
         <Box
           sx={{
             p: 6,
-            bgcolor: '#FFFFFF',
+            bgcolor: 'background.paper',
             borderRadius: '12px',
             boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
             mb: 6,
@@ -154,7 +154,7 @@ export const StrategicPartnersNew: React.FC = () => {
         <Box
           sx={{
             p: 6,
-            bgcolor: '#FFFFFF',
+            bgcolor: 'background.paper',
             borderRadius: '12px',
             boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
             mb: 6,
@@ -340,7 +340,7 @@ export const StrategicPartnersNew: React.FC = () => {
               <Box
                 key={index}
                 sx={{
-                  bgcolor: '#FFFFFF',
+                  bgcolor: 'background.paper',
                   borderRadius: '12px',
                   p: 4,
                   display: 'flex',
