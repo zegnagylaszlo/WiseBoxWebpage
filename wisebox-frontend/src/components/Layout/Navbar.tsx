@@ -105,7 +105,7 @@ export const Navbar: React.FC = () => {
             ))}
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
               href="#contact"
               sx={{
                 ml: 2,
@@ -186,7 +186,7 @@ export const Navbar: React.FC = () => {
           <ListItem sx={{ mx: 2, mt: 2 }}>
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
               href="#contact"
               fullWidth
               onClick={handleDrawerToggle}

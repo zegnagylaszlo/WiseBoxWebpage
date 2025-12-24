@@ -59,30 +59,19 @@ export const Hero: React.FC = () => {
               Mert a válaszokra van szükséged, nem az adatokra
             </Typography>
 
-            {/* CTA Buttons */}
+            {/* CTA Button */}
             <Box
               sx={{
-                display: 'flex',
-                flexDirection: { xs: 'column', sm: 'row' },
-                gap: 2,
                 mb: 4,
               }}
             >
               <Button
                 variant="contained"
-                color="secondary"
+                color="primary"
                 size="large"
                 href="#contact"
               >
                 IDŐPONTOT KÉREK
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                size="large"
-                href="#partnereink"
-              >
-                Tudj meg többet
               </Button>
             </Box>
 
@@ -97,7 +86,7 @@ export const Hero: React.FC = () => {
             >
               <CheckCircleOutlineIcon sx={{ color: 'success.main', fontSize: '24px' }} />
               <Typography variant="body2" sx={{ fontSize: '15px' }}>
-                Több mint 500+ magyar KKV bizalma
+                Több mint 80+ magyar KKV bizalmát élvezzük
               </Typography>
             </Box>
           </Box>

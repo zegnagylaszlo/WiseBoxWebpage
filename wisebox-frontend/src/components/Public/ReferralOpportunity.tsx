@@ -70,7 +70,7 @@ export const ReferralOpportunity: React.FC = () => {
 
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
               size="large"
               href="#contact"
               sx={{

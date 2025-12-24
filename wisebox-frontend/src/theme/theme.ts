@@ -122,15 +122,15 @@ export const wiseboxTheme = createTheme({
           },
         },
         containedPrimary: {
-          backgroundColor: '#FF6B6B', // Coral for primary CTAs
-          color: '#FFFFFF',
+          color: '#FFFFFF', // White text on Teal background
+          backgroundColor: '#0A7B7F',
           '&:hover': {
-            backgroundColor: '#E85555',
+            backgroundColor: '#085F62',
           },
         },
         containedSecondary: {
-          backgroundColor: '#0A7B7F', // Teal for secondary CTAs
-          color: '#FFFFFF',
+          color: '#FFFFFF', // White text on Teal background
+          backgroundColor: '#0A7B7F',
           '&:hover': {
             backgroundColor: '#085F62',
           },

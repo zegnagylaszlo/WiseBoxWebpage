@@ -9,7 +9,7 @@ export const WhyWiseBox: React.FC = () => {
     {
       icon: <VisibilityIcon sx={{ fontSize: '75px' }} />,
       title: 'Elérhető könyvelési adatok',
-      description: 'Elérhetővé tesszük a könyvelési adataidat, hogy minden pillanatban tiszta képet kapj vállalkozásod pénzügyi helyzetéről.',
+      description: 'Elérhetővé tesszük a könyvelési adataidat, hogy minden pillanatban tiszta képet kapj vállalkozásod gazdasági helyzetéről.',
     },
     {
       icon: <AssessmentIcon sx={{ fontSize: '75px' }} />,
@@ -47,17 +47,7 @@ export const WhyWiseBox: React.FC = () => {
               mx: 'auto',
             }}
           >
-            Egyszerű, átlátható, garantált ROI
-          </Typography>
-          <Typography
-            variant="h5"
-            sx={{
-              color: 'text.secondary',
-              maxWidth: '700px',
-              mx: 'auto',
-            }}
-          >
-            Mert a válaszokra van szükséged, nem az adatokra
+            Egyszerű, átlátható, garantált megtérülés
           </Typography>
         </Box>
 
@@ -67,6 +57,7 @@ export const WhyWiseBox: React.FC = () => {
             display: 'grid',
             gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
             gap: 4,
+            mb: 6,
           }}
         >
           {features.map((feature, index) => (
@@ -118,6 +109,20 @@ export const WhyWiseBox: React.FC = () => {
               </CardContent>
             </Card>
           ))}
+        </Box>
+
+        {/* Bottom Text */}
+        <Box sx={{ textAlign: 'center' }}>
+          <Typography
+            variant="h5"
+            sx={{
+              color: 'text.primary',
+              fontWeight: 600,
+              lineHeight: 1.5,
+            }}
+          >
+            Ahol a könyvelés találkozik az üzleti intelligenciával
+          </Typography>
         </Box>
       </Container>
     </Box>

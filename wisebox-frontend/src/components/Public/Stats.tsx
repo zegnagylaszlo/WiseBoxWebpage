@@ -156,7 +156,7 @@ export const Stats: React.FC = () => {
                   sx={{
                     mb: 1,
                     color: 'text.primary',
-                    fontSize: { xs: '40px', md: '48px' },
+                    fontSize: { xs: '32px', md: '36px' },
                     fontWeight: 700,
                   }}
                 >

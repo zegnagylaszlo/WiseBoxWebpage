@@ -126,7 +126,7 @@ export const Pricing: React.FC = () => {
         <Box sx={{ textAlign: 'center' }}>
           <Button
             variant="contained"
-            color="secondary"
+            color="primary"
             size="large"
             href="#contact"
             sx={{

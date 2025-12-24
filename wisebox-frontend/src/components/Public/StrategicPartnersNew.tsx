@@ -136,7 +136,7 @@ export const StrategicPartnersNew: React.FC = () => {
 
           <Button
             variant="contained"
-            color="info"
+            color="secondary"
             size="large"
             href="https://b2b-prosales.com/"
             target="_blank"
@@ -252,7 +252,7 @@ export const StrategicPartnersNew: React.FC = () => {
                 </Button>
                 <Button
                   variant="contained"
-                  color="primary"
+                  color="secondary"
                   size="large"
                   href="https://zek.uni-pannon.hu/"
                   target="_blank"
@@ -402,7 +402,7 @@ export const StrategicPartnersNew: React.FC = () => {
 
                 <Button
                   variant="contained"
-                  color="primary"
+                  color="secondary"
                   size="large"
                   href={partner.buttonUrl}
                   target="_blank"

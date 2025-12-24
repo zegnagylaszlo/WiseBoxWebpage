@@ -439,7 +439,7 @@ export const Contact: React.FC = () => {
             <Button
               type="submit"
               variant="contained"
-              color="secondary"
+              color="primary"
               size="large"
               fullWidth
               disabled={isSubmitting}
