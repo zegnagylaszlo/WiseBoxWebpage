@@ -24,45 +24,44 @@ export const WhyWiseBox: React.FC = () => {
   ];
 
   return (
-    <Box sx={{ py: { xs: 6, md: 10 }, bgcolor: '#FFFFFF' }}>
+    <Box sx={{ py: { xs: 10, md: 14 }, bgcolor: 'background.paper' }}>
       <Container>
-        <Box sx={{ textAlign: 'center', mb: 6 }}>
+        {/* Section Header */}
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
+          <Typography
+            variant="caption"
+            sx={{
+              display: 'block',
+              color: 'primary.main',
+              mb: 2,
+            }}
+          >
+            MIÉRT VÁLASSZ MINKET?
+          </Typography>
           <Typography
             variant="h2"
             sx={{
-              mb: 2,
-              color: '#2B2B28',
-              fontSize: { xs: '32px', md: '45px' },
-              fontWeight: 700,
-              textTransform: 'uppercase',
-            }}
-          >
-            MIÉRT A WISEBOX?
-          </Typography>
-          <Box
-            sx={{
-              width: '80px',
-              height: '4px',
-              bgcolor: 'primary.main',
-              mx: 'auto',
               mb: 3,
-            }}
-          />
-          <Typography
-            variant="h4"
-            sx={{
-              fontSize: { xs: '22px', md: '28px' },
-              fontWeight: 600,
-              color: 'primary.main',
+              color: 'text.primary',
               maxWidth: '800px',
               mx: 'auto',
-              lineHeight: 1.3,
-              mb: 2,
+            }}
+          >
+            Egyszerű, átlátható, garantált ROI
+          </Typography>
+          <Typography
+            variant="h5"
+            sx={{
+              color: 'text.secondary',
+              maxWidth: '700px',
+              mx: 'auto',
             }}
           >
             Mert a válaszokra van szükséged, nem az adatokra
           </Typography>
         </Box>
+
+        {/* Feature Cards */}
         <Box
           sx={{
             display: 'grid',
@@ -71,65 +70,53 @@ export const WhyWiseBox: React.FC = () => {
           }}
         >
           {features.map((feature, index) => (
-            <Box key={index}>
-              <Card
-                elevation={0}
-                sx={{
-                  height: '100%',
-                  textAlign: 'center',
-                  bgcolor: 'transparent',
-                  transition: 'transform 0.3s ease',
-                  '&:hover': {
-                    transform: 'translateY(-8px)',
-                  },
-                }}
-              >
-                <CardContent sx={{ py: 4 }}>
-                  <Box
-                    sx={{
-                      width: '105px',
-                      height: '105px',
-                      borderRadius: '50%',
-                      bgcolor: 'primary.main',
-                      color: 'white',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      mx: 'auto',
-                      mb: 3,
-                    }}
-                  >
-                    {feature.icon}
-                  </Box>
-                  <Typography
-                    variant="h5"
-                    gutterBottom
-                    sx={{
-                      fontWeight: 700,
-                      fontSize: '30px',
-                      color: '#2B2B28',
-                      mb: 2,
-                      minHeight: { xs: 'auto', md: '75px' },
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    {feature.title}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      fontSize: '18px',
-                      color: '#2B2B28',
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    {feature.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Box>
+            <Card
+              key={index}
+              sx={{
+                height: '100%',
+                textAlign: 'center',
+                bgcolor: '#FFFFFF',
+                p: 4,
+              }}
+            >
+              <CardContent sx={{ p: 0 }}>
+                {/* Icon - No circle background */}
+                <Box
+                  sx={{
+                    color: 'primary.main',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    mb: 3,
+                  }}
+                >
+                  {React.cloneElement(feature.icon, { sx: { fontSize: '48px' } })}
+                </Box>
+
+                {/* Title */}
+                <Typography
+                  variant="h3"
+                  gutterBottom
+                  sx={{
+                    mb: 2,
+                    color: 'text.primary',
+                  }}
+                >
+                  {feature.title}
+                </Typography>
+
+                {/* Description */}
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: 'text.secondary',
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {feature.description}
+                </Typography>
+              </CardContent>
+            </Card>
           ))}
         </Box>
       </Container>

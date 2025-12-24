@@ -37,51 +37,43 @@ export const FAQ: React.FC = () => {
   return (
     <Box
       sx={{
-        py: { xs: 8, md: 12 },
-        bgcolor: '#f9f9f9',
+        py: { xs: 10, md: 14 },
+        bgcolor: 'background.paper',
       }}
     >
       <Container maxWidth="md">
-        {/* Section Title */}
-        <Typography
-          variant="h2"
-          sx={{
-            mb: 2,
-            color: '#2B2B28',
-            fontSize: { xs: '32px', md: '45px' },
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            textAlign: 'center',
-          }}
-        >
-          GYAKORI KÉRDÉSEK
-        </Typography>
-
-        {/* Green Underline */}
-        <Box
-          sx={{
-            width: '80px',
-            height: '4px',
-            bgcolor: 'primary.main',
-            mx: 'auto',
-            mb: 2,
-          }}
-        />
-
-        {/* Subtitle */}
-        <Typography
-          variant="body1"
-          sx={{
-            mb: 6,
-            color: '#666',
-            fontSize: { xs: '16px', md: '18px' },
-            textAlign: 'center',
-            maxWidth: '600px',
-            mx: 'auto',
-          }}
-        >
-          Minden, amit tudnod kell a Wisebox-ról. Ha további kérdésed van, fordulj hozzánk bizalommal!
-        </Typography>
+        {/* Section Header - Modern Pattern */}
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
+          <Typography
+            variant="caption"
+            sx={{
+              display: 'block',
+              color: 'primary.main',
+              mb: 2,
+            }}
+          >
+            TUDJ MEG TÖBBET
+          </Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: 3,
+              color: 'text.primary',
+            }}
+          >
+            Gyakori kérdések
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              color: 'text.secondary',
+              maxWidth: '600px',
+              mx: 'auto',
+            }}
+          >
+            Minden, amit tudnod kell a Wisebox-ról. Ha további kérdésed van, fordulj hozzánk bizalommal!
+          </Typography>
+        </Box>
 
         {/* FAQ Accordion */}
         <Box>
@@ -90,8 +82,8 @@ export const FAQ: React.FC = () => {
               key={index}
               sx={{
                 mb: 2,
-                bgcolor: 'white',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+                bgcolor: '#FFFFFF',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
                 borderRadius: '8px !important',
                 '&:before': {
                   display: 'none',
@@ -106,9 +98,6 @@ export const FAQ: React.FC = () => {
                 sx={{
                   py: 2,
                   px: 3,
-                  '&:hover': {
-                    bgcolor: '#f5f5f5',
-                  },
                   '& .MuiAccordionSummary-content': {
                     my: 1,
                   },
@@ -119,7 +108,7 @@ export const FAQ: React.FC = () => {
                   sx={{
                     fontSize: { xs: '16px', md: '18px' },
                     fontWeight: 600,
-                    color: '#2B2B28',
+                    color: 'text.primary',
                   }}
                 >
                   {faq.question}
@@ -130,15 +119,13 @@ export const FAQ: React.FC = () => {
                   px: 3,
                   pb: 3,
                   pt: 0,
-                  bgcolor: '#fafafa',
                 }}
               >
                 <Typography
                   variant="body1"
                   sx={{
-                    fontSize: { xs: '15px', md: '16px' },
                     lineHeight: 1.7,
-                    color: '#555',
+                    color: 'text.secondary',
                   }}
                 >
                   {faq.answer}
@@ -153,9 +140,8 @@ export const FAQ: React.FC = () => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: { xs: '16px', md: '18px' },
-              color: '#2B2B28',
-              mb: 2,
+              color: 'text.primary',
+              mb: 3,
             }}
           >
             Nem találod a választ, amit keresel?
@@ -165,19 +151,18 @@ export const FAQ: React.FC = () => {
             href="#contact"
             sx={{
               display: 'inline-block',
-              bgcolor: 'primary.main',
+              bgcolor: 'secondary.main',
               color: 'white',
               px: 4,
               py: 1.5,
               fontSize: '16px',
               fontWeight: 600,
               textDecoration: 'none',
-              borderRadius: '4px',
-              transition: 'all 0.3s ease',
+              borderRadius: '8px',
+              transition: 'all 0.2s ease-in-out',
               '&:hover': {
-                bgcolor: '#00c96b',
                 transform: 'translateY(-2px)',
-                boxShadow: '0 4px 12px rgba(0, 150, 75, 0.3)',
+                boxShadow: '0 4px 12px rgba(255,107,107,0.3)',
               },
             }}
           >

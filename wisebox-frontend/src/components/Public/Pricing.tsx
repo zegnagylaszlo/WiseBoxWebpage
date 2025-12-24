@@ -1,23 +1,20 @@
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Container, Typography, Button } from '@mui/material';
 
 export const Pricing: React.FC = () => {
-  const circles = [
+  const features = [
     {
       number: '1',
-      color: '#00964B', // Green
       title: 'Kötöttségek nélkül',
       description: 'Elköteleződés nélkül, amíg szeretnéd',
     },
     {
       number: '2',
-      color: '#FF8C00', // Orange
       title: 'Beüzemelési költségek nélkül',
       description: 'Más rendszerekkel ellentétben ingyenes beüzemelés',
     },
     {
       number: '3',
-      color: '#6EC1E4', // Blue
       title: 'Rejtett költségek nélkül',
       description: 'Extra költségekkel nem fogsz találkozni',
     },
@@ -26,128 +23,119 @@ export const Pricing: React.FC = () => {
   return (
     <Box
       sx={{
-        py: { xs: 8, md: 12 },
-        bgcolor: '#F5F5F5',
+        py: { xs: 10, md: 14 },
+        bgcolor: '#FFFFFF',
       }}
     >
       <Container>
-        {/* Section Title */}
-        <Typography
-          variant="h2"
-          sx={{
-            mb: 2,
-            color: '#2B2B28',
-            fontSize: { xs: '28px', md: '42px' },
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            textAlign: 'center',
-            lineHeight: 1.3,
-          }}
-        >
-          ELKÖTELEZŐDÉS ÉS REJTETT KÖLTSÉGEK NÉLKÜL
-        </Typography>
+        {/* Section Header - Modern Pattern */}
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
+          <Typography
+            variant="caption"
+            sx={{
+              display: 'block',
+              color: 'primary.main',
+              mb: 2,
+            }}
+          >
+            ELŐFIZETÉSI MODELL
+          </Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: 3,
+              color: 'text.primary',
+              maxWidth: '900px',
+              mx: 'auto',
+            }}
+          >
+            Elköteleződés és rejtett költségek nélkül
+          </Typography>
+          <Typography
+            variant="h5"
+            sx={{
+              color: 'text.secondary',
+              maxWidth: '700px',
+              mx: 'auto',
+            }}
+          >
+            Ismerd meg előfizetéses rendszerünket – Csak szabadon, a döntés a Te kezedben!
+          </Typography>
+        </Box>
 
-        {/* Green Underline */}
-        <Box
-          sx={{
-            width: '80px',
-            height: '4px',
-            bgcolor: 'primary.main',
-            mx: 'auto',
-            mb: 3,
-          }}
-        />
-
-        {/* Subtitle */}
-        <Typography
-          variant="h5"
-          sx={{
-            mb: 8,
-            textAlign: 'center',
-            fontSize: '20px',
-            color: '#2B2B28',
-            maxWidth: '700px',
-            mx: 'auto',
-            lineHeight: 1.6,
-          }}
-        >
-          Ismerd meg előfizetéses rendszerünket<br />
-          Csak szabadon, a döntés a Te kezedben!
-        </Typography>
-
-        {/* Three Circles */}
+        {/* Feature Cards */}
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, 1fr)' },
+            gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
             gap: 4,
-            maxWidth: '1000px',
-            mx: 'auto',
             mb: 6,
           }}
         >
-          {circles.map((circle, index) => (
+          {features.map((feature, index) => (
             <Box
               key={index}
               sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
+                p: 4,
+                bgcolor: 'background.paper',
+                borderRadius: '12px',
+                borderTop: '4px solid',
+                borderColor: 'primary.main',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
+                textAlign: 'center',
+                transition: 'all 0.2s ease-in-out',
+                '&:hover': {
+                  transform: 'translateY(-4px)',
+                  boxShadow: '0px 4px 16px rgba(0,0,0,0.1)',
+                },
               }}
             >
-              {/* Numbered Circle */}
-              <Box
+              <Typography
                 sx={{
-                  bgcolor: circle.color,
-                  color: 'white',
-                  borderRadius: '50%',
-                  width: { xs: '220px', md: '240px' },
-                  height: { xs: '220px', md: '240px' },
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  p: 3,
-                  mb: 3,
+                  fontSize: '48px',
+                  fontWeight: 700,
+                  color: 'primary.main',
+                  mb: 2,
                 }}
               >
-                <Typography
-                  variant="h2"
-                  sx={{
-                    fontSize: { xs: '60px', md: '70px' },
-                    fontWeight: 700,
-                    mb: 2,
-                  }}
-                >
-                  {circle.number}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontSize: '18px',
-                    fontWeight: 600,
-                    textAlign: 'center',
-                  }}
-                >
-                  {circle.title}
-                </Typography>
-              </Box>
-
-              {/* Description Below Circle */}
+                {feature.number}
+              </Typography>
+              <Typography
+                variant="h3"
+                sx={{
+                  mb: 2,
+                  color: 'text.primary',
+                }}
+              >
+                {feature.title}
+              </Typography>
               <Typography
                 variant="body1"
                 sx={{
-                  fontSize: '16px',
-                  textAlign: 'center',
-                  color: '#2B2B28',
-                  lineHeight: 1.6,
-                  maxWidth: '250px',
+                  color: 'text.secondary',
+                  lineHeight: 1.7,
                 }}
               >
-                {circle.description}
+                {feature.description}
               </Typography>
             </Box>
           ))}
+        </Box>
+
+        {/* CTA */}
+        <Box sx={{ textAlign: 'center' }}>
+          <Button
+            variant="contained"
+            color="secondary"
+            size="large"
+            href="#contact"
+            sx={{
+              px: 5,
+              fontWeight: 600,
+            }}
+          >
+            Időpontot kérek
+          </Button>
         </Box>
       </Container>
     </Box>

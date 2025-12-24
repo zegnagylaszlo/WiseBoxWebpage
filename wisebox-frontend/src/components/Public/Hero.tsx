@@ -1,102 +1,128 @@
 import React from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 export const Hero: React.FC = () => {
   return (
     <Box
       sx={{
         position: 'relative',
-        minHeight: { xs: '500px', md: '700px' },
-        display: 'flex',
-        alignItems: 'center',
-        background: 'linear-gradient(135deg, #00c96b 0%, #00964B 50%, #2E8640 100%)',
+        bgcolor: '#FFFFFF',
+        py: { xs: 8, md: 12 },
         overflow: 'hidden',
-        '&::before': {
-          content: '""',
-          position: 'absolute',
-          top: '-50%',
-          right: '-10%',
-          width: '60%',
-          height: '200%',
-          backgroundImage: 'url(/WB_logo/WB\\ LOGO\\ WHITE\\ FIN.png)',
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          opacity: 0.12,
-          transform: 'rotate(-15deg)',
-        },
-        '&::after': {
-          content: '""',
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: '30%',
-          background: 'linear-gradient(to top, rgba(0,0,0,0.15) 0%, transparent 100%)',
-        },
       }}
     >
-      <Container sx={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
-        <Typography
-          variant="overline"
-          color="white"
-          sx={{
-            display: 'block',
-            mb: 3,
-            fontSize: { xs: '18px', md: '22px' },
-            fontWeight: 600,
-            letterSpacing: '2px',
-            textShadow: '0 2px 4px rgba(0,0,0,0.3)',
-          }}
-        >
-          A KKV-K KONTROLLING RENDSZERE
-        </Typography>
+      <Container>
         <Box
-          component="img"
-          src="/WB_logo/WB LOGO WHITE FIN.png"
-          alt="Wisebox Logo"
           sx={{
-            width: { xs: '200px', md: '300px' },
-            height: 'auto',
-            mb: 4,
-            filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))',
-          }}
-        />
-        <Typography
-          variant="h2"
-          color="white"
-          sx={{
-            mb: 5,
-            fontWeight: 400,
-            fontSize: { xs: '20px', md: '35px' },
-            lineHeight: 1.4,
-            textShadow: '0 2px 6px rgba(0,0,0,0.25)',
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', md: '60% 40%' },
+            gap: { xs: 6, md: 8 },
+            alignItems: 'center',
           }}
         >
-          Fedezd fel a könyvelésben rejlő adataidat könnyen és érthetően
-        </Typography>
-        <Button
-          variant="contained"
-          size="large"
-          href="#contact"
-          sx={{
-            bgcolor: 'white',
-            color: '#2B2B28',
-            px: 5,
-            py: 2,
-            fontSize: '17px',
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            borderRadius: '4px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-            '&:hover': {
-              bgcolor: '#f5f5f5',
-              boxShadow: '0 6px 16px rgba(0,0,0,0.4)',
-            },
-          }}
-        >
-          IDŐPONTOT KÉREK
-        </Button>
+          {/* Left Column - Text Content */}
+          <Box>
+            {/* Overline */}
+            <Typography
+              variant="caption"
+              sx={{
+                display: 'block',
+                color: 'primary.main',
+                mb: 2,
+              }}
+            >
+              A KKV-K KONTROLLING RENDSZERE
+            </Typography>
+
+            {/* Main Headline */}
+            <Typography
+              variant="h1"
+              sx={{
+                mb: 3,
+                color: 'text.primary',
+                maxWidth: '600px',
+              }}
+            >
+              Fedezd fel a könyvelésben rejlő adataidat könnyen és érthetően
+            </Typography>
+
+            {/* Subheadline */}
+            <Typography
+              variant="h5"
+              sx={{
+                mb: 4,
+                color: 'text.secondary',
+                maxWidth: '500px',
+              }}
+            >
+              Mert a válaszokra van szükséged, nem az adatokra
+            </Typography>
+
+            {/* CTA Buttons */}
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', sm: 'row' },
+                gap: 2,
+                mb: 4,
+              }}
+            >
+              <Button
+                variant="contained"
+                color="secondary"
+                size="large"
+                href="#contact"
+              >
+                IDŐPONTOT KÉREK
+              </Button>
+              <Button
+                variant="outlined"
+                color="primary"
+                size="large"
+                href="#partnereink"
+              >
+                Tudj meg többet
+              </Button>
+            </Box>
+
+            {/* Trust Indicator */}
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1.5,
+                color: 'text.secondary',
+              }}
+            >
+              <CheckCircleOutlineIcon sx={{ color: 'success.main', fontSize: '24px' }} />
+              <Typography variant="body2" sx={{ fontSize: '15px' }}>
+                Több mint 500+ magyar KKV bizalma
+              </Typography>
+            </Box>
+          </Box>
+
+          {/* Right Column - Visual/Logo */}
+          <Box
+            sx={{
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Box
+              component="img"
+              src="/WB_logo/WB LOGO BLACK FIN.png"
+              alt="Wisebox Logo"
+              sx={{
+                width: '100%',
+                maxWidth: '400px',
+                height: 'auto',
+                filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.08))',
+              }}
+            />
+          </Box>
+        </Box>
       </Container>
     </Box>
   );

@@ -6,36 +6,35 @@ export const ReferralOpportunity: React.FC = () => {
     <Box
       id="ajanloi-program"
       sx={{
-        py: { xs: 8, md: 12 },
-        bgcolor: 'white',
+        py: { xs: 10, md: 14 },
+        bgcolor: 'background.paper',
       }}
     >
       <Container>
-        {/* Section Title */}
-        <Typography
-          variant="h2"
-          sx={{
-            mb: 2,
-            color: '#2B2B28',
-            fontSize: { xs: '32px', md: '45px' },
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            textAlign: 'center',
-          }}
-        >
-          AJÁNLÓI LEHETŐSÉG
-        </Typography>
-
-        {/* Green Underline */}
-        <Box
-          sx={{
-            width: '80px',
-            height: '4px',
-            bgcolor: 'primary.main',
-            mx: 'auto',
-            mb: 8,
-          }}
-        />
+        {/* Section Header - Modern Pattern */}
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
+          <Typography
+            variant="caption"
+            sx={{
+              display: 'block',
+              color: 'primary.main',
+              mb: 2,
+            }}
+          >
+            ÉRTÉK MEGOSZTÁSA
+          </Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: 3,
+              color: 'text.primary',
+              maxWidth: '800px',
+              mx: 'auto',
+            }}
+          >
+            Ajánlói lehetőség
+          </Typography>
+        </Box>
 
         {/* Content Section */}
         <Box
@@ -49,12 +48,10 @@ export const ReferralOpportunity: React.FC = () => {
           {/* Left Column - Text */}
           <Box>
             <Typography
-              variant="h4"
+              variant="h3"
               sx={{
                 mb: 3,
-                fontSize: { xs: '24px', md: '28px' },
-                fontWeight: 700,
-                color: '#2B2B28',
+                color: 'text.primary',
               }}
             >
               Az ajánlásokban hiszünk, amit díjazunk is
@@ -64,30 +61,21 @@ export const ReferralOpportunity: React.FC = () => {
               variant="body1"
               sx={{
                 mb: 4,
-                fontSize: '18px',
-                lineHeight: 1.8,
-                color: '#2B2B28',
+                lineHeight: 1.7,
+                color: 'text.secondary',
               }}
             >
-              Megtetszett a szoftverünk, vagy már büszke partnerünk vagy és szeretnéd másokkal is megosztani megoldásunkat? Lehetőséget biztosítunk, hogy másoknak ajánlhasd a Wisebox szoftverünket és extra díjazásban részesülj. A win-win szituációkra törekszünk, ezért ha felkeltettük az érdeklődésedet vedd fel velük a kapcsolatot és tájékoztatunk a részletekről!
+              Megtetszett a szoftverünk, vagy már büszke partnerünk vagy és szeretnéd másokkal is megosztani megoldásunkat? Lehetőséget biztosítunk, hogy másoknak ajánlhasd a Wisebox szoftverünket és extra díjazásban részesülj. A win-win szituációkra törekszünk, ezért ha felkeltettük az érdeklődésedet vedd fel velünk a kapcsolatot és tájékoztatunk a részletekről!
             </Typography>
 
             <Button
               variant="contained"
+              color="secondary"
               size="large"
               href="#contact"
               sx={{
-                bgcolor: 'primary.main',
-                color: 'white',
                 px: 4,
-                py: 1.5,
-                fontSize: '15px',
                 fontWeight: 600,
-                textTransform: 'uppercase',
-                borderRadius: '4px',
-                '&:hover': {
-                  bgcolor: '#2E8640',
-                },
               }}
             >
               Időpontot kérek
@@ -105,6 +93,9 @@ export const ReferralOpportunity: React.FC = () => {
               sx={{
                 width: '100%',
                 maxWidth: '600px',
+                borderRadius: '12px',
+                overflow: 'hidden',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.08)',
               }}
             >
               <img
@@ -114,7 +105,6 @@ export const ReferralOpportunity: React.FC = () => {
                   width: '100%',
                   height: 'auto',
                   display: 'block',
-                  borderRadius: '8px',
                 }}
               />
             </Box>

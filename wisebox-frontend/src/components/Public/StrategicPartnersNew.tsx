@@ -41,102 +41,68 @@ export const StrategicPartnersNew: React.FC = () => {
     <Box
       id="partnereink"
       sx={{
-        bgcolor: '#F5F5F5',
-        py: { xs: 4, md: 6 },
+        bgcolor: 'background.paper',
+        py: { xs: 10, md: 14 },
       }}
     >
-      <Box
-        sx={{
-          maxWidth: '1600px',
-          mx: 'auto',
-          px: { xs: 3, md: 6 },
-        }}
-      >
-        {/* Main Section Title */}
-        <Typography
-          variant="h2"
+      <Container>
+        {/* Section Header - Modern Pattern */}
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
+          <Typography
+            variant="caption"
+            sx={{
+              display: 'block',
+              color: 'primary.main',
+              mb: 2,
+            }}
+          >
+            EGYÜTTMŰKÖDÉSEINK
+          </Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: 3,
+              color: 'text.primary',
+              maxWidth: '800px',
+              mx: 'auto',
+            }}
+          >
+            Stratégiai partnereink
+          </Typography>
+        </Box>
+
+        {/* Subsection 1: B2B ProSales */}
+        <Box
           sx={{
-            mb: 4,
-            color: '#2B2B28',
-            fontSize: { xs: '32px', md: '45px' },
-            fontWeight: 700,
-            textTransform: 'uppercase',
+            p: 6,
+            bgcolor: '#FFFFFF',
+            borderRadius: '12px',
+            boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
+            mb: 6,
             textAlign: 'center',
           }}
         >
-          STRATÉGIAI PARTNEREINK
-        </Typography>
-
-        {/* Green Underline */}
-        <Box
-          sx={{
-            width: '80px',
-            height: '4px',
-            bgcolor: 'primary.main',
-            mx: 'auto',
-            mb: 6,
-          }}
-        />
-
-        {/* Framed Container */}
-        <Box
-          sx={{
-            bgcolor: 'white',
-            borderRadius: '12px',
-            boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
-            overflow: 'hidden',
-          }}
-        >
-
-      {/* Subsection 1: B2B ProSales */}
-      <Box
-        sx={{
-          py: { xs: 6, md: 8 },
-          bgcolor: 'info.main', // Blue #6EC1E4
-          textAlign: 'center',
-        }}
-      >
-        <Container maxWidth="md">
-          {/* Subsection Title */}
           <Typography
             variant="h3"
             sx={{
               mb: 2,
-              color: 'white',
-              fontSize: { xs: '24px', md: '28px' },
-              fontWeight: 600,
-              textTransform: 'uppercase',
+              color: 'text.primary',
             }}
           >
-            ÜZLETFEJLESZTÉSI PARTNERÜNK
+            Üzletfejlesztési partnerünk
           </Typography>
 
-          {/* White Underline */}
-          <Box
-            sx={{
-              width: '80px',
-              height: '4px',
-              bgcolor: 'white',
-              mx: 'auto',
-              mb: 3,
-            }}
-          />
-
-          {/* Slogan */}
           <Typography
-            variant="h4"
+            variant="h5"
             sx={{
-              mb: 5,
-              color: 'white',
-              fontSize: { xs: '22px', md: '28px' },
+              mb: 4,
+              color: 'info.main',
               fontWeight: 600,
-              //fontStyle: 'italic',
             }}
           >
             B2B PROSALES - Ahol az eredmény teremti az együttműködést
           </Typography>
 
-          {/* Logo */}
           <Box
             sx={{
               mb: 4,
@@ -148,21 +114,19 @@ export const StrategicPartnersNew: React.FC = () => {
               src="/images/B2B_pecset.webp"
               alt="B2B ProSales"
               style={{
-                maxWidth: '300px',
+                maxWidth: '250px',
                 width: '100%',
                 height: 'auto',
               }}
             />
           </Box>
 
-          {/* Description */}
           <Typography
             variant="body1"
             sx={{
-              mb: 5,
-              color: 'white',
-              fontSize: '18px',
-              lineHeight: 1.6,
+              mb: 4,
+              color: 'text.secondary',
+              lineHeight: 1.7,
               maxWidth: '700px',
               mx: 'auto',
             }}
@@ -170,96 +134,61 @@ export const StrategicPartnersNew: React.FC = () => {
             Küldetésük, hogy a legjobb termékeket, szolgáltatásokat eljuttassák az Ügyfeleikhez. Érejük a függetlenségben rejlik. Céljuk, hogy a B2B név egyet jelentsen a Minőséggel és a Megbízhatósággal.
           </Typography>
 
-          {/* Button */}
           <Button
             variant="contained"
+            color="info"
             size="large"
             href="https://b2b-prosales.com/"
             target="_blank"
             rel="noopener noreferrer"
             sx={{
-              bgcolor: 'white',
-              color: 'info.main',
-              px: 5,
-              py: 2,
-              fontSize: '17px',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              borderRadius: '4px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-              '&:hover': {
-                bgcolor: '#f5f5f5',
-                boxShadow: '0 6px 16px rgba(0,0,0,0.25)',
-              },
+              px: 4,
+              fontWeight: 600,
             }}
           >
             B2B ProSales
           </Button>
-        </Container>
-      </Box>
+        </Box>
 
-      {/* Subsection 2: Pannon University */}
-      <Box
-        sx={{
-          py: { xs: 8, md: 12 },
-          bgcolor: '#FFFFFF',
-        }}
-      >
+        {/* Subsection 2: Pannon University */}
         <Box
           sx={{
-            maxWidth: '1440px',
-            mx: 'auto',
-            px: { xs: 3, md: 8, lg: 12 },
+            p: 6,
+            bgcolor: '#FFFFFF',
+            borderRadius: '12px',
+            boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
+            mb: 6,
           }}
         >
-          {/* Subsection Title */}
           <Typography
             variant="h3"
             sx={{
               mb: 2,
-              color: '#2B2B28',
-              fontSize: { xs: '24px', md: '28px' },
-              fontWeight: 600,
+              color: 'text.primary',
               textAlign: 'center',
-              textTransform: 'uppercase',
             }}
           >
-            EGYETEMI PARTNERÜNK
+            Egyetemi partnerünk
           </Typography>
 
-          {/* Green Underline */}
-          <Box
-            sx={{
-              width: '80px',
-              height: '4px',
-              bgcolor: 'primary.main',
-              mx: 'auto',
-              mb: 3,
-            }}
-          />
-
-          {/* Subtitle */}
           <Typography
-            variant="h4"
+            variant="h5"
             sx={{
-              mb: 8,
+              mb: 6,
               textAlign: 'center',
-              fontSize: { xs: '22px', md: '28px' },
               fontWeight: 600,
-              color: '#2B2B28',
+              color: 'primary.main',
             }}
           >
             PANNON EGYETEM - Együtt a jövő vállalkozóiért
           </Typography>
 
-          {/* Two Column Layout */}
           <Box
             sx={{
               display: 'grid',
               gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
               gap: 6,
               alignItems: 'center',
-              mb: 6,
             }}
           >
             {/* Left Column - Text */}
@@ -268,9 +197,8 @@ export const StrategicPartnersNew: React.FC = () => {
                 variant="body1"
                 sx={{
                   mb: 3,
-                  fontSize: '18px',
-                  lineHeight: 1.8,
-                  color: '#2B2B28',
+                  lineHeight: 1.7,
+                  color: 'text.secondary',
                 }}
               >
                 Büszkén jelentjük be, hogy a Pannon Egyetem és a Wisebox csapata (Great BiExpert Kft. és B2B ProSales Kft.) háromoldalú együttműködési megállapodást kötött a gyakorlatorientált oktatás támogatására.
@@ -278,10 +206,9 @@ export const StrategicPartnersNew: React.FC = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  mb: 4,
-                  fontSize: '18px',
-                  lineHeight: 1.8,
-                  color: '#2B2B28',
+                  mb: 3,
+                  lineHeight: 1.7,
+                  color: 'text.secondary',
                 }}
               >
                 A megállapodás keretében a Wisebox szoftver aktív szerepet kap:
@@ -292,10 +219,9 @@ export const StrategicPartnersNew: React.FC = () => {
                   mb: 4,
                   pl: 3,
                   '& li': {
-                    mb: 2,
-                    fontSize: '18px',
-                    lineHeight: 1.8,
-                    color: '#2B2B28',
+                    mb: 1.5,
+                    lineHeight: 1.7,
+                    color: 'text.secondary',
                   },
                 }}
               >
@@ -303,7 +229,6 @@ export const StrategicPartnersNew: React.FC = () => {
                 <li>valamint a controlling szakirányú továbbképzésekben</li>
               </Box>
 
-              {/* Buttons */}
               <Box
                 sx={{
                   display: 'flex',
@@ -313,43 +238,28 @@ export const StrategicPartnersNew: React.FC = () => {
               >
                 <Button
                   variant="outlined"
+                  color="primary"
                   size="large"
                   href="/pannon-egyetem-wisebox-egyuttmukodes"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{
                     px: 4,
-                    py: 1.5,
-                    fontSize: '15px',
                     fontWeight: 600,
-                    borderColor: '#2B2B28',
-                    color: '#2B2B28',
-                    borderRadius: '4px',
-                    '&:hover': {
-                      borderColor: '#2B2B28',
-                      bgcolor: 'rgba(43, 43, 40, 0.04)',
-                    },
                   }}
                 >
                   Bővebben
                 </Button>
                 <Button
                   variant="contained"
+                  color="primary"
                   size="large"
                   href="https://zek.uni-pannon.hu/"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{
                     px: 4,
-                    py: 1.5,
-                    fontSize: '15px',
                     fontWeight: 600,
-                    bgcolor: '#2B2B28',
-                    color: 'white',
-                    borderRadius: '4px',
-                    '&:hover': {
-                      bgcolor: '#1F1F1D',
-                    },
                   }}
                 >
                   Pannon Egyetem
@@ -366,11 +276,12 @@ export const StrategicPartnersNew: React.FC = () => {
                 gap: 3,
               }}
             >
-              {/* Photo */}
               <Box
                 sx={{
                   width: '100%',
-                  maxWidth: '600px',
+                  borderRadius: '8px',
+                  overflow: 'hidden',
+                  boxShadow: '0px 2px 8px rgba(0,0,0,0.08)',
                 }}
               >
                 <img
@@ -384,12 +295,10 @@ export const StrategicPartnersNew: React.FC = () => {
                 />
               </Box>
 
-              {/* Logo Below Image */}
               <Box
                 sx={{
                   display: 'flex',
                   justifyContent: 'center',
-                  bgcolor: 'white',
                   width: '100%',
                 }}
               >
@@ -397,7 +306,7 @@ export const StrategicPartnersNew: React.FC = () => {
                   src="/images/wisebox-pannon-egyetem-zalaegerszeg-logo-vizszintes-1024x337.webp"
                   alt="Pannon Egyetem"
                   style={{
-                    maxWidth: '550px',
+                    maxWidth: '400px',
                     width: '100%',
                     height: 'auto',
                   }}
@@ -406,122 +315,84 @@ export const StrategicPartnersNew: React.FC = () => {
             </Box>
           </Box>
         </Box>
-      </Box>
 
-      {/* Subsection 3: Professional Partners */}
-      <Box
-        sx={{
-          py: { xs: 8, md: 12 },
-          bgcolor: '#FAFAFA',
-        }}
-      >
-        <Box
-          sx={{
-            maxWidth: '1400px',
-            mx: 'auto',
-            px: { xs: 3, md: 6 },
-          }}
-        >
-          {/* Subsection Title */}
+        {/* Subsection 3: Professional Partners */}
+        <Box>
           <Typography
             variant="h3"
             sx={{
-              mb: 2,
-              color: '#2B2B28',
-              fontSize: { xs: '24px', md: '28px' },
-              fontWeight: 600,
+              mb: 6,
+              color: 'text.primary',
               textAlign: 'center',
-              textTransform: 'uppercase',
             }}
           >
-            SZAKMAI PARTNEREINK
+            Szakmai partnereink
           </Typography>
 
-          {/* Green Underline */}
           <Box
             sx={{
-              width: '80px',
-              height: '4px',
-              bgcolor: 'primary.main',
-              mx: 'auto',
-              mb: 8,
-            }}
-          />
-
-          {/* Three Partner Cards */}
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
               gap: 4,
-              justifyContent: 'center',
-              alignItems: 'stretch',
             }}
           >
             {professionalPartners.map((partner, index) => (
               <Box
                 key={index}
                 sx={{
-                  bgcolor: 'white',
-                  borderRadius: '8px',
+                  bgcolor: '#FFFFFF',
+                  borderRadius: '12px',
                   p: 4,
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
                   textAlign: 'center',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                  flex: '1',
-                  maxWidth: { md: '450px' },
+                  boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
+                  transition: 'all 0.2s ease-in-out',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0px 4px 16px rgba(0,0,0,0.1)',
+                  },
                 }}
               >
-                {/* Logo */}
                 <Box
                   sx={{
                     mb: 3,
-                    height: '180px',
-                    width: partner.logoContainerWidth,
-                    maxWidth: '100%',
+                    height: '120px',
+                    width: '100%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    mx: 'auto',
                   }}
                 >
                   <img
                     src={partner.logo}
                     alt={partner.buttonText}
                     style={{
-                      maxWidth: partner.logoMaxWidth,
-                      minWidth: partner.logoMinWidth || 'auto',
-                      maxHeight: partner.logoMaxHeight,
-                      minHeight: partner.logoMinHeight || 'auto',
+                      maxWidth: '180px',
+                      maxHeight: '100px',
                       width: 'auto',
                       height: 'auto',
                     }}
                   />
                 </Box>
 
-                {/* Title */}
                 <Typography
-                  variant="h6"
+                  variant="h4"
                   sx={{
-                    mb: 3,
-                    fontSize: '20px',
-                    fontWeight: 600,
-                    color: '#2B2B28',
+                    mb: 2,
+                    color: 'text.primary',
                   }}
                 >
                   {partner.title}
                 </Typography>
 
-                {/* Description */}
                 <Typography
                   variant="body1"
                   sx={{
                     mb: 4,
-                    fontSize: '16px',
-                    lineHeight: 1.8,
-                    color: '#2B2B28',
+                    lineHeight: 1.7,
+                    color: 'text.secondary',
                     whiteSpace: 'pre-line',
                     flexGrow: 1,
                   }}
@@ -529,26 +400,16 @@ export const StrategicPartnersNew: React.FC = () => {
                   {partner.description}
                 </Typography>
 
-                {/* Button */}
                 <Button
                   variant="contained"
+                  color="primary"
                   size="large"
                   href={partner.buttonUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{
                     px: 4,
-                    py: 1.5,
-                    fontSize: '15px',
                     fontWeight: 600,
-                    bgcolor: '#00964B',
-                    color: 'white',
-                    borderRadius: '4px',
-                    textTransform: 'none',
-                    width: '200px',
-                    '&:hover': {
-                      bgcolor: '#2E8640',
-                    },
                   }}
                 >
                   {partner.buttonText}
@@ -557,9 +418,7 @@ export const StrategicPartnersNew: React.FC = () => {
             ))}
           </Box>
         </Box>
-      </Box>
-      </Box>
-    </Box>
+      </Container>
     </Box>
   );
 };

@@ -44,36 +44,35 @@ export const FeaturesGrid: React.FC = () => {
   return (
     <Box
       sx={{
-        py: { xs: 8, md: 12 },
-        bgcolor: '#FFFFFF',
+        py: { xs: 10, md: 14 },
+        bgcolor: 'background.paper',
       }}
     >
       <Container>
-        {/* Section Title */}
-        <Typography
-          variant="h2"
-          sx={{
-            mb: 2,
-            color: '#2B2B28',
-            fontSize: { xs: '28px', md: '40px' },
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            textAlign: 'center',
-          }}
-        >
-          KÖVETKEZŐ SZINTRE EMELJÜK VÁLLALKOZÁSODAT
-        </Typography>
-
-        {/* Green Underline */}
-        <Box
-          sx={{
-            width: '80px',
-            height: '4px',
-            bgcolor: 'primary.main',
-            mx: 'auto',
-            mb: 8,
-          }}
-        />
+        {/* Section Header - Modern Pattern */}
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
+          <Typography
+            variant="caption"
+            sx={{
+              display: 'block',
+              color: 'primary.main',
+              mb: 2,
+            }}
+          >
+            FUNKCIÓK ÉS LEHETŐSÉGEK
+          </Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: 3,
+              color: 'text.primary',
+              maxWidth: '800px',
+              mx: 'auto',
+            }}
+          >
+            Következő szintre emeljük vállalkozásodat
+          </Typography>
+        </Box>
 
         {/* Features Grid */}
         <Box
@@ -86,46 +85,34 @@ export const FeaturesGrid: React.FC = () => {
           {features.map((feature, index) => (
             <Card
               key={index}
-              elevation={0}
               sx={{
                 height: '100%',
                 textAlign: 'center',
-                borderRadius: '8px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                '&:hover': {
-                  transform: 'translateY(-8px)',
-                  boxShadow: '0px 10px 20px rgba(0,0,0,0.15)',
-                },
+                bgcolor: '#FFFFFF',
+                p: 4,
               }}
             >
-              <CardContent sx={{ p: 4 }}>
-                {/* Orange Circular Icon */}
+              <CardContent sx={{ p: 0 }}>
+                {/* Icon - No circular background */}
                 <Box
                   sx={{
-                    width: '110px',
-                    height: '110px',
-                    borderRadius: '50%',
-                    bgcolor: 'secondary.main', // Orange
-                    color: 'white',
+                    color: 'primary.main',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    mx: 'auto',
                     mb: 3,
                   }}
                 >
-                  {feature.icon}
+                  {React.cloneElement(feature.icon, { sx: { fontSize: '48px' } })}
                 </Box>
 
                 {/* Feature Title */}
                 <Typography
-                  variant="h5"
+                  variant="h3"
                   gutterBottom
                   sx={{
-                    fontWeight: 700,
-                    fontSize: '24px',
-                    color: '#2B2B28',
                     mb: 2,
+                    color: 'text.primary',
                   }}
                 >
                   {feature.title}
@@ -135,9 +122,8 @@ export const FeaturesGrid: React.FC = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    fontSize: '16px',
-                    color: '#2B2B28',
-                    lineHeight: 1.6,
+                    color: 'text.secondary',
+                    lineHeight: 1.7,
                   }}
                 >
                   {feature.description}

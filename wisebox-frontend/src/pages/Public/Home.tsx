@@ -1,7 +1,6 @@
 import React from 'react';
 import { Hero } from '../../components/Public/Hero';
 import { BelieveInROI_Solution } from '../../components/Public/BelieveInROI_Solution';
-import { WaveDivider } from '../../components/Public/WaveDivider';
 import { GuaranteedROI } from '../../components/Public/GuaranteedROI';
 import { WhyWiseBox } from '../../components/Public/WhyWiseBox';
 import { FeaturesGrid } from '../../components/Public/FeaturesGrid';
@@ -23,7 +22,6 @@ export const Home: React.FC = () => {
       <Stats />
       <Testimonials />
       <StrategicPartnersNew />
-      <WaveDivider variant="white-to-green" />
       <GuaranteedROI />
       <Pricing />
       <FAQ />

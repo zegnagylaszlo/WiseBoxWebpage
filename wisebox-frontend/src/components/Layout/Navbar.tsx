@@ -27,9 +27,21 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <AppBar position="sticky" elevation={0} sx={{ bgcolor: '#2B2B28' }}>
-      <Box sx={{ px: { xs: 3, md: 8, lg: 12, xl: 15 } }}>
-        <Toolbar disableGutters sx={{ py: 1.5, px: 0, maxWidth: '1440px', mx: 'auto' }}>
+    <AppBar
+      position="sticky"
+      elevation={0}
+      sx={{
+        bgcolor: '#FFFFFF',
+        borderBottom: '1px solid',
+        borderColor: 'grey.100',
+        transition: 'box-shadow 0.3s ease',
+        '&.MuiAppBar-root': {
+          boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
+        },
+      }}
+    >
+      <Box sx={{ px: { xs: 3, md: 6, lg: 8 } }}>
+        <Toolbar disableGutters sx={{ py: 2, px: 0, maxWidth: '1200px', mx: 'auto' }}>
           {/* Logo and WISEBOX text - Left side */}
           <Box
             component="a"
@@ -50,13 +62,13 @@ export const Navbar: React.FC = () => {
             <img
               src="/images/wisebox-logo.webp"
               alt="Wisebox"
-              style={{ height: '60px', width: 'auto' }}
+              style={{ height: '50px', width: 'auto' }}
             />
             <Box
               sx={{
-                color: 'white',
+                color: 'text.primary',
                 fontWeight: 700,
-                fontSize: '18px',
+                fontSize: '20px',
                 letterSpacing: '0.5px',
               }}
             >
@@ -68,21 +80,23 @@ export const Navbar: React.FC = () => {
           <Box sx={{ flexGrow: 1 }} />
 
           {/* Desktop menu - Right side */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2, alignItems: 'center' }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1, alignItems: 'center' }}>
             {menuItems.map((item) => (
               <Button
                 key={item.path}
                 href={item.path}
                 sx={{
-                  color: 'white',
-                  fontWeight: 400,
+                  color: 'text.primary',
+                  fontWeight: 500,
                   fontSize: '15px',
                   textTransform: 'none',
-                  padding: '6px 12px',
+                  padding: '8px 16px',
                   minWidth: 'auto',
+                  borderRadius: '6px',
+                  transition: 'all 0.2s ease',
                   '&:hover': {
                     color: 'primary.main',
-                    bgcolor: 'transparent',
+                    bgcolor: 'rgba(10,123,127,0.04)',
                   },
                 }}
               >
@@ -91,21 +105,19 @@ export const Navbar: React.FC = () => {
             ))}
             <Button
               variant="contained"
-              color="primary"
+              color="secondary"
               href="#contact"
               sx={{
-                bgcolor: 'primary.main',
-                color: 'white',
-                fontWeight: 700,
-                fontSize: '14px',
+                ml: 2,
+                fontWeight: 600,
+                fontSize: '15px',
                 textTransform: 'uppercase',
                 px: 3,
-                py: 1.25,
-                borderRadius: '4px',
+                py: 1,
+                borderRadius: '8px',
                 boxShadow: 'none',
                 '&:hover': {
-                  bgcolor: 'primary.dark',
-                  boxShadow: 'none',
+                  boxShadow: '0 4px 12px rgba(255,107,107,0.3)',
                 },
               }}
             >
@@ -121,7 +133,7 @@ export const Navbar: React.FC = () => {
             sx={{
               display: { md: 'none' },
               ml: 'auto',
-              color: 'white',
+              color: 'text.primary',
             }}
           >
             <MenuIcon />
@@ -136,7 +148,11 @@ export const Navbar: React.FC = () => {
         onClose={handleDrawerToggle}
         sx={{
           display: { xs: 'block', md: 'none' },
-          '& .MuiDrawer-paper': { width: 240 },
+          '& .MuiDrawer-paper': {
+            width: 280,
+            bgcolor: '#FFFFFF',
+            pt: 3,
+          },
         }}
       >
         <List>
@@ -149,14 +165,40 @@ export const Navbar: React.FC = () => {
               sx={{
                 textDecoration: 'none',
                 color: 'text.primary',
+                borderRadius: '8px',
+                mx: 2,
+                mb: 1,
                 '&:hover': {
-                  bgcolor: 'background.paper',
+                  bgcolor: 'rgba(10,123,127,0.04)',
+                  color: 'primary.main',
                 },
               }}
             >
-              <ListItemText primary={item.label} />
+              <ListItemText
+                primary={item.label}
+                primaryTypographyProps={{
+                  fontWeight: 500,
+                  fontSize: '16px',
+                }}
+              />
             </ListItem>
           ))}
+          <ListItem sx={{ mx: 2, mt: 2 }}>
+            <Button
+              variant="contained"
+              color="secondary"
+              href="#contact"
+              fullWidth
+              onClick={handleDrawerToggle}
+              sx={{
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                py: 1.5,
+              }}
+            >
+              IDŐPONTOT KÉREK
+            </Button>
+          </ListItem>
         </List>
       </Drawer>
     </AppBar>

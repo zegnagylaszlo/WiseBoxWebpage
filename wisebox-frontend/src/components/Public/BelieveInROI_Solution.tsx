@@ -17,186 +17,152 @@ export const BelieveInROI_Solution: React.FC = () => {
   ];
 
   return (
-    <Box sx={{ bgcolor: 'white' }}>
-      {/* Title Section */}
-      <Box sx={{ py: 8, textAlign: 'center' }}>
-        <Typography
-          variant="h2"
-          sx={{
-            mb: 1,
-            color: '#2B2B28',
-            fontSize: { xs: '32px', md: '40px' },
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            letterSpacing: '0.5px',
-          }}
-        >
-          MIRE AD MEGOLDÁST A WISEBOX
-        </Typography>
-        <Box
-          sx={{
-            width: '60px',
-            height: '3px',
-            bgcolor: 'primary.main',
-            mx: 'auto',
-          }}
-        />
-      </Box>
-
-      {/* Full Width Green Box */}
-      <Box
-        sx={{
-          bgcolor: 'primary.main',
-          color: 'white',
-          py: 4,
-        }}
-      >
-        <Box sx={{ maxWidth: '1440px', mx: 'auto', px: { xs: 3, md: 8, lg: 12 } }}>
+    <Box sx={{ py: { xs: 10, md: 14 }, bgcolor: '#FFFFFF' }}>
+      <Container>
+        {/* Section Header - Modern Pattern */}
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
           <Typography
-            variant="h5"
+            variant="caption"
             sx={{
-              fontSize: { xs: '18px', md: '22px' },
-              fontWeight: 600,
-              lineHeight: 1.5,
-              textAlign: 'center',
+              display: 'block',
+              color: 'primary.main',
+              mb: 2,
+            }}
+          >
+            MIRE AD MEGOLDÁST A WISEBOX
+          </Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: 3,
+              color: 'text.primary',
+              maxWidth: '900px',
+              mx: 'auto',
             }}
           >
             A Wisebox egy döntéstámogató rendszer, ami a könyvelési adataidat láthatóvá és értelmezhetővé teszi
           </Typography>
         </Box>
-      </Box>
 
-      {/* Before/After Comparison */}
-      <Box
-        sx={{
-          px: { xs: 3, md: 8, lg: 12 },
-          py: 8,
-        }}
-      >
-        <Container maxWidth="lg">
+        {/* Before/After Comparison */}
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
+            gap: 4,
+            mb: 6,
+          }}
+        >
+          {/* LEFT: Without Wisebox - Problems */}
           <Box
             sx={{
-              display: 'grid',
-              gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
-              gap: 4,
+              bgcolor: '#FEF5F5',
+              borderRadius: '12px',
+              p: 4,
+              height: '100%',
+              border: '1px solid #FFCDD2',
+              boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
             }}
           >
-            {/* LEFT: Without Wisebox - Problems */}
-            <Box
-              sx={{
-                bgcolor: '#f5f5f5',
-                borderRadius: '8px',
-                p: 4,
-                height: '100%',
-                border: '2px solid #e0e0e0',
-              }}
-            >
-                <Typography
-                  variant="h4"
-                  sx={{
-                    mb: 3,
-                    color: '#d32f2f',
-                    fontSize: { xs: '22px', md: '26px' },
-                    fontWeight: 700,
-                    textAlign: 'center',
-                  }}
-                >
-                  Wisebox nélkül
-                </Typography>
-
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
-                  {problemItems.map((item, index) => (
-                    <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>
-                      <CancelIcon
-                        sx={{
-                          color: '#d32f2f',
-                          fontSize: '24px',
-                          mt: 0.2,
-                          flexShrink: 0,
-                        }}
-                      />
-                      <Typography
-                        variant="body1"
-                        sx={{
-                          fontSize: { xs: '15px', md: '16px' },
-                          lineHeight: 1.6,
-                          color: '#2B2B28',
-                        }}
-                      >
-                        {item}
-                      </Typography>
-                    </Box>
-                  ))}
-                </Box>
-              </Box>
-
-            {/* RIGHT: With Wisebox - Solutions */}
-            <Box
-              sx={{
-                bgcolor: '#f0f9f4',
-                borderRadius: '8px',
-                p: 4,
-                height: '100%',
-                border: '2px solid #00964B',
-                boxShadow: '0 4px 12px rgba(0, 150, 75, 0.15)',
-              }}
-            >
-                <Typography
-                  variant="h4"
-                  sx={{
-                    mb: 3,
-                    color: '#00964B',
-                    fontSize: { xs: '22px', md: '26px' },
-                    fontWeight: 700,
-                    textAlign: 'center',
-                  }}
-                >
-                  Wisebox-szal
-                </Typography>
-
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
-                  {solutionItems.map((item, index) => (
-                    <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>
-                      <CheckCircleIcon
-                        sx={{
-                          color: '#00964B',
-                          fontSize: '24px',
-                          mt: 0.2,
-                          flexShrink: 0,
-                        }}
-                      />
-                      <Typography
-                        variant="body1"
-                        sx={{
-                          fontSize: { xs: '15px', md: '16px' },
-                          lineHeight: 1.6,
-                          color: '#2B2B28',
-                        }}
-                      >
-                        {item}
-                      </Typography>
-                    </Box>
-                  ))}
-                </Box>
-              </Box>
-          </Box>
-
-          {/* Bottom CTA Text */}
-          <Box sx={{ mt: 6, textAlign: 'center' }}>
             <Typography
-              variant="h5"
+              variant="h3"
               sx={{
-                color: '#2B2B28',
-                fontSize: { xs: '18px', md: '22px' },
-                fontWeight: 600,
-                lineHeight: 1.5,
+                mb: 4,
+                color: '#D32F2F',
+                textAlign: 'center',
               }}
             >
-              Váltás a káoszból a kontrollba – pár kattintással.
+              Wisebox nélkül
             </Typography>
+
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+              {problemItems.map((item, index) => (
+                <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
+                  <CancelIcon
+                    sx={{
+                      color: '#D32F2F',
+                      fontSize: '28px',
+                      mt: 0.2,
+                      flexShrink: 0,
+                    }}
+                  />
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      lineHeight: 1.7,
+                      color: 'text.primary',
+                    }}
+                  >
+                    {item}
+                  </Typography>
+                </Box>
+              ))}
+            </Box>
           </Box>
-        </Container>
-      </Box>
+
+          {/* RIGHT: With Wisebox - Solutions */}
+          <Box
+            sx={{
+              bgcolor: '#F1F8F5',
+              borderRadius: '12px',
+              p: 4,
+              height: '100%',
+              border: '2px solid',
+              borderColor: 'success.main',
+              boxShadow: '0px 4px 16px rgba(122, 200, 125, 0.15)',
+            }}
+          >
+            <Typography
+              variant="h3"
+              sx={{
+                mb: 4,
+                color: 'success.main',
+                textAlign: 'center',
+              }}
+            >
+              Wisebox-szal
+            </Typography>
+
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+              {solutionItems.map((item, index) => (
+                <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
+                  <CheckCircleIcon
+                    sx={{
+                      color: 'success.main',
+                      fontSize: '28px',
+                      mt: 0.2,
+                      flexShrink: 0,
+                    }}
+                  />
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      lineHeight: 1.7,
+                      color: 'text.primary',
+                    }}
+                  >
+                    {item}
+                  </Typography>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Box>
+
+        {/* Bottom CTA Text */}
+        <Box sx={{ textAlign: 'center' }}>
+          <Typography
+            variant="h5"
+            sx={{
+              color: 'text.primary',
+              fontWeight: 600,
+              lineHeight: 1.5,
+            }}
+          >
+            Váltás a káoszból a kontrollba – pár kattintással.
+          </Typography>
+        </Box>
+      </Container>
     </Box>
   );
 };

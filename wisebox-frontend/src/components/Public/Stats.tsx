@@ -83,36 +83,35 @@ export const Stats: React.FC = () => {
     <Box
       ref={statsRef}
       sx={{
-        py: { xs: 8, md: 12 },
-        bgcolor: '#f3fff6',
+        py: { xs: 10, md: 14 },
+        bgcolor: '#F8FCFC',
       }}
     >
       <Container>
-        {/* Section Title */}
-        <Typography
-          variant="h2"
-          sx={{
-            mb: 2,
-            color: '#2B2B28',
-            fontSize: { xs: '32px', md: '45px' },
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            textAlign: 'center',
-          }}
-        >
-          WISEBOX SZÁMOKBAN
-        </Typography>
-
-        {/* Green Underline */}
-        <Box
-          sx={{
-            width: '80px',
-            height: '4px',
-            bgcolor: 'primary.main',
-            mx: 'auto',
-            mb: 8,
-          }}
-        />
+        {/* Section Header - Modern Pattern */}
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
+          <Typography
+            variant="caption"
+            sx={{
+              display: 'block',
+              color: 'primary.main',
+              mb: 2,
+            }}
+          >
+            EREDMÉNYEINK
+          </Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: 3,
+              color: 'text.primary',
+              maxWidth: '800px',
+              mx: 'auto',
+            }}
+          >
+            Wisebox számokban
+          </Typography>
+        </Box>
 
         {/* Stats Grid */}
         <Box
@@ -120,7 +119,6 @@ export const Stats: React.FC = () => {
             display: 'grid',
             gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
             gap: 4,
-            mb: 6,
           }}
         >
           {stats.map((stat, index) => {
@@ -137,13 +135,13 @@ export const Stats: React.FC = () => {
                 sx={{
                   textAlign: 'center',
                   p: 4,
-                  bgcolor: 'white',
-                  borderRadius: '8px',
-                  transition: 'transform 0.3s ease',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                  bgcolor: '#FFFFFF',
+                  borderRadius: '12px',
+                  boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
+                  transition: 'all 0.2s ease-in-out',
                   '&:hover': {
-                    transform: 'translateY(-8px)',
-                    boxShadow: '0 6px 16px rgba(0,0,0,0.15)',
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0px 4px 16px rgba(0,0,0,0.1)',
                   },
                 }}
               >
@@ -151,26 +149,24 @@ export const Stats: React.FC = () => {
                   sx={{
                     fontSize: '48px',
                     color: 'primary.main',
-                    mb: 2,
+                    mb: 3,
                   }}
                 />
                 <Typography
-                  variant="h4"
                   sx={{
                     mb: 1,
-                    color: '#2B2B28',
-                    fontSize: { xs: '32px', md: '40px' },
+                    color: 'text.primary',
+                    fontSize: { xs: '40px', md: '48px' },
                     fontWeight: 700,
                   }}
                 >
                   {displayValue.toLocaleString('hu-HU')}{stat.suffix}
                 </Typography>
                 <Typography
-                  variant="h6"
+                  variant="h4"
                   sx={{
                     mb: 2,
                     color: 'primary.main',
-                    fontSize: { xs: '18px', md: '20px' },
                     fontWeight: 600,
                     textTransform: 'lowercase',
                   }}
@@ -180,9 +176,8 @@ export const Stats: React.FC = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: '#2B2B28',
-                    fontSize: '15px',
-                    lineHeight: 1.6,
+                    color: 'text.secondary',
+                    lineHeight: 1.7,
                     whiteSpace: 'pre-line',
                   }}
                 >

@@ -9,21 +9,23 @@ export const Footer: React.FC = () => {
     <Box
       component="footer"
       sx={{
-        bgcolor: '#2B2B28',
-        color: 'white',
-        py: { xs: 4, md: 6 },
+        bgcolor: 'background.paper',
+        color: 'text.primary',
+        py: { xs: 6, md: 8 },
         mt: 0,
+        borderTop: '1px solid',
+        borderColor: 'grey.200',
       }}
     >
       <Container>
         {/* Logo and tagline */}
-        <Box sx={{ mb: 4, textAlign: { xs: 'center', md: 'left' } }}>
+        <Box sx={{ mb: 6, textAlign: { xs: 'center', md: 'left' } }}>
           <Box
             sx={{
               display: 'flex',
               alignItems: 'center',
               gap: 1.5,
-              mb: 1.5,
+              mb: 2,
               justifyContent: { xs: 'center', md: 'flex-start' },
             }}
           >
@@ -34,9 +36,9 @@ export const Footer: React.FC = () => {
             />
             <Typography
               sx={{
-                color: 'white',
+                color: 'text.primary',
                 fontWeight: 700,
-                fontSize: '16px',
+                fontSize: '18px',
                 letterSpacing: '0.5px',
               }}
             >
@@ -44,14 +46,16 @@ export const Footer: React.FC = () => {
             </Typography>
           </Box>
           <Typography
-            variant="body2"
+            variant="body1"
             sx={{
-              opacity: 0.85,
-              fontSize: '16px',
-              lineHeight: 1.6,
+              color: 'text.secondary',
+              fontSize: '15px',
+              lineHeight: 1.7,
+              maxWidth: '600px',
+              mx: { xs: 'auto', md: 0 },
             }}
           >
-            A KKV-k könyvelési rendszere -  Könyvelési adatok könnyen és érthetően - Mert a válaszokra van szükséged, nem az adatokra
+            A KKV-k könyvelési rendszere - Könyvelési adatok könnyen és érthetően - Mert a válaszokra van szükséged, nem az adatokra
           </Typography>
         </Box>
 
@@ -59,22 +63,22 @@ export const Footer: React.FC = () => {
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
+            gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
             gap: 4,
-            mb: 4,
+            mb: 6,
           }}
         >
           <Box>
             <Typography
               variant="body2"
               sx={{
-                opacity: 0.85,
-                fontSize: '16px',
-                lineHeight: 2,
+                fontSize: '15px',
+                lineHeight: 2.2,
                 '& a': {
-                  color: 'white',
+                  color: 'text.primary',
                   textDecoration: 'none',
                   display: 'block',
+                  transition: 'color 0.2s ease',
                   '&:hover': {
                     color: 'primary.main',
                   },
@@ -90,13 +94,13 @@ export const Footer: React.FC = () => {
             <Typography
               variant="body2"
               sx={{
-                opacity: 0.85,
-                fontSize: '16px',
-                lineHeight: 2,
+                fontSize: '15px',
+                lineHeight: 2.2,
                 '& a': {
-                  color: 'white',
+                  color: 'text.primary',
                   textDecoration: 'none',
                   display: 'block',
+                  transition: 'color 0.2s ease',
                   '&:hover': {
                     color: 'primary.main',
                   },
@@ -111,13 +115,13 @@ export const Footer: React.FC = () => {
             <Typography
               variant="body2"
               sx={{
-                opacity: 0.85,
-                fontSize: '16px',
-                lineHeight: 2,
+                fontSize: '15px',
+                lineHeight: 2.2,
                 '& a': {
-                  color: 'white',
+                  color: 'text.primary',
                   textDecoration: 'none',
                   display: 'block',
+                  transition: 'color 0.2s ease',
                   '&:hover': {
                     color: 'primary.main',
                   },
@@ -133,8 +137,9 @@ export const Footer: React.FC = () => {
         {/* Bottom section */}
         <Box
           sx={{
-            borderTop: '1px solid rgba(255,255,255,0.15)',
-            pt: 3,
+            borderTop: '1px solid',
+            borderColor: 'grey.200',
+            pt: 4,
             mt: 2,
           }}
         >
@@ -145,8 +150,8 @@ export const Footer: React.FC = () => {
               flexDirection: { xs: 'column', sm: 'row' },
               justifyContent: 'center',
               alignItems: 'center',
-              gap: 3,
-              mb: 3,
+              gap: 4,
+              mb: 4,
             }}
           >
             {/* GDPR Badge */}
@@ -154,15 +159,15 @@ export const Footer: React.FC = () => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: 1,
+                gap: 1.5,
               }}
             >
-              <VerifiedUserIcon sx={{ color: '#00964B', fontSize: '22px' }} />
+              <VerifiedUserIcon sx={{ color: 'primary.main', fontSize: '24px' }} />
               <Typography
                 variant="body2"
                 sx={{
-                  color: 'rgba(255,255,255,0.8)',
-                  fontSize: '13px',
+                  color: 'text.secondary',
+                  fontSize: '14px',
                   fontWeight: 500,
                 }}
               >
@@ -175,15 +180,15 @@ export const Footer: React.FC = () => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: 1,
+                gap: 1.5,
               }}
             >
-              <LockIcon sx={{ color: '#00964B', fontSize: '22px' }} />
+              <LockIcon sx={{ color: 'primary.main', fontSize: '24px' }} />
               <Typography
                 variant="body2"
                 sx={{
-                  color: 'rgba(255,255,255,0.8)',
-                  fontSize: '13px',
+                  color: 'text.secondary',
+                  fontSize: '14px',
                   fontWeight: 500,
                 }}
               >
@@ -196,15 +201,15 @@ export const Footer: React.FC = () => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: 1,
+                gap: 1.5,
               }}
             >
-              <CloudDoneIcon sx={{ color: '#00964B', fontSize: '22px' }} />
+              <CloudDoneIcon sx={{ color: 'primary.main', fontSize: '24px' }} />
               <Typography
                 variant="body2"
                 sx={{
-                  color: 'rgba(255,255,255,0.8)',
-                  fontSize: '13px',
+                  color: 'text.secondary',
+                  fontSize: '14px',
                   fontWeight: 500,
                 }}
               >
@@ -217,7 +222,7 @@ export const Footer: React.FC = () => {
             variant="body2"
             align="center"
             sx={{
-              opacity: 0.75,
+              color: 'text.secondary',
               fontSize: '14px',
               mb: 1,
             }}
@@ -228,8 +233,9 @@ export const Footer: React.FC = () => {
             variant="body2"
             align="center"
             sx={{
-              opacity: 0.6,
-              fontSize: '12px',
+              color: 'text.secondary',
+              fontSize: '13px',
+              opacity: 0.7,
             }}
           >
             Created and designed by Movement Makerz & WiseBox Team

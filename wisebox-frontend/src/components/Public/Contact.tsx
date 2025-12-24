@@ -75,217 +75,64 @@ export const Contact: React.FC = () => {
     <Box
       id="contact"
       sx={{
-        bgcolor: '#F5F5F5',
-        py: { xs: 4, md: 6 },
+        bgcolor: '#FFFFFF',
+        py: { xs: 10, md: 14 },
       }}
     >
-      <Box
-        sx={{
-          maxWidth: '1600px',
-          mx: 'auto',
-          px: { xs: 3, md: 6 },
-        }}
-      >
-        {/* Framed Container */}
-        <Box
-          sx={{
-            bgcolor: 'white',
-            borderRadius: '12px',
-            boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
-            overflow: 'hidden',
-          }}
-        >
-          {/* Hero Section - Green Background with CTAs */}
-          <Box
+      <Container>
+        {/* Section Header - Modern Pattern */}
+        <Box sx={{ textAlign: 'center', mb: 8 }}>
+          <Typography
+            variant="caption"
             sx={{
-              py: { xs: 8, md: 12 },
-              bgcolor: 'primary.main',
+              display: 'block',
+              color: 'primary.main',
+              mb: 2,
             }}
           >
-            <Container maxWidth="xl">
-          {/* Section Title */}
+            LÉPJ VELÜNK KAPCSOLATBA
+          </Typography>
           <Typography
             variant="h2"
             sx={{
-              mb: 2,
-              color: 'white',
-              fontSize: { xs: '32px', md: '45px' },
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              textAlign: 'center',
-            }}
-          >
-            VEDD FEL VELÜNK A KAPCSOLATOT!
-          </Typography>
-
-          {/* White Underline */}
-          <Box
-            sx={{
-              width: '80px',
-              height: '4px',
-              bgcolor: 'white',
+              mb: 3,
+              color: 'text.primary',
+              maxWidth: '900px',
               mx: 'auto',
-              mb: 4,
-            }}
-          />
-
-          {/* Subtitle */}
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              mb: 6,
-              px: { xs: 2, md: 2, lg: 3, xl: 4 },
             }}
           >
-            <Typography
-              variant="h4"
-              sx={{
-                color: 'white',
-                fontSize: { xs: '20px', md: '26px', lg: '28px', xl: '30px' },
-                fontWeight: 600,
-                textAlign: 'center',
-                lineHeight: 1.3,
-                whiteSpace: { md: 'nowrap' },
-              }}
-            >
-              Fedezd fel, hogyan segíthet a Wisebox még jobban megérteni céged könyvelési adatait
-            </Typography>
-          </Box>
-
-          {/* Three Equal CTA Buttons */}
-          <Box
+            Vedd fel velünk a kapcsolatot!
+          </Typography>
+          <Typography
+            variant="h5"
             sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
-              gap: 3,
-              justifyContent: 'center',
-              alignItems: 'center',
-              mt: 6,
+              color: 'text.secondary',
+              maxWidth: '700px',
+              mx: 'auto',
             }}
           >
-            {/* Email Button */}
-            <Button
-              variant="contained"
-              size="large"
-              startIcon={<EmailIcon />}
-              component="a"
-              href="#contact-email"
-              sx={{
-                bgcolor: 'white',
-                color: 'primary.main',
-                px: 4,
-                py: 2,
-                fontSize: '17px',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                minWidth: { xs: '100%', sm: '280px' },
-                transition: 'all 0.2s',
-                '&:hover': {
-                  bgcolor: '#f0f0f0',
-                  transform: 'scale(1.02)',
-                },
-              }}
-            >
-              EMAIL KÜLDÉSE
-            </Button>
+            Fedezd fel, hogyan segíthet a Wisebox még jobban megérteni céged könyvelési adatait
+          </Typography>
+        </Box>
 
-            {/* Phone Button */}
-            <Button
-              variant="contained"
-              size="large"
-              startIcon={<PhoneIcon />}
-              component="a"
-              href="#contact-phone"
-              sx={{
-                bgcolor: 'white',
-                color: 'primary.main',
-                px: 4,
-                py: 2,
-                fontSize: '17px',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                minWidth: { xs: '100%', sm: '280px' },
-                transition: 'all 0.2s',
-                '&:hover': {
-                  bgcolor: '#f0f0f0',
-                  transform: 'scale(1.02)',
-                },
-              }}
-            >
-              HÍVÁS INDÍTÁSA
-            </Button>
-
-            {/* Form Scroll Button */}
-            <Button
-              variant="contained"
-              size="large"
-              startIcon={<SendIcon />}
-              component="a"
-              href="#contact-form"
-              sx={{
-                bgcolor: 'white',
-                color: 'primary.main',
-                px: 4,
-                py: 2,
-                fontSize: '17px',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                minWidth: { xs: '100%', sm: '280px' },
-                transition: 'all 0.2s',
-                '&:hover': {
-                  bgcolor: '#f0f0f0',
-                  transform: 'scale(1.02)',
-                },
-              }}
-            >
-              ÜZENET ÍRÁSA
-            </Button>
-          </Box>
-        </Container>
-      </Box>
-
-      {/* Contact Cards Section - White Background */}
-        <Box
-          id="contact-phone"
-          sx={{
-            py: { xs: 8, md: 10 },
-            bgcolor: 'white',
-          }}
-        >
-        <Container maxWidth="xl">
-          {/* Section Title */}
+        {/* Contact Cards Section */}
+        <Box id="contact-phone" sx={{ mb: 8 }}>
           <Typography
             variant="h3"
             sx={{
-              mb: 2,
-              color: '#2B2B28',
-              fontSize: { xs: '28px', md: '36px' },
-              fontWeight: 700,
-              textTransform: 'uppercase',
+              mb: 6,
+              color: 'text.primary',
               textAlign: 'center',
             }}
           >
-            VÁRJUK A HÍVÁSODAT
+            Várjuk a hívásodat
           </Typography>
-
-          {/* Green Underline */}
-          <Box
-            sx={{
-              width: '80px',
-              height: '4px',
-              bgcolor: 'primary.main',
-              mx: 'auto',
-              mb: 6,
-            }}
-          />
 
           <Box
             sx={{
               display: 'grid',
               gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
               gap: 4,
-              justifyContent: 'center',
               maxWidth: '800px',
               mx: 'auto',
             }}
@@ -293,17 +140,18 @@ export const Contact: React.FC = () => {
             {/* Card 1 - Dezső Tibor */}
             <Box
               sx={{
-                bgcolor: 'white',
+                bgcolor: 'background.paper',
                 borderRadius: '12px',
                 p: 4,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 textAlign: 'center',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                transition: 'box-shadow 0.3s',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
+                transition: 'all 0.2s ease-in-out',
                 '&:hover': {
-                  boxShadow: '0 6px 20px rgba(0,0,0,0.15)',
+                  transform: 'translateY(-4px)',
+                  boxShadow: '0px 4px 16px rgba(0,0,0,0.1)',
                 },
               }}
             >
@@ -333,9 +181,7 @@ export const Contact: React.FC = () => {
                 variant="h4"
                 sx={{
                   mb: 1,
-                  color: '#2B2B28',
-                  fontSize: '28px',
-                  fontWeight: 700,
+                  color: 'text.primary',
                 }}
               >
                 Dezső Tibor
@@ -346,9 +192,7 @@ export const Contact: React.FC = () => {
                 variant="h6"
                 sx={{
                   mb: 3,
-                  color: '#2B2B28',
-                  fontSize: '18px',
-                  fontWeight: 500,
+                  color: 'text.secondary',
                 }}
               >
                 Üzletfejlesztési manager
@@ -375,7 +219,7 @@ export const Contact: React.FC = () => {
                     width: '36px',
                     height: '36px',
                     borderRadius: '50%',
-                    bgcolor: '#00964B',
+                    bgcolor: 'success.main',
                     color: 'white',
                     display: 'flex',
                     alignItems: 'center',
@@ -387,8 +231,7 @@ export const Contact: React.FC = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: '#2B2B28',
-                    fontSize: '18px',
+                    color: 'text.primary',
                     fontWeight: 500,
                   }}
                 >
@@ -400,17 +243,18 @@ export const Contact: React.FC = () => {
             {/* Card 2 - Lepsényi Tamás */}
             <Box
               sx={{
-                bgcolor: 'white',
+                bgcolor: 'background.paper',
                 borderRadius: '12px',
                 p: 4,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 textAlign: 'center',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                transition: 'box-shadow 0.3s',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
+                transition: 'all 0.2s ease-in-out',
                 '&:hover': {
-                  boxShadow: '0 6px 20px rgba(0,0,0,0.15)',
+                  transform: 'translateY(-4px)',
+                  boxShadow: '0px 4px 16px rgba(0,0,0,0.1)',
                 },
               }}
             >
@@ -440,9 +284,7 @@ export const Contact: React.FC = () => {
                 variant="h4"
                 sx={{
                   mb: 1,
-                  color: '#2B2B28',
-                  fontSize: '28px',
-                  fontWeight: 700,
+                  color: 'text.primary',
                 }}
               >
                 Lepsényi Tamás
@@ -453,9 +295,7 @@ export const Contact: React.FC = () => {
                 variant="h6"
                 sx={{
                   mb: 3,
-                  color: '#2B2B28',
-                  fontSize: '18px',
-                  fontWeight: 500,
+                  color: 'text.secondary',
                 }}
               >
                 Senior Üzletfejlesztő
@@ -482,7 +322,7 @@ export const Contact: React.FC = () => {
                     width: '36px',
                     height: '36px',
                     borderRadius: '50%',
-                    bgcolor: '#00964B',
+                    bgcolor: 'success.main',
                     color: 'white',
                     display: 'flex',
                     alignItems: 'center',
@@ -494,8 +334,7 @@ export const Contact: React.FC = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: '#2B2B28',
-                    fontSize: '18px',
+                    color: 'text.primary',
                     fontWeight: 500,
                   }}
                 >
@@ -504,55 +343,30 @@ export const Contact: React.FC = () => {
               </Box>
             </Box>
           </Box>
-        </Container>
-      </Box>
+        </Box>
 
-      {/* Contact Form Section - Light Grey Background */}
-      <Box
-        id="contact-form"
-        sx={{
-          py: { xs: 8, md: 12 },
-          bgcolor: '#F5F5F5',
-        }}
-      >
-        <Container maxWidth="md">
-          {/* Form Title */}
+        {/* Contact Form Section */}
+        <Box id="contact-form" sx={{ mb: 8, maxWidth: '700px', mx: 'auto' }}>
           <Typography
             variant="h3"
             sx={{
-              mb: 2,
-              color: '#2B2B28',
-              fontSize: { xs: '28px', md: '36px' },
-              fontWeight: 700,
-              textTransform: 'uppercase',
+              mb: 6,
+              color: 'text.primary',
               textAlign: 'center',
             }}
           >
-            VAGY ÍRJ NEKÜNK ÜZENETET
+            Vagy írj nekünk üzenetet
           </Typography>
-
-          {/* Form Underline */}
-          <Box
-            sx={{
-              width: '80px',
-              height: '4px',
-              bgcolor: 'primary.main',
-              mx: 'auto',
-              mb: 6,
-            }}
-          />
 
           {/* Form Container */}
           <Box
             component="form"
             onSubmit={handleSubmit}
             sx={{
-              bgcolor: 'white',
+              bgcolor: 'background.paper',
               borderRadius: '12px',
               p: { xs: 3, md: 5 },
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-              maxWidth: '700px',
-              mx: 'auto',
+              boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
             }}
           >
             {/* Success Message */}
@@ -625,23 +439,17 @@ export const Contact: React.FC = () => {
             <Button
               type="submit"
               variant="contained"
+              color="secondary"
               size="large"
               fullWidth
               disabled={isSubmitting}
               startIcon={<SendIcon />}
               sx={{
-                bgcolor: '#00964B',
-                color: 'white',
                 py: 2,
-                fontSize: '17px',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                '&:hover': {
-                  bgcolor: '#2E8640',
-                },
+                fontWeight: 600,
               }}
             >
-              {isSubmitting ? 'KÜLDÉS...' : 'ÜZENET KÜLDÉSE'}
+              {isSubmitting ? 'Küldés...' : 'Üzenet küldése'}
             </Button>
 
             {/* Security Badges */}
@@ -649,7 +457,8 @@ export const Contact: React.FC = () => {
               sx={{
                 mt: 4,
                 pt: 4,
-                borderTop: '1px solid #e0e0e0',
+                borderTop: '1px solid',
+                borderColor: 'grey.200',
                 display: 'flex',
                 flexDirection: { xs: 'column', sm: 'row' },
                 justifyContent: 'center',
@@ -657,7 +466,6 @@ export const Contact: React.FC = () => {
                 gap: 3,
               }}
             >
-              {/* GDPR Badge */}
               <Box
                 sx={{
                   display: 'flex',
@@ -665,11 +473,11 @@ export const Contact: React.FC = () => {
                   gap: 1,
                 }}
               >
-                <VerifiedUserIcon sx={{ color: '#00964B', fontSize: '24px' }} />
+                <VerifiedUserIcon sx={{ color: 'primary.main', fontSize: '24px' }} />
                 <Typography
                   variant="body2"
                   sx={{
-                    color: '#666',
+                    color: 'text.secondary',
                     fontSize: '13px',
                     fontWeight: 500,
                   }}
@@ -678,7 +486,6 @@ export const Contact: React.FC = () => {
                 </Typography>
               </Box>
 
-              {/* SSL Badge */}
               <Box
                 sx={{
                   display: 'flex',
@@ -686,11 +493,11 @@ export const Contact: React.FC = () => {
                   gap: 1,
                 }}
               >
-                <LockIcon sx={{ color: '#00964B', fontSize: '24px' }} />
+                <LockIcon sx={{ color: 'primary.main', fontSize: '24px' }} />
                 <Typography
                   variant="body2"
                   sx={{
-                    color: '#666',
+                    color: 'text.secondary',
                     fontSize: '13px',
                     fontWeight: 500,
                   }}
@@ -699,7 +506,6 @@ export const Contact: React.FC = () => {
                 </Typography>
               </Box>
 
-              {/* EU Servers Badge */}
               <Box
                 sx={{
                   display: 'flex',
@@ -707,11 +513,11 @@ export const Contact: React.FC = () => {
                   gap: 1,
                 }}
               >
-                <CloudDoneIcon sx={{ color: '#00964B', fontSize: '24px' }} />
+                <CloudDoneIcon sx={{ color: 'primary.main', fontSize: '24px' }} />
                 <Typography
                   variant="body2"
                   sx={{
-                    color: '#666',
+                    color: 'text.secondary',
                     fontSize: '13px',
                     fontWeight: 500,
                   }}
@@ -721,98 +527,61 @@ export const Contact: React.FC = () => {
               </Box>
             </Box>
           </Box>
-        </Container>
-      </Box>
+        </Box>
 
-      {/* Email Section - White Background */}
-      <Box
-        id="contact-email"
-        sx={{
-          py: { xs: 8, md: 10 },
-          bgcolor: 'white',
-        }}
-      >
-        <Container maxWidth="md">
-          {/* Section Title */}
+        {/* Email Section */}
+        <Box id="contact-email" sx={{ textAlign: 'center' }}>
           <Typography
             variant="h3"
             sx={{
-              mb: 2,
-              color: '#2B2B28',
-              fontSize: { xs: '28px', md: '36px' },
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              textAlign: 'center',
+              mb: 4,
+              color: 'text.primary',
             }}
           >
-            VAGY KÜLDJ NEKÜNK EMAIL-T
+            Vagy küldj nekünk email-t
           </Typography>
 
-          {/* Green Underline */}
           <Box
+            component="a"
+            href="mailto:info@wisebox.hu"
             sx={{
-              width: '80px',
-              height: '4px',
-              bgcolor: 'primary.main',
-              mx: 'auto',
-              mb: 6,
-            }}
-          />
-
-          {/* Email Display */}
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
+              display: 'inline-flex',
               alignItems: 'center',
               gap: 2,
+              textDecoration: 'none',
+              cursor: 'pointer',
+              transition: 'transform 0.2s',
+              '&:hover': {
+                transform: 'scale(1.05)',
+              },
             }}
           >
             <Box
-              component="a"
-              href="mailto:info@wisebox.hu"
               sx={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '50%',
+                bgcolor: 'success.main',
+                color: 'white',
                 display: 'flex',
                 alignItems: 'center',
-                gap: 2,
-                textDecoration: 'none',
-                cursor: 'pointer',
-                transition: 'transform 0.2s',
-                '&:hover': {
-                  transform: 'scale(1.05)',
-                },
+                justifyContent: 'center',
               }}
             >
-              <Box
-                sx={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '50%',
-                  bgcolor: '#00964B',
-                  color: 'white',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <EmailIcon sx={{ fontSize: '24px' }} />
-              </Box>
-              <Typography
-                variant="h5"
-                sx={{
-                  color: '#2B2B28',
-                  fontSize: { xs: '20px', md: '24px' },
-                  fontWeight: 600,
-                }}
-              >
-                info@wisebox.hu
-              </Typography>
+              <EmailIcon sx={{ fontSize: '24px' }} />
             </Box>
+            <Typography
+              variant="h5"
+              sx={{
+                color: 'text.primary',
+                fontWeight: 600,
+              }}
+            >
+              info@wisebox.hu
+            </Typography>
           </Box>
-        </Container>
-      </Box>
-      </Box>
-      </Box>
+        </Box>
+      </Container>
     </Box>
   );
 };
