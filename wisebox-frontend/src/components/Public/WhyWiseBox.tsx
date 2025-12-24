@@ -121,7 +121,7 @@ export const WhyWiseBox: React.FC = () => {
               lineHeight: 1.5,
             }}
           >
-            Ahol a könyvelés találkozik az üzleti intelligenciával
+            Ahol a könyvelési adataid találkoznak az üzleti intelligenciával
           </Typography>
         </Box>
       </Container>
