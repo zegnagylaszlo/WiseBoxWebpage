@@ -9,8 +9,9 @@ export const wiseboxTheme = createTheme({
       light: '#5EACAF', // Lighter teal for backgrounds
     },
     secondary: {
-      main: '#FF6B6B', // Coral Orange - CTAs, important highlights
-      dark: '#E85555',  // Darker coral for hover
+      main: '#3A9FA6', // Medium Teal - partner links, external navigation
+      dark: '#2A7F85', // Darker teal for hover states
+      light: '#7CBFC5', // Lighter teal (optional, for future use)
     },
     info: {
       main: '#4A90E2', // Sky Blue - secondary actions, info elements
@@ -129,10 +130,10 @@ export const wiseboxTheme = createTheme({
           },
         },
         containedSecondary: {
-          color: '#FFFFFF', // White text on Teal background
-          backgroundColor: '#0A7B7F',
+          color: '#FFFFFF', // White text on Medium Teal background
+          backgroundColor: '#3A9FA6',
           '&:hover': {
-            backgroundColor: '#085F62',
+            backgroundColor: '#2A7F85',
           },
         },
         outlinedPrimary: {

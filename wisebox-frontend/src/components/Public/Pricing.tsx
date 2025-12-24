@@ -134,7 +134,7 @@ export const Pricing: React.FC = () => {
               fontWeight: 600,
             }}
           >
-            Időpontot kérek
+            IDŐPONTOT KÉREK
           </Button>
         </Box>
       </Container>

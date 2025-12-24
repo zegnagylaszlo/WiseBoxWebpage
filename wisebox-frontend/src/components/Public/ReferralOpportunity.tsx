@@ -78,7 +78,7 @@ export const ReferralOpportunity: React.FC = () => {
                 fontWeight: 600,
               }}
             >
-              Időpontot kérek
+              IDŐPONTOT KÉREK
             </Button>
           </Box>
 
