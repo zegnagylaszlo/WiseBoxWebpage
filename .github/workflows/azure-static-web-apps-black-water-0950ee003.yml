@@ -23,7 +23,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-      - name: Build And Deploy
+      - name: Install and Build
+        run: |
+          cd wisebox-frontend
+          npm ci
+          npm run build
+      - name: Deploy to Azure Static Web Apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -32,9 +37,10 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/wisebox-frontend" # App source code path
+          app_location: "/wisebox-frontend/build" # Pre-built app content
           api_location: "" # Api source code path - optional
-          output_location: "build" # Built app content directory - optional
+          output_location: "" # Already built, no build needed
+          skip_app_build: true # We build it ourselves above
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
