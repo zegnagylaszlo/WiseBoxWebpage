@@ -48,7 +48,7 @@ export const Navbar: React.FC = () => {
             href="/"
             onClick={(e: React.MouseEvent) => {
               e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              window.location.href = '/';
             }}
             sx={{
               textDecoration: 'none',
