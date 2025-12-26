@@ -2,7 +2,7 @@ using WiseBox.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container (Production deployment)
+// Add services to the container (Production deployment with CORS for new.wisebox.hu)
 builder.Services.AddControllers();
 
 // Register Email Service
