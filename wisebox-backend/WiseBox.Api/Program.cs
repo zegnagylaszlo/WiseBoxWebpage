@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
             "https://icy-meadow-020538203.2.azurestaticapps.net",  // Dev environment
             "https://black-water-0950ee003.5.azurestaticapps.net",  // Production Static Web App
             "https://new.wisebox.hu",                   // Custom domain
-            "https://wisebox-api-prod-cfazf6h4h6gma5kl.northeurope-01.azurewebsites.net"  // Backend URL (for direct testing)
+            "https://wisebox-api-prod-cfazf6h4h6gma5fd.northeurope-01.azurewebsites.net"  // Backend URL (for direct testing)
         )
         .AllowAnyMethod()
         .AllowAnyHeader();
