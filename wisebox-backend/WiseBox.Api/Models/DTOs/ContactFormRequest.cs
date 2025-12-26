@@ -13,7 +13,7 @@ namespace WiseBox.Api.Models.DTOs
         public string Email { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "A telefonszám megadása kötelező")]
-        [RegularExpression(@"^[\d\s\+\-\(\)]+$", ErrorMessage = "Érvénytelen telefonszám formátum")]
+        [RegularExpression(@"^[\d\s+\-()]+$", ErrorMessage = "Érvénytelen telefonszám formátum")]
         [StringLength(20, ErrorMessage = "A telefonszám maximum 20 karakter lehet")]
         public string Phone { get; set; } = string.Empty;
 

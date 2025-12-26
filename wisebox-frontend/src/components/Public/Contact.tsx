@@ -36,7 +36,7 @@ export const Contact: React.FC = () => {
 
     if (!phone.trim()) {
       newErrors.phone = 'A telefonszám megadása kötelező';
-    } else if (!/^[\d\s\+\-\(\)]+$/.test(phone)) {
+    } else if (!/^[\d\s+\-()]+$/.test(phone)) {
       newErrors.phone = 'Érvénytelen telefonszám formátum';
     }
 
