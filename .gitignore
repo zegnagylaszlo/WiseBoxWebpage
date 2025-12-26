@@ -43,9 +43,24 @@ Thumbs.db
 
 # dotenv environment variables file
 .env
+.env.development
+.env.production
 
 # Debug
 debug.log
+
+# .NET / ASP.NET Core
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.suo
+*.cache
+*.dll
+*.exe
+*.pdb
+appsettings.Production.json
+UserSecrets/
 
 # WordPress source files (temporary reference files)
 wordpress-source/

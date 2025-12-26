@@ -1,0 +1,45 @@
+name: Azure Backend Dev Deployment
+
+on:
+  push:
+    branches:
+      - 'feature/**'
+      - 'dev'
+    paths:
+      - 'wisebox-backend/**'
+      - '.github/workflows/azure-backend-dev.yml'
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    name: Build and Deploy Backend to Dev
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: |
+          cd wisebox-backend/WiseBox.Api
+          dotnet restore
+
+      - name: Build
+        run: |
+          cd wisebox-backend/WiseBox.Api
+          dotnet build --configuration Release --no-restore
+
+      - name: Publish
+        run: |
+          cd wisebox-backend/WiseBox.Api
+          dotnet publish --configuration Release --output ./publish --no-build
+
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ secrets.AZURE_BACKEND_DEV_APP_NAME }}
+          publish-profile: ${{ secrets.AZURE_BACKEND_DEV_PUBLISH_PROFILE }}
+          package: wisebox-backend/WiseBox.Api/publish
