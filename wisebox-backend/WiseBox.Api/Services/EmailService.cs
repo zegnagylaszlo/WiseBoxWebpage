@@ -89,8 +89,8 @@ namespace WiseBox.Api.Services
                 );
 
                 await client.AuthenticateAsync(
-                    _configuration["EmailSettings:Username"],
-                    _configuration["EmailSettings:Password"]
+                    _configuration["EmailSettings:SmtpUsername"],
+                    _configuration["EmailSettings:SmtpPassword"]
                 );
 
                 await client.SendAsync(message);
