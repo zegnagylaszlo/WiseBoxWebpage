@@ -15,6 +15,7 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
             "http://localhost:3000",                    // Local development
+            "https://icy-meadow-020538203.2.azurestaticapps.net",  // Dev environment
             "https://black-water-0950ee003.5.azurestaticapps.net",  // Production
             "https://new.wisebox.hu"                    // Custom domain
         )
