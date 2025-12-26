@@ -358,7 +358,7 @@ export const StrategicPartnersNew: React.FC = () => {
                 <Box
                   sx={{
                     mb: 3,
-                    height: '120px',
+                    height: '180px',
                     width: '100%',
                     display: 'flex',
                     alignItems: 'center',
@@ -369,10 +369,13 @@ export const StrategicPartnersNew: React.FC = () => {
                     src={partner.logo}
                     alt={partner.buttonText}
                     style={{
-                      maxWidth: '180px',
-                      maxHeight: '100px',
+                      maxWidth: '100%',
+                      maxHeight: '180px',
                       width: 'auto',
                       height: 'auto',
+                      objectFit: 'contain',
+                      transform: partner.buttonText === 'Movement Makerz' ? 'scale(1.8)' :
+                                partner.buttonText === 'HyperMatrix' ? 'scale(1.2)' : 'none',
                     }}
                   />
                 </Box>
@@ -410,6 +413,7 @@ export const StrategicPartnersNew: React.FC = () => {
                   sx={{
                     px: 4,
                     fontWeight: 600,
+                    minWidth: '200px',
                   }}
                 >
                   {partner.buttonText}
