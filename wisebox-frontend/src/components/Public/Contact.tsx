@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
-import { Box, Container, Typography, Button, TextField, Alert } from '@mui/material';
+import { Box, Container, Typography, Button, TextField, Alert, FormControlLabel, Checkbox, Link } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import SendIcon from '@mui/icons-material/Send';
 import LockIcon from '@mui/icons-material/Lock';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import CloudDoneIcon from '@mui/icons-material/CloudDone';
+import { submitContactForm } from '../../services/contactService';
 
 export const Contact: React.FC = () => {
   // Form state
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [company, setCompany] = useState('');
   const [message, setMessage] = useState('');
+  const [consentGiven, setConsentGiven] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -31,8 +34,22 @@ export const Contact: React.FC = () => {
       newErrors.email = 'Érvénytelen email formátum';
     }
 
+    if (!phone.trim()) {
+      newErrors.phone = 'A telefonszám megadása kötelező';
+    } else if (!/^[\d\s\+\-\(\)]+$/.test(phone)) {
+      newErrors.phone = 'Érvénytelen telefonszám formátum';
+    }
+
+    if (!company.trim()) {
+      newErrors.company = 'A cég nevének megadása kötelező';
+    }
+
     if (!message.trim()) {
       newErrors.message = 'Az üzenet megadása kötelező';
+    }
+
+    if (!consentGiven) {
+      newErrors.consent = 'Az adatkezelési tájékoztató elfogadása kötelező';
     }
 
     setErrors(newErrors);
@@ -46,26 +63,41 @@ export const Contact: React.FC = () => {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
+    setErrors({}); // Clear previous errors
 
     try {
-      // Placeholder for API integration
-      console.log({ name, email, company, message });
+      const response = await submitContactForm({
+        name,
+        email,
+        phone,
+        company,
+        message,
+        consentGiven,
+      });
 
-      // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      if (response.success) {
+        setSubmitSuccess(true);
 
-      setSubmitSuccess(true);
+        // Reset form
+        setName('');
+        setEmail('');
+        setPhone('');
+        setCompany('');
+        setMessage('');
+        setConsentGiven(false);
+        setErrors({});
 
-      // Reset form
-      setName('');
-      setEmail('');
-      setCompany('');
-      setMessage('');
-      setErrors({});
-
-      setTimeout(() => setSubmitSuccess(false), 5000);
+        // Hide success message after 5 seconds
+        setTimeout(() => setSubmitSuccess(false), 5000);
+      } else {
+        setErrors({ submit: response.message });
+      }
     } catch (error) {
-      setErrors({ submit: 'Hiba történt az üzenet küldése során' });
+      if (error instanceof Error) {
+        setErrors({ submit: error.message });
+      } else {
+        setErrors({ submit: 'Hiba történt az üzenet küldése során. Kérjük, próbálja újra később.' });
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -410,13 +442,29 @@ export const Contact: React.FC = () => {
               sx={{ mb: 3 }}
             />
 
+            {/* Phone Field */}
+            <TextField
+              fullWidth
+              required
+              label="Telefonszám"
+              variant="outlined"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              error={!!errors.phone}
+              helperText={errors.phone || 'Pl: +36 70 123 4567'}
+              sx={{ mb: 3 }}
+            />
+
             {/* Company Field */}
             <TextField
               fullWidth
-              label="Cég (opcionális)"
+              required
+              label="Cég neve"
               variant="outlined"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
+              error={!!errors.company}
+              helperText={errors.company}
               sx={{ mb: 3 }}
             />
 
@@ -434,6 +482,75 @@ export const Contact: React.FC = () => {
               helperText={errors.message}
               sx={{ mb: 4 }}
             />
+
+            {/* GDPR Consent Checkbox */}
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={consentGiven}
+                  onChange={(e) => setConsentGiven(e.target.checked)}
+                  color="primary"
+                  sx={{
+                    '&.Mui-checked': {
+                      color: 'primary.main',
+                    },
+                  }}
+                />
+              }
+              label={
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: 'text.primary',
+                    fontSize: '14px',
+                    lineHeight: 1.6,
+                  }}
+                >
+                  Elfogadom az{' '}
+                  <Link
+                    href="/legal/11.Adatkezelesi_Tajekoztato_Weblap_WB.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: 'primary.main',
+                      textDecoration: 'underline',
+                      fontWeight: 500,
+                      '&:hover': {
+                        color: 'primary.dark',
+                      },
+                    }}
+                  >
+                    Adatkezelési Tájékoztatót
+                  </Link>
+                  {' '}és hozzájárulok ahhoz, hogy a megadott személyes adataim feldolgozásra kerüljenek a kapcsolatfelvétel céljából.
+                </Typography>
+              }
+              sx={{
+                alignItems: 'flex-start',
+                mb: 3,
+                ml: 0,
+                '& .MuiFormControlLabel-label': {
+                  ml: 1,
+                  mt: 0.5,
+                },
+              }}
+            />
+
+            {/* Consent Error Message */}
+            {errors.consent && (
+              <Typography
+                variant="body2"
+                sx={{
+                  color: 'error.main',
+                  fontSize: '12px',
+                  mt: -2,
+                  mb: 3,
+                  ml: 4,
+                }}
+              >
+                {errors.consent}
+              </Typography>
+            )}
 
             {/* Submit Button */}
             <Button
