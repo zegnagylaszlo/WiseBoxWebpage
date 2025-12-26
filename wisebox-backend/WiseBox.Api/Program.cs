@@ -2,7 +2,7 @@ using WiseBox.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
+// Add services to the container (Production deployment)
 builder.Services.AddControllers();
 
 // Register Email Service
