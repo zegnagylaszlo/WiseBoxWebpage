@@ -143,7 +143,7 @@ export const Contact: React.FC = () => {
               mx: 'auto',
             }}
           >
-            Fedezd fel, hogyan segíthet a Wisebox még jobban megérteni céged könyvelési adatait
+            Fedezd fel, hogyan segíthet a WiseBox még jobban megérteni céged könyvelési adatait
           </Typography>
         </Box>
 

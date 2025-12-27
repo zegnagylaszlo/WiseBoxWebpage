@@ -6,7 +6,7 @@ export const StrategicPartnersNew: React.FC = () => {
     {
       logo: '/images/hypermatrix_logo.webp',
       title: 'Informatikai szolgáltatónk',
-      description: '✓ teljes informatikai hátterünket biztosítja\n✓ jelenlegi kor által megkövetelt információ-, és adatbiztonsági előírásokkal összhangban',
+      description: '✓ teljes-körű informatikai megoldások biztosítása\n✓ a jelenkor által megkövetelt információ-, és adatbiztonsági előírásokkal összhangban',
       buttonText: 'HyperMatrix',
       buttonUrl: 'https://www.hypermatrix.cloud/',
       logoMaxWidth: '200px',
@@ -16,7 +16,7 @@ export const StrategicPartnersNew: React.FC = () => {
     {
       logo: '/images/expertconsult_long.webp',
       title: 'Teljeskörű szolgáltatás',
-      description: '✓ teljes ügyviteli folyamat egy kézből üzemeltethető\n✓ dokumentum-kezelés, könyvelés, kontrolling',
+      description: '✓ teljes-körű ügyviteli szolgáltatás egy kézből \n✓ dokumentum-kezelés, könyvelés, kontrolling, informatika',
       buttonText: 'ExpertConsult',
       buttonUrl: 'https://expertconsult.hu/',
       logoMaxWidth: '200px',
@@ -131,7 +131,7 @@ export const StrategicPartnersNew: React.FC = () => {
               mx: 'auto',
             }}
           >
-            Küldetésük, hogy a legjobb termékeket, szolgáltatásokat eljuttassák az Ügyfeleikhez. Érejük a függetlenségben rejlik. Céljuk, hogy a B2B név egyet jelentsen a Minőséggel és a Megbízhatósággal.
+            Küldetésük, hogy a legjobb termékeket és szolgáltatásokat eljuttassák az Ügyfeleikhez. <br />Érejük a függetlenségben rejlik. <br />Céljuk, hogy a B2B név egyet jelentsen a Minőséggel és a Megbízhatósággal.
           </Typography>
 
           <Button
@@ -201,7 +201,7 @@ export const StrategicPartnersNew: React.FC = () => {
                   color: 'text.secondary',
                 }}
               >
-                Büszkén jelentjük be, hogy a Pannon Egyetem és a Wisebox csapata (Great BiExpert Kft. és B2B ProSales Kft.) háromoldalú együttműködési megállapodást kötött a gyakorlatorientált oktatás támogatására.
+                Büszkén jelentjük be, hogy a Pannon Egyetem és a WiseBox csapata (Great BiExpert Kft. és B2B ProSales Kft.) háromoldalú együttműködési megállapodást kötött a gyakorlatorientált oktatás támogatására.
               </Typography>
               <Typography
                 variant="body1"
@@ -211,7 +211,7 @@ export const StrategicPartnersNew: React.FC = () => {
                   color: 'text.secondary',
                 }}
               >
-                A megállapodás keretében a Wisebox szoftver aktív szerepet kap:
+                A megállapodás keretében a WiseBox szoftver aktív szerepet kap:
               </Typography>
               <Box
                 component="ul"

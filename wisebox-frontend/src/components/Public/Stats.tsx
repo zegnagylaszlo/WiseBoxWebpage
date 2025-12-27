@@ -15,15 +15,15 @@ export const Stats: React.FC = () => {
       value: 25,
       suffix: '+ milliárd Ft',
       title: 'árbevétel',
-      description: 'Wisebox szoftverünket használó cégek éves árbevétele meghaladta a 25 milliárd forintot 2024-ben',
+      description: 'WiseBox kontrolling rendszert használó Ügyfeleink éves nettó árbevétele 2024-ben meghaladta \na 25 milliárd Ft-ot',
       animationKey: 'revenue' as const,
     },
     {
       icon: GroupsIcon,
       value: 80,
       suffix: '+',
-      title: 'felhasználó cég',
-      description: 'Jelenleg több mint 80 cég szavazott bizalmat és használja a rendszerünket nap mint nap, és ez a szám folyamatosan növekszik',
+      title: 'ügyfél',
+      description: 'Jelenleg több mint 80 Ügyfelünk szavazott bizalmat és használja a rendszerünket nap mint nap, és ez a szám folyamatosan növekszik',
       animationKey: 'users' as const,
     },
     {
@@ -109,7 +109,7 @@ export const Stats: React.FC = () => {
               mx: 'auto',
             }}
           >
-            Wisebox számokban
+            WiseBox számokban
           </Typography>
         </Box>
 
@@ -135,7 +135,7 @@ export const Stats: React.FC = () => {
                 sx={{
                   textAlign: 'center',
                   p: 4,
-                  bgcolor: '#FFFFFF',
+                  bgcolor: 'background.paper',
                   borderRadius: '12px',
                   boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
                   transition: 'all 0.2s ease-in-out',

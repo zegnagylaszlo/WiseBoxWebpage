@@ -61,7 +61,7 @@ export const Navbar: React.FC = () => {
           >
             <img
               src="/images/wisebox-logo.webp"
-              alt="Wisebox"
+              alt="WiseBox"
               style={{ height: '50px', width: 'auto' }}
             />
             <Box

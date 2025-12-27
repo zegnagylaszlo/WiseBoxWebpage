@@ -102,7 +102,7 @@ export const Hero: React.FC = () => {
             <Box
               component="img"
               src="/WB_logo/WB LOGO BLACK FIN.png"
-              alt="Wisebox Logo"
+              alt="WiseBox Logo"
               sx={{
                 width: '100%',
                 maxWidth: '400px',

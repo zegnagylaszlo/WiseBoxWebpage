@@ -5,7 +5,7 @@ export const Testimonials: React.FC = () => {
   // TODO: Replace with real testimonials when available
   const testimonials = [
     {
-      quote: "A Wisebox segítségével végre átlátom a cégem pénzügyi helyzetét. Hetente csak 10 percet kell rászánnom a jelentések áttekintésére.",
+      quote: "A WiseBox segítségével végre átlátom a cégem gazdasági helyzetét. Hetente csak 10 percet kell rászánnom a jelentések áttekintésére.",
       name: "Nagy Péter",
       position: "Ügyvezető",
       company: "TechSolutions Kft.",
@@ -17,7 +17,7 @@ export const Testimonials: React.FC = () => {
       company: "Marketing Pro Bt.",
     },
     {
-      quote: "A könyvelőmmel folytatott e-mail ping-pong véget ért. A Wisebox dashboardon azonnal látom, hogy min állunk. Profi kontrolling KKV-knak.",
+      quote: "A könyvelőmmel folytatott e-mail ping-pong véget ért. A WiseBox dashboardon azonnal látom, hogy min állunk. Profi kontrolling KKV-knak.",
       name: "Szabó Gábor",
       position: "Tulajdonos",
       company: "LogisztikaMester Zrt.",

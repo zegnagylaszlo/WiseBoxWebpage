@@ -12,7 +12,7 @@ export const FeaturesGrid: React.FC = () => {
     {
       icon: <TrendingUpIcon sx={{ fontSize: '60px' }} />,
       title: '39+ bővülő funkció',
-      description: 'Folyamatosan bővülő funkciók controlling szoftverünkben',
+      description: 'Folyamatosan bővülő funkciók az Ügyfeleink valós igényei alapján',
     },
     {
       icon: <PeopleIcon sx={{ fontSize: '60px' }} />,
@@ -27,17 +27,17 @@ export const FeaturesGrid: React.FC = () => {
     {
       icon: <BusinessIcon sx={{ fontSize: '60px' }} />,
       title: 'Cégcsoportok kezelése',
-      description: 'Cégcsoportjaidról egy helyen információdhatsz. Extra 8+ funkció',
+      description: 'A teljes cégcsoportod könyvelési számait átlátod egy helyen',
     },
     {
       icon: <SecurityIcon sx={{ fontSize: '60px' }} />,
-      title: 'Jogosultsági szintek',
-      description: 'Jogosultsági szinteket határozhatsz meg vezetőidnek',
+      title: 'Jogosultsági szintek kezelése',
+      description: 'Jogosultsági szinteket határozhatsz meg - ki mit lásson a rendszerben',
     },
     {
       icon: <AssessmentIcon sx={{ fontSize: '60px' }} />,
-      title: 'Költséghely-munkaszám',
-      description: 'Projektszámmal is dolgozunk. Extra 12+ funkció',
+      title: 'Projektszám, Költséghely',
+      description: 'Használhatsz projektszámot, költséghelyet, ... - ezeket is látod',
     },
   ];
 

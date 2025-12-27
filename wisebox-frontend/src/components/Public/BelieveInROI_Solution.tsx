@@ -6,14 +6,16 @@ import CancelIcon from '@mui/icons-material/Cancel';
 export const BelieveInROI_Solution: React.FC = () => {
   const problemItems = [
     'Túl sok idő megy el könyvelővel való egyeztetésre',
-    'Nem látod a könyvelés szerinti gazdasági és pénzügyi helyzeted',
-    'Manuálisan kell visszatérő, rendszeres jelentéseket készítened',
+    'Csak egy számra lenne szükséged a könyvelőtől, de arra nagyon gyorsan',
+    'Megvan a fejedben, a exceledben, hogy hogy áll a céged, de nem tudod ellenőrizni, hogy ez a könyvelésedben is így van-e' /* 'Nem látod a könyvelés szerinti gazdasági és pénzügyi helyzeted', */,
+    'Manuálisan kell rendszeresen visszatérő jelentéseket készítened rengeteg munkával',
   ];
 
   const solutionItems = [
     'A lényegről tudsz egyeztetni a könyvelőddel',
-    'A könyvelési adataid pár kattintásra elérhetőek, bármikor, bárhonnan',
-    'Automatikus, standard formátumú jelentések és elemzések',
+    'A lekönyvelt adataidat eléred bármikor, bárhonnan - 1-2 kattintás és már meg is kaptad a választ',
+    'Naprakész, pontos képet kapsz a céged helyzetéről a lekönyvelt adatok alapján - nincs több vakrepülés és kínos meglepetés',
+    'Standard formátumú jelentések és elemzések - automatikusan - rengeteg időt és pénzt spórolva neked',
   ];
 
   return (
@@ -29,7 +31,7 @@ export const BelieveInROI_Solution: React.FC = () => {
               mb: 2,
             }}
           >
-            MIRE AD MEGOLDÁST A WISEBOX
+            MIRE AD MEGOLDÁST A WISEBOX?
           </Typography>
           <Typography
             variant="h2"
@@ -40,7 +42,7 @@ export const BelieveInROI_Solution: React.FC = () => {
               mx: 'auto',
             }}
           >
-            A Wisebox egy döntéstámogató rendszer, ami a könyvelési adataidat láthatóvá és értelmezhetővé teszi
+            A WiseBox egy döntés-támogató rendszer, ami a könyvelési adataidat láthatóvá és értelmezhetővé teszi
           </Typography>
         </Box>
 
@@ -53,14 +55,15 @@ export const BelieveInROI_Solution: React.FC = () => {
             mb: 6,
           }}
         >
-          {/* LEFT: Without Wisebox - Problems */}
+          {/* LEFT: Without WiseBox - Problems */}
           <Box
             sx={{
-              bgcolor: '#FEF5F5',
+              bgcolor: 'background.paper',
               borderRadius: '12px',
               p: 4,
               height: '100%',
-              border: '1px solid #FFCDD2',
+              border: '1px solid',
+              borderColor: 'grey.200',
               boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
             }}
           >
@@ -72,7 +75,7 @@ export const BelieveInROI_Solution: React.FC = () => {
                 textAlign: 'center',
               }}
             >
-              Wisebox nélkül
+              WiseBox nélkül
             </Typography>
 
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
@@ -100,16 +103,16 @@ export const BelieveInROI_Solution: React.FC = () => {
             </Box>
           </Box>
 
-          {/* RIGHT: With Wisebox - Solutions */}
+          {/* RIGHT: With WiseBox - Solutions */}
           <Box
             sx={{
-              bgcolor: '#F1F8F5',
+              bgcolor: 'background.paper',
               borderRadius: '12px',
               p: 4,
               height: '100%',
               border: '2px solid',
               borderColor: 'success.main',
-              boxShadow: '0px 4px 16px rgba(122, 200, 125, 0.15)',
+              boxShadow: '0px 2px 8px rgba(0,0,0,0.06)',
             }}
           >
             <Typography
@@ -120,7 +123,7 @@ export const BelieveInROI_Solution: React.FC = () => {
                 textAlign: 'center',
               }}
             >
-              Wisebox-szal
+              WiseBox-szal
             </Typography>
 
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
@@ -159,7 +162,7 @@ export const BelieveInROI_Solution: React.FC = () => {
               lineHeight: 1.5,
             }}
           >
-            Váltás a káoszból a kontrollba – pár kattintással.
+            Váltás a káoszból a kontrollba – mert nem engedheted meg magadnak, hogy ne lásd mi van a könyvelésedben!
           </Typography>
         </Box>
       </Container>

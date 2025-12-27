@@ -12,14 +12,14 @@ export const WhyWiseBox: React.FC = () => {
       description: 'Elérhetővé tesszük a könyvelési adataidat, hogy minden pillanatban tiszta képet kapj vállalkozásod gazdasági helyzetéről.',
     },
     {
-      icon: <AssessmentIcon sx={{ fontSize: '75px' }} />,
-      title: 'Döntéstámogatás',
-      description: 'Értelmezhetővé tesszük az adatokat, hogy megalapozott döntéseket hozhass vállalkozásod működésével kapcsolatban.',
+      icon: <TrendingUpIcon sx={{ fontSize: '75px' }} />,
+      title: 'Egyszerű, érthető',
+      description: 'Könnyen használható, felhasználó-barát rendszer, amely a bonyolult könyvelési adatokat egyszerű, érthető formában jeleníti meg.',
     },
     {
-      icon: <TrendingUpIcon sx={{ fontSize: '75px' }} />,
-      title: 'Egyszerű és érthető',
-      description: 'Könnyen használható, felhasználó-barát rendszer, amely a bonyolult könyvelési adatokat egyszerű, érthető formában jeleníti meg.',
+      icon: <AssessmentIcon sx={{ fontSize: '75px' }} />,
+      title: 'Döntés-támogató',
+      description: 'Értelmezhetővé tesszük az adatokat, hogy megalapozott döntéseket hozhass vállalkozásod működésével kapcsolatban.',
     },
   ];
 
@@ -47,7 +47,7 @@ export const WhyWiseBox: React.FC = () => {
               mx: 'auto',
             }}
           >
-            Egyszerű, átlátható, garantált megtérülés
+            Elérhető, Átlátható, Érthető
           </Typography>
         </Box>
 

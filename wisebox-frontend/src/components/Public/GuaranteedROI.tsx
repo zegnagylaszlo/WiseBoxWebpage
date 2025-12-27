@@ -5,17 +5,17 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 export const GuaranteedROI: React.FC = () => {
   const requirements = [
     {
-      title: '3+ munkavállaló',
+      title: '3+ munkavállalód van',
       description: 'Akik közül legalább egy a pénzügyi / adminisztrációs tevékenységgel foglalkozik',
     },
     {
-      title: '50+ millió Ft árbevétel',
+      title: '50+ MFt árbevételed van',
       description: 'Éves szinten akár 8-10 milliárd Ft éves árbevételig',
     },
   ];
 
   const benefits = [
-    'Szeretnél befektetés nélkül pénzügyi kompetenciára szert tenni',
+    'Szeretnél gazdasági kompetenciára szert tenni',
     'Szeretnéd adatvezérelten irányítani a cégedet',
   ];
 
@@ -28,7 +28,7 @@ export const GuaranteedROI: React.FC = () => {
     >
       <Container>
         {/* Section Header - Modern Pattern */}
-        <Box sx={{ textAlign: 'center', mb: 8 }}>
+        <Box sx={{ textAlign: 'center', mb: 5 }}>
           <Typography
             variant="caption"
             sx={{
@@ -56,7 +56,7 @@ export const GuaranteedROI: React.FC = () => {
               color: 'text.secondary',
             }}
           >
-            Hónapról – hónapra, ha
+            hónapról hónapra, amennyiben
           </Typography>
         </Box>
 
@@ -68,7 +68,7 @@ export const GuaranteedROI: React.FC = () => {
             gap: 4,
             maxWidth: '900px',
             mx: 'auto',
-            mb: 8,
+            mb: 12,
           }}
         >
           {requirements.map((req, index) => (
@@ -106,15 +106,15 @@ export const GuaranteedROI: React.FC = () => {
 
         {/* Divider */}
         <Typography
-          variant="h4"
+          variant="h5"
           sx={{
-            mb: 4,
+            mb: 2,
             textAlign: 'center',
-            fontWeight: 600,
+            fontWeight: 500,
             color: 'text.primary',
           }}
         >
-          Vagy ezektől függetlenül:
+          vagy ezektől függetlenül
         </Typography>
 
         {/* Benefits */}
@@ -122,7 +122,7 @@ export const GuaranteedROI: React.FC = () => {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            gap: 3,
+            gap: 1.0,
             maxWidth: '700px',
             mx: 'auto',
           }}
@@ -147,7 +147,7 @@ export const GuaranteedROI: React.FC = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  fontSize: '18px',
+                  fontSize: '16px',
                   color: 'text.primary',
                   lineHeight: 1.7,
                 }}

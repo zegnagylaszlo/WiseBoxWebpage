@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
           >
             <img
               src="/images/wisebox-logo.webp"
-              alt="Wisebox"
+              alt="WiseBox"
               style={{ height: '40px', width: 'auto' }}
             />
             <Typography
@@ -227,7 +227,7 @@ export const Footer: React.FC = () => {
               mb: 1,
             }}
           >
-            Copyright © Wisebox | Minden jog fenntartva
+            Copyright © WiseBox | Minden jog fenntartva
           </Typography>
           <Typography
             variant="body2"

@@ -5,32 +5,32 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export const FAQ: React.FC = () => {
   const faqs = [
     {
-      question: 'Mennyi időbe telik a Wisebox beüzemelése?',
+      question: 'Mennyi időbe telik a WiseBox beüzemelése?',
       answer: 'A rendszer beállítása általában 1-2 napot vesz igénybe. A könyvelőddel való összekötés után azonnal kezdheted használni a dashboardokat és jelentéseket. Nincs hosszadalmas tanulási görbe – a felület intuitív és azonnal használható.',
     },
     {
       question: 'Szükségem van speciális IT tudásra a használatához?',
-      answer: 'Egyáltalán nem! A Wisebox-ot úgy terveztük, hogy bármely vállalkozó könnyen használhassa, IT tudás nélkül is. Ha tudsz emailt írni és böngészni az interneten, már használhatod is a rendszert. Online támogatást és képzést is biztosítunk.',
+      answer: 'Egyáltalán nem! A WiseBox-ot úgy terveztük, hogy bármely vállalkozó könnyen használhassa, IT tudás nélkül is. Ha tudsz emailt írni és böngészni az interneten, már használhatod is a rendszert. Online támogatást és képzést is biztosítunk.',
     },
     {
       question: 'Biztonságban vannak a pénzügyi adataim?',
-      answer: 'Abszolút! A Wisebox bank-szintű titkosítást használ (256-bit SSL), és az adatokat európai szervereken tároljuk GDPR-kompatibilis módon. Rendszeres biztonsági auditokat végzünk, és többlépcsős hozzáférés-védelmet alkalmazunk.',
+      answer: 'Abszolút! A WiseBox bank-szintű titkosítást használ (256-bit SSL), és az adatokat európai szervereken tároljuk GDPR-kompatibilis módon. Rendszeres biztonsági auditokat végzünk, és többlépcsős hozzáférés-védelmet alkalmazunk.',
     },
     {
-      question: 'Hogyan működik együtt a Wisebox a könyvelőmmel?',
-      answer: 'A Wisebox a meglévő könyvelési rendszeredből kapja az adatokat, nem helyettesíti a könyvelőt. A könyvelőd továbbra is vezeti a könyvelést, de te valós időben láthatod az adatokat strukturált, érthető formában. Sok könyvelő kifejezetten örül, mert kevesebb rutinkérdést kap.',
+      question: 'Hogyan működik együtt a WiseBox a könyvelőmmel?',
+      answer: 'A WiseBox a meglévő könyvelési rendszeredből kapja az adatokat, nem helyettesíti a könyvelőt. A könyvelőd továbbra is vezeti a könyvelést, de te valós időben láthatod az adatokat strukturált, érthető formában. Sok könyvelő kifejezetten örül, mert kevesebb rutinkérdést kap.',
     },
     {
       question: 'Milyen könyvelési rendszerekkel kompatibilis?',
-      answer: 'A Wisebox a legtöbb magyar könyvelési szoftverrel kompatibilis, beleértve a NAV Online Számla rendszert is. Ha egyedi könyvelési szoftvert használsz, vedd fel velünk a kapcsolatot – szívesen segítünk az integráció beállításában.',
+      answer: 'A WiseBox a legtöbb magyar könyvelési szoftverrel kompatibilis, beleértve a NAV Online Számla rendszert is. Ha egyedi könyvelési szoftvert használsz, vedd fel velünk a kapcsolatot – szívesen segítünk az integráció beállításában.',
     },
     {
-      question: 'Mennyi időt spórolhatok meg a Wisebox-szal?',
+      question: 'Mennyi időt spórolhatok meg a WiseBox-szal?',
       answer: 'Ügyfeleink átlagosan heti 3-5 órát spórolnak meg a manuális jelentéskészítéssel, adatgyűjtéssel és könyvelői egyeztetéssel. A döntéshozatal is gyorsabb lesz, mert minden fontos adat egy helyen, naprakészen elérhető.',
     },
     {
       question: 'Van próbaidőszak vagy pénzvisszafizetési garancia?',
-      answer: 'Igen! 30 napos pénzvisszafizetési garanciát biztosítunk. Ha az első hónapban úgy érzed, hogy a Wisebox nem felel meg az elvárásaidnak, teljes összegben visszatérítjük a díjat, kérdések nélkül.',
+      answer: 'Igen! 30 napos pénzvisszafizetési garanciát biztosítunk. Ha az első hónapban úgy érzed, hogy a WiseBox nem felel meg az elvárásaidnak, teljes összegben visszatérítjük a díjat, kérdések nélkül.',
     },
   ];
 
@@ -71,7 +71,7 @@ export const FAQ: React.FC = () => {
               mx: 'auto',
             }}
           >
-            Minden, amit tudnod kell a Wisebox-ról. Ha további kérdésed van, fordulj hozzánk bizalommal!
+            Minden, amit tudnod kell a WiseBox-ról
           </Typography>
         </Box>
 
@@ -144,7 +144,7 @@ export const FAQ: React.FC = () => {
               mb: 3,
             }}
           >
-            Nem találod a választ, amit keresel?
+            Ha további kérdésed van, fordulj hozzánk bizalommal!
           </Typography>
           <Box
             component="a"
@@ -166,7 +166,7 @@ export const FAQ: React.FC = () => {
               },
             }}
           >
-            Írj nekünk
+            Keress minket
           </Box>
         </Box>
       </Container>

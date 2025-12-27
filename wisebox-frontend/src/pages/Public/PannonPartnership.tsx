@@ -61,7 +61,7 @@ export const PannonPartnership: React.FC = () => {
         >
           <img
             src="/images/wisebox-pannon-egyetem-egyuttmukodesi-megallapodas-kep-1024x683.webp"
-            alt="Pannon Egyetem - Wisebox együttműködési megállapodás"
+            alt="Pannon Egyetem - WiseBox együttműködési megállapodás"
             style={{
               width: '100%',
               height: 'auto',
@@ -83,7 +83,7 @@ export const PannonPartnership: React.FC = () => {
               textAlign: 'justify',
             }}
           >
-            A Pannon Egyetem és a Wisebox csapata háromoldalú megállapodást kötött a gyakorlatorientált oktatás támogatására. A hallgatók valós céges környezetben sajátíthatják el a digitális pénzügyi és kontrolling folyamatokat.
+            A Pannon Egyetem és a WiseBox csapata háromoldalú megállapodást kötött a gyakorlatorientált oktatás támogatására. A hallgatók valós céges környezetben sajátíthatják el a digitális pénzügyi és kontrolling folyamatokat.
           </Typography>
 
           <Typography
@@ -96,7 +96,7 @@ export const PannonPartnership: React.FC = () => {
               textAlign: 'justify',
             }}
           >
-            Büszkén jelentjük be, hogy a Pannon Egyetem és a Wisebox csapata (Great BiExpert Kft. és a B2B ProSales Kft.) háromoldalú együttműködési megállapodást kötött, melynek célja a gyakorlatorientált oktatás támogatása és a jövő vállalkozóinak felkészítése a digitális kihívásokra.
+            Büszkén jelentjük be, hogy a Pannon Egyetem és a WiseBox csapata (Great BiExpert Kft. és a B2B ProSales Kft.) háromoldalú együttműködési megállapodást kötött, melynek célja a gyakorlatorientált oktatás támogatása és a jövő vállalkozóinak felkészítése a digitális kihívásokra.
           </Typography>
 
           <Typography
@@ -109,7 +109,7 @@ export const PannonPartnership: React.FC = () => {
               textAlign: 'justify',
             }}
           >
-            A megállapodás keretében a Wisebox szoftver aktív szerepet kap az egyetem alap- és mesterképzéseiben, valamint a controlling szakirányú továbbképzésekben. Ezáltal a hallgatók valós vállalati környezetben ismerkedhetnek meg a pénzügyi és kontrolling folyamatokkal, ami jelentősen növeli munkaerőpiaci értéküket.
+            A megállapodás keretében a WiseBox szoftver aktív szerepet kap az egyetem alap- és mesterképzéseiben, valamint a controlling szakirányú továbbképzésekben. Ezáltal a hallgatók valós vállalati környezetben ismerkedhetnek meg a pénzügyi és kontrolling folyamatokkal, ami jelentősen növeli munkaerőpiaci értéküket.
           </Typography>
 
           <Typography
@@ -161,7 +161,7 @@ export const PannonPartnership: React.FC = () => {
               textAlign: 'justify',
             }}
           >
-            Dezső Tibor, a B2B ProSales Kft. ügyvezetője hangsúlyozta: „A Wisebox nem csupán egy szoftver, hanem egy olyan eszköz, amely lehetővé teszi a vállalkozók számára, hogy ne csak adatokat lássanak, hanem valódi válaszokat is kapjanak."
+            Dezső Tibor, a B2B ProSales Kft. ügyvezetője hangsúlyozta: „A WiseBox nem csupán egy szoftver, hanem egy olyan eszköz, amely lehetővé teszi a vállalkozók számára, hogy ne csak adatokat lássanak, hanem valódi válaszokat is kapjanak."
           </Typography>
 
           <Typography
@@ -305,7 +305,7 @@ export const PannonPartnership: React.FC = () => {
             </Box>
             <Box
               component="a"
-              href={`mailto:?subject=${encodeURIComponent('Pannon Egyetem × Wisebox együttműködés')}&body=${encodeURIComponent(window.location.href)}`}
+              href={`mailto:?subject=${encodeURIComponent('Pannon Egyetem × WiseBox együttműködés')}&body=${encodeURIComponent(window.location.href)}`}
               sx={{
                 color: '#666',
                 transition: 'transform 0.2s',

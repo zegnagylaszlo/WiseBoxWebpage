@@ -65,7 +65,7 @@ export const ReferralOpportunity: React.FC = () => {
                 color: 'text.secondary',
               }}
             >
-              Megtetszett a szoftverünk, vagy már büszke partnerünk vagy és szeretnéd másokkal is megosztani megoldásunkat? Lehetőséget biztosítunk, hogy másoknak ajánlhasd a Wisebox szoftverünket és extra díjazásban részesülj. A win-win szituációkra törekszünk, ezért ha felkeltettük az érdeklődésedet vedd fel velünk a kapcsolatot és tájékoztatunk a részletekről!
+              Megtetszett a szoftverünk, vagy már büszke partnerünk vagy és szeretnéd másokkal is megosztani megoldásunkat? Lehetőséget biztosítunk, hogy másoknak ajánlhasd a WiseBox szoftverünket és extra díjazásban részesülj. A win-win szituációkra törekszünk, ezért ha felkeltettük az érdeklődésedet vedd fel velünk a kapcsolatot és tájékoztatunk a részletekről!
             </Typography>
 
             <Button
