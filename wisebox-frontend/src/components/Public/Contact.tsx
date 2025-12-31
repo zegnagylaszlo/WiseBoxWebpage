@@ -3,9 +3,6 @@ import { Box, Container, Typography, Button, TextField, Alert, FormControlLabel,
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import SendIcon from '@mui/icons-material/Send';
-import LockIcon from '@mui/icons-material/Lock';
-import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
-import CloudDoneIcon from '@mui/icons-material/CloudDone';
 import { submitContactForm } from '../../services/contactService';
 
 export const Contact: React.FC = () => {
@@ -568,81 +565,6 @@ export const Contact: React.FC = () => {
             >
               {isSubmitting ? 'Küldés...' : 'Üzenet küldése'}
             </Button>
-
-            {/* Security Badges */}
-            <Box
-              sx={{
-                mt: 4,
-                pt: 4,
-                borderTop: '1px solid',
-                borderColor: 'grey.200',
-                display: 'flex',
-                flexDirection: { xs: 'column', sm: 'row' },
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: 3,
-              }}
-            >
-              <Box
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 1,
-                }}
-              >
-                <VerifiedUserIcon sx={{ color: 'primary.main', fontSize: '24px' }} />
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: 'text.secondary',
-                    fontSize: '13px',
-                    fontWeight: 500,
-                  }}
-                >
-                  GDPR megfelelő
-                </Typography>
-              </Box>
-
-              <Box
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 1,
-                }}
-              >
-                <LockIcon sx={{ color: 'primary.main', fontSize: '24px' }} />
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: 'text.secondary',
-                    fontSize: '13px',
-                    fontWeight: 500,
-                  }}
-                >
-                  256-bit titkosítás
-                </Typography>
-              </Box>
-
-              <Box
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 1,
-                }}
-              >
-                <CloudDoneIcon sx={{ color: 'primary.main', fontSize: '24px' }} />
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: 'text.secondary',
-                    fontSize: '13px',
-                    fontWeight: 500,
-                  }}
-                >
-                  EU szerverek
-                </Typography>
-              </Box>
-            </Box>
           </Box>
         </Box>
 
