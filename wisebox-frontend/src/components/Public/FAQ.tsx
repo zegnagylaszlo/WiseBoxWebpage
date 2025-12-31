@@ -6,31 +6,27 @@ export const FAQ: React.FC = () => {
   const faqs = [
     {
       question: 'Mennyi időbe telik a WiseBox beüzemelése?',
-      answer: 'A rendszer beállítása általában 1-2 napot vesz igénybe. A könyvelőddel való összekötés után azonnal kezdheted használni a dashboardokat és jelentéseket. Nincs hosszadalmas tanulási görbe – a felület intuitív és azonnal használható.',
+      answer: 'A rendszer beállítása általában 1 hetet vesz igénybe. A könyvelési adataid "bekötése" után integráljuk az adataidat a WiseBox-ba és ezt követően már indulhat is a használat az első betanítási körrel.',
     },
     {
       question: 'Szükségem van speciális IT tudásra a használatához?',
-      answer: 'Egyáltalán nem! A WiseBox-ot úgy terveztük, hogy bármely vállalkozó könnyen használhassa, IT tudás nélkül is. Ha tudsz emailt írni és böngészni az interneten, már használhatod is a rendszert. Online támogatást és képzést is biztosítunk.',
+      answer: 'Egyáltalán nem! A WiseBox-ot úgy terveztük, hogy bármely vállalkozó könnyen használhassa, IT tudás nélkül is. Ha tudsz emailt írni és böngészni az interneten, már használhatod is a rendszert. Online videók is elérhetők és a bevezetés során többlépcsős képzést is biztosítunk.',
     },
     {
-      question: 'Biztonságban vannak a pénzügyi adataim?',
-      answer: 'Abszolút! A WiseBox bank-szintű titkosítást használ (256-bit SSL), és az adatokat európai szervereken tároljuk GDPR-kompatibilis módon. Rendszeres biztonsági auditokat végzünk, és többlépcsős hozzáférés-védelmet alkalmazunk.',
+      question: 'Biztonságban vannak a könyvelési adataim?',
+      answer: 'Abszolút! Az adatokat magyarországi szervereken tároljuk GDPR-kompatibilis módon és többlépcsős hozzáférés-védelmet alkalmazunk. IT szolgáltatóink rendszeresen végeznek biztonsági auditokat, hogy garantálják az adatok védelmét.',
     },
     {
       question: 'Hogyan működik együtt a WiseBox a könyvelőmmel?',
-      answer: 'A WiseBox a meglévő könyvelési rendszeredből kapja az adatokat, nem helyettesíti a könyvelőt. A könyvelőd továbbra is vezeti a könyvelést, de te valós időben láthatod az adatokat strukturált, érthető formában. Sok könyvelő kifejezetten örül, mert kevesebb rutinkérdést kap.',
+      answer: 'A WiseBox a meglévő könyvelési rendszeredből kapja az adatokat, nem helyettesíti a könyvelőt. A könyvelőd továbbra is vezeti a könyvelést, de te valós időben láthatod az adatokat strukturált, érthető formában. Sok könyvelő kifejezetten örül, mert kevesebb rutinkérdést kap, illetve sokkal konkrétabban tudnak kérdezni az Ügyfelek.',
     },
     {
       question: 'Milyen könyvelési rendszerekkel kompatibilis?',
-      answer: 'A WiseBox a legtöbb magyar könyvelési szoftverrel kompatibilis, beleértve a NAV Online Számla rendszert is. Ha egyedi könyvelési szoftvert használsz, vedd fel velünk a kapcsolatot – szívesen segítünk az integráció beállításában.',
+      answer: 'A WiseBox az alábbi magyar könyvelési szoftverekkel kompatibilis: Novitax, Kulcs-Soft, RLB, InfoTéka, QualitySoft, Tensoft. A piaci igények alapján folyamatosan bővítjük a kompatibilis könyvelési szoftverek körét.',
     },
     {
       question: 'Mennyi időt spórolhatok meg a WiseBox-szal?',
-      answer: 'Ügyfeleink átlagosan heti 3-5 órát spórolnak meg a manuális jelentéskészítéssel, adatgyűjtéssel és könyvelői egyeztetéssel. A döntéshozatal is gyorsabb lesz, mert minden fontos adat egy helyen, naprakészen elérhető.',
-    },
-    {
-      question: 'Van próbaidőszak vagy pénzvisszafizetési garancia?',
-      answer: 'Igen! 30 napos pénzvisszafizetési garanciát biztosítunk. Ha az első hónapban úgy érzed, hogy a WiseBox nem felel meg az elvárásaidnak, teljes összegben visszatérítjük a díjat, kérdések nélkül.',
+      answer: 'Ez minden Ügyfelünknél változó, sok mindentől függ. Komoly idő - és ezáltal pénzbeli - megtakarítást tudunk felmutatni azoknál az Ügyfeleinknél, ahol sok erőforrás megy el a manuális jelentéskészítésre, adatgyűjtésre és könyvelői egyeztetésekre. A döntéshozatal is gyorsabb lesz, mert minden fontos adat egy helyen, naprakészen elérhető.',
     },
   ];
 
